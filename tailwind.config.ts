@@ -11,9 +11,7 @@ export default {
       fontFamily: {
         inter: ["var(--font-inter)"],
         monts: ["var(--font-monts)"],
-        rajdhani: ["var(--font-rajdhani)"],
-        inknut: ["var(--font-inknut)"],
-        Bodoni:["var(--font-Bodoni)"]
+        firaSans: ["var(--font-firasans)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -24,7 +22,7 @@ export default {
         "primary-dark": "#48422D",
         "secondary-dark": "#2C2C3E",
         "para-dark": "#8D9DBC",
-        accent: "#C98200",
+        accent: "#20B4CE",
       },
       screens: {
         "2xl": { max: "1535px" },

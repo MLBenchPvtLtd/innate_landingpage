@@ -1,6 +1,5 @@
 "use client";
 import { useCallback, useEffect } from "react";
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 // import Text from "@/ui/Text";
@@ -19,7 +18,7 @@ const Drawer: React.FC<DrawerProps> = ({
   isOpen,
   onClose,
   className,
-  drawerTitle,
+  // drawerTitle,
   children,
 }) => {
   const handleEscapeKeyPress = useCallback(
