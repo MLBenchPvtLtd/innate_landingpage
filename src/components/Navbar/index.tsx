@@ -6,9 +6,8 @@ import { gsap } from "gsap";
 
 import Drawer from "../ui/Drawer";
 
-import logo from "@/public/logo.png";
+import logo from "@/public/logo-innate.png";
 import Image from "next/image";
-import Button from "../ui/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +45,7 @@ const Navbar = () => {
                 href="/"
                 className="flex  mob:justify-start space-x-3 rtl:space-x-reverse"
               >
-                <Image src={logo} alt="Flowbite Logo" width={461} height={170} />
+                <Image className="mob:max-w-[200px]" src={logo} alt="Flowbite Logo" width={259} height={56} />
               </Link>
               <div className="flex xl:pr-4 xl:hidden  pt-2">
                 <button
@@ -81,27 +80,11 @@ const Navbar = () => {
                   id="navbar-default"
                 >
                   {/* Your menu options */}
-                  <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[50px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
+                  <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[24px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
                     <li>
                       <Link
                         href="/"
                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
-                      >
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href=""
-                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
-                      >
-                        Service
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href=""
-                     className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
                       >
                         About
                       </Link>
@@ -109,24 +92,37 @@ const Navbar = () => {
                     <li>
                       <Link
                         href=""
+                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                      >
+                        Work
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href=""
+                     className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                      >
+                        Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href=""
                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
                       >
-                        Our Doctors
+                        Press
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href=""
+                        className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                      >
+                        Contact
                       </Link>
                     </li>
                   
-                    <li className="">
-                      <div className=" xl:hidden">
-                        <Link
-                          href="/contact"
-                          className="block  text-[15px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] "
-                        >
-                          <Button className="w-[148px]  ">
-                          Contact Us
-                          </Button>
-                        </Link>
-                      </div>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>
@@ -140,7 +136,7 @@ const Navbar = () => {
                   <button
                     // onClick={toggleMenu}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm border border-[#fff]/90 bg-[#fff] text-[#00297A] rounded-lg  "
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm   bg-transparent text-white rounded-lg  "
                     aria-controls="navbar-default"
                     aria-expanded={isOpen ? "true" : "false"}
                   >
@@ -171,7 +167,7 @@ const Navbar = () => {
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  " 
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                            Home
+                          About
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
@@ -181,7 +177,7 @@ const Navbar = () => {
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                            Expertise
+                          Work
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
@@ -191,7 +187,7 @@ const Navbar = () => {
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                            Services
+                          Services
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
@@ -201,7 +197,7 @@ const Navbar = () => {
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                            Team
+                          Press
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
@@ -211,21 +207,10 @@ const Navbar = () => {
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                            Gallery
+                            Contact
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
-
-                        <Link
-                          href="/contact"
-                          className="flex justify-center  text-[16px] font-dmsans font-normal leading-7 text-[#FFFFFF]"
-                        >
-                          <li className="hidden xl:block mt-5 list-items">
-                            <button className=" hidden xl:block  px-[23px] py-[11px] rounded-[150px] bg-[#FFFFFF]   border-[#FFFFFF] border text-[15px] font-inter font-medium leading-[25.5px] text-[#191A05] ">
-                              Get Free Estimate
-                            </button>
-                          </li>
-                        </Link>
+                       
                       </ul>
                     </div>
                   </Drawer>
