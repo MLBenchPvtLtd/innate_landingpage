@@ -107,7 +107,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href=""
+                        href="/press"
                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
                       >
                         Press
@@ -115,7 +115,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href=""
+                        href="/contact"
                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
                       >
                         Contact
@@ -163,7 +163,7 @@ const Navbar = () => {
                     <div className="flex items-center h-full w-full ">
                       <ul className="font-normal  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
-                          href="/"
+                          href="/about"
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  " 
                         >
                           <li className="flex justify-center py-[15px] list-items">
@@ -193,7 +193,7 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
-                          href="/team"
+                          href="/press"
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
@@ -203,7 +203,7 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
-                          href="/gallery"
+                          href="/contact"
                           className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
                         >
                           <li className="flex justify-center py-[15px] list-items">
