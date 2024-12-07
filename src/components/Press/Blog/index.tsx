@@ -24,7 +24,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -41,7 +41,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -58,7 +58,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -75,7 +75,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -94,7 +94,7 @@ const Blog = () => {
             When you reach out to a general contractor and ask for a bid, you may not hear back for several weeks, if at all.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -112,7 +112,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -129,7 +129,7 @@ const Blog = () => {
               smooth and compliant construction process.....
             </Text>
 
-            <Link href="" className="text-[#000000] flex items-center mt-5">
+            <Link href="/blog" className="text-[#000000] flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
