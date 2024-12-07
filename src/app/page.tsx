@@ -1,4 +1,5 @@
 import Collective from "@/components/Home/Collective";
+import Confidence from "@/components/Home/Confidence";
 import ContactHome from "@/components/Home/ContactHome";
 import DesignAndBuild from "@/components/Home/DesignAndBuild";
 import Hero from "@/components/Home/Hero";
@@ -19,6 +20,7 @@ export default function Home() {
         <Philosophy />
         <Reviews />
         <Testimonials />
+        <Confidence/>
       </div>
       <ContactHome />
       <OurPartners />
