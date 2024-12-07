@@ -1,0 +1,28 @@
+import React from "react";
+
+import Text from "@/components/ui/Text";
+
+import rightimg from "@/public/images/home/collective.png";
+import Image from "next/image";
+const Philosophy = () => {
+  return (
+    <div className="flex justify-center items-center py-20">
+      <div className="w-full max-w-[1203px] flex items-center justify-between">
+        <div className="max-w-[586px]">
+          <Text className="text-black/90 text-[20px]">Philosophy</Text>
+          <Text className="text-[32px] text-black font-semibold leading-[41.2px] mt-3 mb-4">
+          When design is both functional and beautiful, it has the most impact on peoples lives.
+          </Text>
+        
+          
+        </div>
+        <div className="">
+          <Image className="mr-8 mob:mr-0" src={rightimg} alt="rightimg" width={398} height={261} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export default Philosophy

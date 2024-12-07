@@ -3,7 +3,7 @@ import React from "react";
 
 import Text from "@/components/ui/Text";
 
-// import rightarrow from "@/public/images/press/RightArrowblue.png";
+// import rightarrow from "@/public/images/press/RightArrowbue.png";
 import Form from "@/components/Contact/Form";
 
 const ContactHome = () => {
