@@ -83,7 +83,7 @@ const Navbar = () => {
                   <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[24px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
                     <li>
                       <Link
-                        href="/"
+                        href="/about"
                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
                       >
                         About
