@@ -5,7 +5,7 @@ import slide from "@/public/images/home/slide1innate.png";
 import Text from "@/components/ui/Text";
 const Hero = () => {
   return (
-    <div className="relative h-screen min-h-[784px] flex justify-center items-center">
+    <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
       <Image
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src={slide}
