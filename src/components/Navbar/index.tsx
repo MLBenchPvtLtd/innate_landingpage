@@ -15,7 +15,9 @@ const Navbar = () => {
   const { activeTab, setActiveTab } = useTabContext();
   const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
-
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab); // Update context
+  };
   useEffect(() => {
     if (isOpen) {
       // Select all list items
@@ -48,7 +50,7 @@ const Navbar = () => {
               >
                 <Image
                   className="mob:max-w-[200px]"
-                  onClick={() => setActiveTab("/")}
+                  onClick={() => handleTabChange("/")}
                   src={logo}
                   alt="Flowbite Logo"
                   width={259}
@@ -92,10 +94,10 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/about"
-                        onClick={() => setActiveTab("/about")}
-                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                        onClick={() => handleTabChange("/about")}
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
                           activeTab === "/about"
-                            ? "text-[#2CFF06] "
+                            ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
@@ -105,10 +107,10 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/work"
-                        onClick={() => setActiveTab("/work")}
-                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                        onClick={() => handleTabChange("/work")}
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
                           activeTab === "/work"
-                            ? "text-[#2CFF06] "
+                            ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
@@ -117,11 +119,11 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href=""
-                        onClick={() => setActiveTab("/services")}
-                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                        href="/services"
+                        onClick={() => handleTabChange("/services")}
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
                           activeTab === "/services"
-                            ? "text-[#2CFF06] "
+                            ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
@@ -131,10 +133,10 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/press"
-                        onClick={() => setActiveTab("/press")}
-                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                        onClick={() => handleTabChange("/press")}
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
                           activeTab === "/press"
-                            ? "text-[#2CFF06] "
+                            ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
@@ -144,10 +146,10 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/contact"
-                        onClick={() => setActiveTab("/contact")}
-                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                        onClick={() => handleTabChange("/contact")}
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
                           activeTab === "/contact"
-                            ? "text-[#2CFF06] "
+                            ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
@@ -195,10 +197,10 @@ const Navbar = () => {
                       <ul className="font-normal  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
-                          onClick={() => setActiveTab("/about")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                          onClick={() => handleTabChange("/about")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${
                             activeTab === "/about"
-                              ? "text-[#2CFF06] "
+                              ? "text-[#2CFF06]"
                               : "text-[#FFFFFF]"
                           }`}
                         >
@@ -210,10 +212,10 @@ const Navbar = () => {
 
                         <Link
                           href="/work"
-                          onClick={() => setActiveTab("/work")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                          onClick={() => handleTabChange("/work")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${
                             activeTab === "/work"
-                              ? "text-[#2CFF06] "
+                              ? "text-[#2CFF06]"
                               : "text-[#FFFFFF]"
                           }`}
                         >
@@ -225,10 +227,10 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => setActiveTab("/services")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                          onClick={() => handleTabChange("/services")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${
                             activeTab === "/services"
-                              ? "text-[#2CFF06] "
+                              ? "text-[#2CFF06]"
                               : "text-[#FFFFFF]"
                           }`}
                         >
@@ -240,10 +242,10 @@ const Navbar = () => {
 
                         <Link
                           href="/press"
-                          onClick={() => setActiveTab("/press")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                          onClick={() => handleTabChange("/press")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${
                             activeTab === "/press"
-                              ? "text-[#2CFF06] "
+                              ? "text-[#2CFF06]"
                               : "text-[#FFFFFF]"
                           }`}
                         >
@@ -255,10 +257,10 @@ const Navbar = () => {
 
                         <Link
                           href="/contact"
-                          onClick={() => setActiveTab("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                          onClick={() => handleTabChange("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${
                             activeTab === "/contact"
-                              ? "text-[#2CFF06] "
+                              ? "text-[#2CFF06]"
                               : "text-[#FFFFFF]"
                           }`}
                         >
