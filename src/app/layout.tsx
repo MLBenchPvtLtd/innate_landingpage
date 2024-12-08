@@ -10,7 +10,7 @@ import {
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import { TabProvider } from "@/context/TabContsxt";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -37,7 +37,6 @@ const Bodoni = Bodoni_Moda({
   variable: "--font-Bodoni",
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,11 +45,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      className={` ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} `}
+        className={` ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} `}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <TabProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </TabProvider>
       </body>
     </html>
   );

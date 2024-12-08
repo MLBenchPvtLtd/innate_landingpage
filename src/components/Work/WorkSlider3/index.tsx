@@ -16,9 +16,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import First from "../Content/First";
-import leftarrow from "@/public/images/work/Arrowleft.png"
-import rightarrow from "@/public/images/work/Arrowright.png"
+import Third from "../Content/Third";
+import leftarrow from "@/public/images/work/Arrowleftblue.png"
+import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
 function WorkSlider3() {
     const swiper = useSwiper();
@@ -55,20 +55,7 @@ function WorkSlider3() {
           alt="movenextbtn"
         />
           <Swiper
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 1,
-              },
-              1180: {
-                slidesPerView: 1,
-              },
-              1323: {
-                slidesPerView: 1,
-              },
-            }}
+          
             slidesPerView={1}
             speed={2000}
             loop={true}
@@ -80,15 +67,15 @@ function WorkSlider3() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <First />
+              <Third />
             </SwiperSlide>
 
             <SwiperSlide>
-              <First />
+              <Third />
             </SwiperSlide>
 
             <SwiperSlide>
-              <First />
+              <Third />
             </SwiperSlide>
           </Swiper>
         </div>

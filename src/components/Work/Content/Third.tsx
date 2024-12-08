@@ -6,7 +6,7 @@ import Text from "@/components/ui/Text";
 import slide from "@/public/images/home/slide1innate.png";
 import arrowwhite from "@/public/images/work/Arrowwhite.png";
 import arrowblue from "@/public/images/work/Arrowblue.png";
-const First = () => {
+const Third = () => {
   return (
     <div className="relative w-full z-10  mob:h-full h-screen min-h-[700px] flex justify-center items-center mob:px-5">
       <Image
@@ -23,7 +23,7 @@ const First = () => {
             Residential
           </Text>
           <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1">
-            Palm Springs ADU{" "}
+            Shoreline Residence
             <Image src={arrowblue} alt="" width={31} height={31} />
           </Text>
           <Link
@@ -38,4 +38,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default Third;

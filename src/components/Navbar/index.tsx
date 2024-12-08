@@ -8,10 +8,11 @@ import Drawer from "../ui/Drawer";
 
 import logo from "@/public/logo-innate.png";
 import Image from "next/image";
+import { useTabContext } from "@/context/TabContsxt";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { activeTab, setActiveTab } = useTabContext();
   const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
 
@@ -45,7 +46,14 @@ const Navbar = () => {
                 href="/"
                 className="flex  mob:justify-start space-x-3 rtl:space-x-reverse"
               >
-                <Image className="mob:max-w-[200px]" src={logo} alt="Flowbite Logo" width={259} height={56} />
+                <Image
+                  className="mob:max-w-[200px]"
+                  onClick={() => setActiveTab("/")}
+                  src={logo}
+                  alt="Flowbite Logo"
+                  width={259}
+                  height={56}
+                />
               </Link>
               <div className="flex xl:pr-4 xl:hidden  pt-2">
                 <button
@@ -84,15 +92,25 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/about"
-                        className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                        onClick={() => setActiveTab("/about")}
+                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                          activeTab === "/about"
+                            ? "text-[#2CFF06] "
+                            : "text-[#FFFFFF]"
+                        }`}
                       >
                         About
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href=""
-                         className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                        href="/work"
+                        onClick={() => setActiveTab("/work")}
+                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                          activeTab === "/work"
+                            ? "text-[#2CFF06] "
+                            : "text-[#FFFFFF]"
+                        }`}
                       >
                         Work
                       </Link>
@@ -100,7 +118,12 @@ const Navbar = () => {
                     <li>
                       <Link
                         href=""
-                     className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                        onClick={() => setActiveTab("/services")}
+                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                          activeTab === "/services"
+                            ? "text-[#2CFF06] "
+                            : "text-[#FFFFFF]"
+                        }`}
                       >
                         Services
                       </Link>
@@ -108,7 +131,12 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/press"
-                        className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                        onClick={() => setActiveTab("/press")}
+                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                          activeTab === "/press"
+                            ? "text-[#2CFF06] "
+                            : "text-[#FFFFFF]"
+                        }`}
                       >
                         Press
                       </Link>
@@ -116,21 +144,24 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/contact"
-                        className="block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  "
+                        onClick={() => setActiveTab("/contact")}
+                        className={`block  text-[16px] font-inter font-normal leading-[25.5px] text-[#FFFFFF]  ${
+                          activeTab === "/contact"
+                            ? "text-[#2CFF06] "
+                            : "text-[#FFFFFF]"
+                        }`}
                       >
                         Contact
                       </Link>
                     </li>
-                  
-                   
                   </ul>
                 </div>
               </div>
 
               {/* tab and mob  menu*/}
-              <div className="hidden xl:block pr-[5%] ">
+              <div className="hidden xl:block  ">
                 <div
-                  className="relative cursor-pointer flex pr-2 pt-[5px]"
+                  className="relative cursor-pointer flex pt-[5px]"
                   onClick={onOpen}
                 >
                   <button
@@ -164,53 +195,77 @@ const Navbar = () => {
                       <ul className="font-normal  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
-                          className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  " 
+                          onClick={() => setActiveTab("/about")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                            activeTab === "/about"
+                              ? "text-[#2CFF06] "
+                              : "text-[#FFFFFF]"
+                          }`}
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                          About
+                            About
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
-                          href="/about"
-                          className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
+                          href="/work"
+                          onClick={() => setActiveTab("/work")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                            activeTab === "/work"
+                              ? "text-[#2CFF06] "
+                              : "text-[#FFFFFF]"
+                          }`}
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                          Work
+                            Work
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/services"
-                          className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
+                          onClick={() => setActiveTab("/services")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                            activeTab === "/services"
+                              ? "text-[#2CFF06] "
+                              : "text-[#FFFFFF]"
+                          }`}
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                          Services
+                            Services
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/press"
-                          className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
+                          onClick={() => setActiveTab("/press")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                            activeTab === "/press"
+                              ? "text-[#2CFF06] "
+                              : "text-[#FFFFFF]"
+                          }`}
                         >
                           <li className="flex justify-center py-[15px] list-items">
-                          Press
+                            Press
                           </li>
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/contact"
-                          className="block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]  "
+                          onClick={() => setActiveTab("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF]   ${
+                            activeTab === "/contact"
+                              ? "text-[#2CFF06] "
+                              : "text-[#FFFFFF]"
+                          }`}
                         >
                           <li className="flex justify-center py-[15px] list-items">
                             Contact
                           </li>
                         </Link>
-                       
                       </ul>
                     </div>
                   </Drawer>

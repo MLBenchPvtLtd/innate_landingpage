@@ -55,20 +55,7 @@ function WorkSlider1() {
           alt="movenextbtn"
         />
           <Swiper
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 1,
-              },
-              1180: {
-                slidesPerView: 1,
-              },
-              1323: {
-                slidesPerView: 1,
-              },
-            }}
+            
             slidesPerView={1}
             speed={2000}
             loop={true}
