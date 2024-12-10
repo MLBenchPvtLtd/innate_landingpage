@@ -12,6 +12,7 @@ import job from "@/public/images/services/job.png";
 import demolition from "@/public/images/services/demolition.png";
 import instalation from "@/public/images/services/installation.png";
 import cleanup from "@/public/images/services/cleanup.png";
+import point from "@/public/images/services/point.png"
 
 const data = [
   {
@@ -68,10 +69,10 @@ const data2 = [
 const OurProcess = () => {
   return (
     <div className="bg-black">
-      <div className="min-h-screen lg:hidden w-full bg-gradient-to-r from-[#141E4C] via-[#00000040] to-[#0f1015] pt-16 pb-20 px-5">
+      <div className="min-h-screen lg:hidden w-full gradient pt-16 pb-20 px-5">
         <Text
           as="h1"
-          className="text-[53px] mb-16 text-center leading-[68.9px] font-normal"
+          className="text-[53px] font-semibold mb-16 text-center leading-[68.9px] "
         >
           Our Process
         </Text>
@@ -112,13 +113,62 @@ const OurProcess = () => {
             ))}
           </div>
           {/* center */}
-          <div className=" ">
+          <div className=" relative w-[29px] flex justify-center">
             <Image
-              className=" z-0 h-full max-h-[2315px]"
+              className=" z-0 w-[5px] h-full max-h-[2315px]"
               src={centerline}
               alt=""
               width={5}
               height={2215}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[8.7%]"
+              src={point}
+              alt="point1"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[22.7%]"
+              src={point}
+              alt="point2"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[35.3%]"
+              src={point}
+              alt="point3"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[50.1%]"
+              src={point}
+              alt="point4"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[62%]"
+              src={point}
+              alt="point5"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[76.2%]"
+              src={point}
+              alt="point6"
+              width={29}
+              height={26}
+            />
+            <Image
+              className="w-[29px] absolute z-10 top-[88.6%]"
+              src={point}
+              alt="point6"
+              width={29}
+              height={26}
             />
           </div>
           {/* right */}
