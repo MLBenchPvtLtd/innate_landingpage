@@ -20,7 +20,7 @@ const Hero = () => {
         Design+ Build <br />
         It’s Innate
         </Text>
-        <button className="mt-[20px] border border-[#FFFFFF] backdrop-blur-[57px] bg-opacity-10 bg-gray-500 w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px]">
+        <button className="mt-[20px] border border-[#FFFFFF] font-bold font-inter backdrop-blur-[57px] bg-opacity-10 bg-[#30332e] w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px]">
         Book a Consultation
         </button>
         

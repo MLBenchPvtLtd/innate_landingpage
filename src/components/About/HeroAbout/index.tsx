@@ -64,6 +64,8 @@ const HeroAbout = () => {
         </div>
         <Image src={michel} alt="" width={508} height={357} />
       </div>
+      <Text as="h2" className="text-center text-[40px] mt-8">Our Team</Text>
+
       <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
         <div className="w-full max-w-[266px]">
           <Image className="" src={gelberg} alt="" width={266} height={261} />
