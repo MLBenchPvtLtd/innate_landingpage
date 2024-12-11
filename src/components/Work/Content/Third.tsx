@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Text from "@/components/ui/Text";
-import slide from "@/public/images/home/slide1innate.png";
+import slide from "@/public/images/work/slide3 (2).png";
 import arrowwhite from "@/public/images/work/Arrowwhite.png";
 import arrowblue from "@/public/images/work/Arrowblue.png";
 const Third = () => {
