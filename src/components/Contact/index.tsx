@@ -5,10 +5,11 @@ import Text from "@/components/ui/Text";
 
 import rightarrow from "@/public/images/press/RightArrowblue.png";
 import Form from "./Form";
+import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="bg-black pb-16 pt-44 px-5">
+    <div className="gradient pb-16 pt-44 px-5">
       <div className="mx-auto w-full max-w-[1140px] flex justify-center lg:flex-wrap gap-[200px] lg:gap-[50px]">
         <div className="max-w-[444px]">
           <Text as="h1" className="text-[40px] text-white font-medium ">
@@ -31,6 +32,7 @@ const Contact = () => {
             estimate, follow the link below and fill in your project details to
             receive a rough AI generated estimate.
           </Text>
+          <Link href="/onboarding" className="w-[172.63px]">
           <button
             type="submit"
             className="w-[172.63px] h-[50px] mt-8 border border-white text-white text-[16px] font-medium flex items-center justify-center gap-1"
@@ -38,6 +40,7 @@ const Contact = () => {
             Start project
             <Image src={rightarrow} alt="" width={18} height={18} />
           </button>
+          </Link>
         </div>
         {/* right form */}
        <Form/>

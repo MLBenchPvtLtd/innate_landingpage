@@ -7,7 +7,7 @@ const PressPage = () => {
   return (
     <>
       <HeroPress/>
-      <div className="bg-white">
+      <div className="gradient">
       <Blog/>
       <Contact/>
       </div>

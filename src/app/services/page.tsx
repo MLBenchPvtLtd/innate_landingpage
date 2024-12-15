@@ -10,17 +10,16 @@ import React from "react";
 
 const ServicesPage = () => {
   return (
-    <div>
+    <div className="gradient">
       <HeroService />
-      <div className="bg-white">
-        <Collective />
+      <Collective />
         <LatestProjects />
         <Testimonials />
         <OurProcess />
+        
         <Marquee  />
         <ReviewsSlider />
         <Consultation />
-      </div>
     </div>
   );
 };

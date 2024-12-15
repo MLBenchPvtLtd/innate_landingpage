@@ -24,14 +24,14 @@ const Services = () => {
   return (
     <div className="">
       <div className="flex flex-wrap justify-center w-full  mx-auto">
-        <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] min-h-[484px] border border-white  tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame1}
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
             />
             <div className="relative z-10">
               <Image
@@ -45,12 +45,14 @@ const Services = () => {
                 Roofing
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame2}
@@ -68,15 +70,17 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Decks
+                Decks
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame3}
@@ -94,20 +98,21 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Kitchens & Bathrooms
+                Kitchens & Bathrooms
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-      
       </div>
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
-        <div className="w-[49.5%] tab:w-full relative group">
-        <div className="overflow-hidden h-full  flex justify-center items-center">
+        <div className="w-[49.5%] border border-white  tab:w-full relative group">
+          <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame4}
               alt="Roofing Service"
@@ -124,17 +129,19 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Architectural Services
+                Architectural Services
               </Text>
               <div className="flex justify-center">
-                <Button className="w-[136px]">Learn More</Button>
+              <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-[49.5%] tab:w-full relative group min-h-[484px]  overflow-hidden">
-        <div className="overflow-hidden h-full  flex justify-center items-center">
+        <div className="w-[49.5%] border border-white  tab:w-full relative group min-h-[484px]  overflow-hidden">
+          <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame5}
               alt="Roofing Service"
@@ -151,10 +158,12 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              New Construction & ADU
+                New Construction & ADU
               </Text>
               <div className="flex justify-center">
-                <Button className="w-[136px]">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
@@ -162,7 +171,7 @@ const Services = () => {
       </div>
       {/*  */}
       <div className="flex flex-wrap justify-center w-full   mx-auto">
-      <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame6}
@@ -180,15 +189,17 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Siding
+                Siding
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-      <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame7}
@@ -206,15 +217,17 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Windows & Doors
+                Windows & Doors
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-      <div className="w-[33%] min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full  flex justify-center items-center">
             <Image
               src={frame8}
@@ -232,10 +245,12 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-medium text-center my-4">
-              Interior Design
+                Interior Design
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] ">Learn More</Button>
+                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                  Learn More
+                </Button>{" "}
               </div>
             </div>
           </div>

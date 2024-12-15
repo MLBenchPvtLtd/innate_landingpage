@@ -9,7 +9,7 @@ import rightdot from "@/public/images/home/right“.png";
 const Reviews = () => {
   return (
     <div className="py-16">
-      <Text as="h1" className="text-center text-black mb-12">
+      <Text as="h1" className="text-center text-white  mb-12">
         Don’t just take our word for it!
       </Text>
       <div className="w-full max-w-[1104px] mx-auto relative">
@@ -28,7 +28,7 @@ const Reviews = () => {
           height={64}
         />
 
-        <Text className="text-center text-[24px] font-medium leading-[31.2px] text-black max-w-[879px] mx-auto">
+        <Text className="text-center text-[24px] font-medium leading-[31.2px] text-white  max-w-[879px] mx-auto">
           I found Michael because he came highly recommended as both a designer
           and a builder. I wanted to update the style of my kitchen and bathroom
           but being unfamiliar with the construction process, I needed a
@@ -40,10 +40,10 @@ const Reviews = () => {
         <div className="flex gap-[11px] items-center justify-center mt-10">
           <Image src={avatar} alt="" width={70} height={70} />
           <div className="">
-            <Text className=" text-[24px] font-medium leading-[31.2px] text-black">
+            <Text className=" text-[24px] font-medium leading-[31.2px] text-white ">
               Katerin C
             </Text>
-            <Text className="mt-1 text-black">Co-founder, Head of Product</Text>
+            <Text className="mt-1 text-white ">Co-founder, Head of Product</Text>
           </div>
         </div>
       </div>

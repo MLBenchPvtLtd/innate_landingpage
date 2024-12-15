@@ -117,7 +117,7 @@ const Navbar = () => {
                         Work
                       </Link>
                     </li>
-                    <li>
+                    <li className="relative group">
                       <Link
                         href="/services"
                         onClick={() => handleTabChange("/services")}
@@ -129,7 +129,75 @@ const Navbar = () => {
                       >
                         Services
                       </Link>
+                      {/* Dropdown menu */}
+                      <ul className="absolute left-0 min-w-[180px] hidden group-hover:block bg-[#333333] text-white shadow-lg rounded-lg">
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                            Architecture
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                            Kitchens & Bathrooms
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                            Construction
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                            Roofing
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                            Decks & Patio Covers
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                           Siding
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                           Windows & Doors
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                          >
+                         Interior Design
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
+
                     <li>
                       <Link
                         href="/press"
