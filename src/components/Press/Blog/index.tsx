@@ -53,7 +53,6 @@ const Blog = () => {
               one to find a consensus on. The American Institute of Architects
               suggests that design
             </Text>
-
             <Link
               href={`/blogs/2`}
               className="text-white flex items-center mt-5"
