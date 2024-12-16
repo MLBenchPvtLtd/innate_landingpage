@@ -1,11 +1,7 @@
 import React from "react";
-import Image from "next/image";
 
 import Text from "@/components/ui/Text";
-import p1 from "@/public/images/home/bt.png";
-import p2 from "@/public/images/home/marvin 2.png";
-import p3 from "@/public/images/home/dt 2.png";
-import p4 from "@/public/images/home/ad 2.png";
+
 import Marquee from "./Marquee";
 
 const OurPartners = () => {

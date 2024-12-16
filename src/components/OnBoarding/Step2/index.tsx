@@ -30,8 +30,8 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   };
 
   return (
-    <div className="min-h-screen gradient flex items-center justify-center">
-      <div className="w-full max-w-[1180px] mt-20">
+    <div className="py-20 gradient flex items-center justify-center">
+      <div className="w-full max-w-[1180px] ">
         <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-10">
         Got it! What professional do you need help finding?
         </Text>
@@ -53,12 +53,12 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
         <div className="flex mob:flex-wrap justify-end mt-20">
         
           <div className="flex gap-5 mt-6">
-            <button
+          <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
+              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
               Previous
-              <Image src={arrow} alt="" width={24} height={24} />
             </button>
             <button
               onClick={onNext}

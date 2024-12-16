@@ -31,3 +31,12 @@ body {
   background: linear-gradient(to left, #171d37 5%, #0f1221 25%, #0f1015 100%);
 
 }
+
+.icon-scale {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.icon-scale {
+  transform: scale(1.1);
+}
