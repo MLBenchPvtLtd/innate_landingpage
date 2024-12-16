@@ -30,8 +30,8 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   };
 
   return (
-    <div className="min-h-screen gradient flex items-center justify-center">
-      <div className="w-full max-w-[1180px] mt-20">
+    <div className="py-20 gradient flex items-center justify-center">
+      <div className="w-full max-w-[1180px] ">
         <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-10">
         Got it! What professional do you need help finding?
         </Text>

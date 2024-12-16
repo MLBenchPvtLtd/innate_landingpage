@@ -3,8 +3,6 @@ import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
-import test1 from "@/public/images/home/testimonial1.png";
-import test2 from "@/public/images/home/testimonial2 (2).png";
 import profile1 from "@/public/images/home/profile.png";
 import profile2 from "@/public/images/home/profile (1).png";
 import profile3 from "@/public/images/home/profile (2).png";

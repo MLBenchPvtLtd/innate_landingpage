@@ -32,7 +32,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   };
 
   return (
-    <div className="min-h-screen gradient flex items-center justify-center">
+    <div className=" gradient flex items-center justify-center py-20">
       <div className="w-full max-w-[1180px]">
         <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-10">
           How do you want to get started?
