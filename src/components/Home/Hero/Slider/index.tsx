@@ -47,10 +47,10 @@ function HomeSlider() {
             }}
             slidesPerView={1}
             speed={2000}
-            // autoplay={{
-            //   delay: 4000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
             loop={true}
             navigation={{
               nextEl: ".custom-next",
