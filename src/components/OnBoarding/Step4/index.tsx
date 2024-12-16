@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import range from "@/public/images/onboarding/range image.png";
+import SlideBar from "./SlideBar";
 
 interface Step4Props {
   onNext: () => void;
@@ -12,6 +12,8 @@ interface Step4Props {
 }
 
 const Step4: React.FC<Step4Props> = ({ onNext, onPrevious }) => {
+ 
+
   return (
     <div className=" gradient flex py-20 items-center justify-center px-5">
       <div className="max-w-[1140px] w-full ">
@@ -25,7 +27,8 @@ const Step4: React.FC<Step4Props> = ({ onNext, onPrevious }) => {
           >
             What’s your budget range?
           </Text>
-          <Image src={range} alt="" width={1140} height={278} />
+          {/* <Image src={range} alt="" width={1140} height={278} /> */}
+          <SlideBar/>
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-5">

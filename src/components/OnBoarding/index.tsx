@@ -32,9 +32,9 @@ const OnBoarding: React.FC = () => {
   const progress = ((currentStep / totalSteps) * 100).toFixed(2);
 
   return (
-    <div className="onboarding-container gradient">
+    <div className="onboarding-container gradient ">
    {currentStep !== 0 && (
-  <div className="pt-40 flex justify-center">
+  <div className="pt-40 flex justify-center mob:px-5">
     <div
       className="max-w-[1180px] relative"
       style={{
