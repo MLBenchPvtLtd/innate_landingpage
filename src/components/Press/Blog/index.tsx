@@ -13,8 +13,8 @@ import blog5 from "@/public/images/press/blog5.png";
 import blogb from "@/public/images/press/blogb.png";
 
 const Blog = () => {
-  const title = "1"
-  const slug = title.toLowerCase().replace(/\s+/g, "-");
+  // const title = "1";
+  // const slug = title.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <div className=" pt-16">
@@ -24,14 +24,17 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            Do you need a soils report or civil engineer for an addition in Bellevue?
+              Do you need a soils report or civil engineer for an addition in
+              Bellevue?
             </Text>
             <Text className="text-white ">
-            When planning to build an addition in Bellevue, Washington, understanding the city’s zoning regulations is essential for a smooth and compliant construction process. Bellevue’s zoning
+              When planning to build an addition in Bellevue, Washington,
+              understanding the city’s zoning regulations is essential for a
+              smooth and compliant construction process. Bellevue’s zoning
             </Text>
 
             <Link
-           href={`/blogs/${slug}`}
+              href={`/blogs/1`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
@@ -43,14 +46,16 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            The Cost of Architecture
+              The Cost of Architecture
             </Text>
             <Text className="text-white ">
-            The cost of architecture is a contentious topic and a difficult one to find a consensus on. The American Institute of Architects suggests that design
+              The cost of architecture is a contentious topic and a difficult
+              one to find a consensus on. The American Institute of Architects
+              suggests that design
             </Text>
 
             <Link
-              href="/blog"
+              href={`/blogs/2`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
@@ -62,14 +67,16 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            Are you being ripped off by your insurance company?
+              Are you being ripped off by your insurance company?
             </Text>
             <Text className="text-white ">
-            Are you feeling the weight of uncertainty after filing a water damage claim with your insurance company? Have you ever wondered if the estimate you
+              Are you feeling the weight of uncertainty after filing a water
+              damage claim with your insurance company? Have you ever wondered
+              if the estimate you
             </Text>
 
             <Link
-              href="/blog"
+              href={`/blogs/3`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
@@ -81,16 +88,15 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            New construction CRM app JobSync available on apple app store
+              New construction CRM app JobSync available on apple app store
             </Text>
             <Text className="text-white ">
-            In the fast-paced world of construction management, efficiency and precision are paramount. That’s why we’re excited to introduce JobSync, our revolutionary proprietary software that seamlessly
+              In the fast-paced world of construction management, efficiency and
+              precision are paramount. That’s why we’re excited to introduce
+              JobSync, our revolutionary proprietary software that seamlessly
             </Text>
 
-            <Link
-              href="/blog"
-              className="text-white flex items-center mt-5"
-            >
+            <Link   href={`/blogs/4`} className="text-white flex items-center mt-5">
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
           </div>
@@ -103,14 +109,16 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            The Best CRM and Construction Project Management Software
+              The Best CRM and Construction Project Management Software
             </Text>
             <Text className="text-white ">
-            In the intricate world of construction, effective management of both customer relationships and project timelines is paramount for success. Construction companies operate within a dynamic
+              In the intricate world of construction, effective management of
+              both customer relationships and project timelines is paramount for
+              success. Construction companies operate within a dynamic
             </Text>
 
             <Link
-              href="/blog"
+              href={`/blogs/5`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
@@ -123,14 +131,16 @@ const Blog = () => {
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
-            Why aren’t general contractors getting back to me?
+              Why aren’t general contractors getting back to me?
             </Text>
             <Text className="text-white ">
-            When getting bids for construction, it can be quite a daunting process. When you reach out to a general contractor and ask for a bid,
+              When getting bids for construction, it can be quite a daunting
+              process. When you reach out to a general contractor and ask for a
+              bid,
             </Text>
 
             <Link
-              href="/blog"
+              href={`/blogs/6`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
@@ -150,7 +160,7 @@ const Blog = () => {
             </Text>
 
             <Link
-              href="/blog"
+              href={`/blogs/7`}
               className="text-white flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
