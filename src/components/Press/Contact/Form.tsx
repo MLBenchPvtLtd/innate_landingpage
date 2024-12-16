@@ -7,24 +7,24 @@ const Form = () => {
       <input
         type="text"
         placeholder="Name"
-        className="w-full py-2 mb-6 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black placeholder-black"
+        className="w-full py-2 mb-6 border-b-2 border-white bg-transparent focus:outline-none text-[16px] text-white placeholder-white"
       />
       <input
         type="email"
         placeholder="Email"
-        className="w-full py-2 mb-6 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black placeholder-black"
+        className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white placeholder-white"
       />
       <input
         type="number"
         placeholder="Phone"
-        className="w-full py-2 mb-6 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black placeholder-black"
+        className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white placeholder-white"
       />
       <input
         type="text"
         placeholder="Project Address"
-        className="w-full py-2 mb-6 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black placeholder-black"
+        className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white placeholder-white"
       />
-      <select className="w-full py-2 mb-6 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black bg-transparent placeholder-black">
+      <select className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white bg-transparent placeholder-white">
         <option value="" disabled selected hidden>
           Project Type
         </option>
@@ -35,11 +35,11 @@ const Form = () => {
       <input
         type="text"
         placeholder="Message"
-        className="w-full py-2 mb-9 border-b-2 border-[#0000003D] focus:outline-none text-[16px] text-black placeholder-black"
+        className="w-full py-2 mb-9 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white placeholder-white"
       />
       <button
         type="submit"
-        className="w-[130.63px] h-[50px] border border-black text-black text-[16px] font-medium flex items-center justify-center gap-1"
+        className="w-[130.63px] h-[50px] border border-white bg-transparent  text-white text-[16px] font-medium flex items-center justify-center gap-1"
       >
         Submit
         <Image src={rightarrow} alt="" width={18} height={18}/>

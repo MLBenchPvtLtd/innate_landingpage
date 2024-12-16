@@ -7,15 +7,15 @@ import rightimg from "@/public/images/home/collective.png";
 import Image from "next/image";
 const Collective = () => {
   return (
-    <div className="flex justify-center items-center pt-20 mob:my-12 mob:px-5 bg-white">
+    <div className="flex justify-center items-center pt-20 mob:my-12 mob:px-5 ">
       <div className="w-full max-w-[1203px] flex mob:flex-wrap items-center justify-between">
         <div className="max-w-[517px]">
-          <Text className="text-[24px] text-[#000000] font-medium leading-[31.2px] mb-4">
+          <Text className="text-[24px] text-white font-medium leading-[31.2px] mb-4">
             We are a collective of architects, engineers and craftsmen
             collaborating to create beautiful spaces and structures that meet
             the unique needs of our clients.
           </Text>
-          <Text className="text-[#00000091]">
+          <Text className="text-white">
             Innate is an architecture, engineering and construction firm capable
             of handling the entire project from permit to build. Our approach
             focuses on quality design and construction that will stand the test
@@ -23,7 +23,7 @@ const Collective = () => {
             subcontractors who share our values. Detailed, beautiful work is
             often expensive, and so we are typically not the cheapest bid.
           </Text>
-          <Button className="max-w-[137px] text-black border-[black] h-[50px] text-[16px] font-normal mt-7">
+          <Button className="max-w-[137px] text-white border-white h-[50px] text-[16px] font-normal mt-7">
             Learn More
           </Button>
         </div>

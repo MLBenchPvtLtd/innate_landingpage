@@ -9,8 +9,8 @@ const Philosophy = () => {
     <div className="flex  justify-center items-center py-20 mob:py-12 mob:px-5">
       <div className="w-full max-w-[1203px] flex mob:flex-wrap items-center justify-between">
         <div className="max-w-[586px]">
-          <Text className="text-black/90 text-[20px]">Philosophy</Text>
-          <Text className="text-[32px] text-black font-semibold leading-[41.2px] mt-3 mb-4">
+          <Text className="text-white text-[20px]">Philosophy</Text>
+          <Text className="text-[32px] text-white  font-semibold leading-[41.2px] mt-3 mb-4">
           When design is both functional and beautiful, it has the most impact on peoples lives.
           </Text>
         

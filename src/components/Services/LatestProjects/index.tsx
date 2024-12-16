@@ -8,10 +8,10 @@ const LatestProjects = () => {
   return (
     <div className="w-full max-w-[1203px] min-h-[700px] py-16 flex flex-wrap lg:justify-center lg:gap-[50px] items-center justify-between mx-auto lg:px-5">
       <div className="w-full max-w-[504px]">
-        <Text className="text-[40px] font-medium text-black leading-[52px]">
+        <Text className="text-[40px] font-medium text-white leading-[52px]">
           Check Out Some of Our Latest Bathroom & Kitchen Projects
         </Text>
-        <Text className="text-[#00000091] mt-4">
+        <Text className="text-white mt-4">
           This gallery showcases some of the projects we have done for clients
           in both Colorado and Washington.
         </Text>

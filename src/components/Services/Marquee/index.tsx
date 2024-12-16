@@ -27,7 +27,7 @@ const Marquee = (props: Props) => {
 
   return (
     <div className="py-14">
-      <h2 className="text-[24px] text-[#000000] font-medium text-center mb-8">
+      <h2 className="text-[24px] text-white font-medium text-center mb-8">
         Partnered with top brands in the industry
       </h2>
       <ReactMarquee {...rest} className="flex items-center">

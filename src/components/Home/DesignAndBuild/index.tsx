@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 import avoid from "@/public/images/home/avoidsurprise.png";
 import savetime from "@/public/images/home/savetime.png";
 import stress from "@/public/images/home/avoidstress.png";
-import track from "@/public/images/home/track.png";
+import track from "@/public/images/home/cabinetry.png";
 import rightarrow from "@/public/images/press/RightArrowblue.png";
 
 const DesignAndBuild = () => {

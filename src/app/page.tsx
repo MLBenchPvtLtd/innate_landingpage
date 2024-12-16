@@ -19,14 +19,14 @@ export default function Home() {
       <Collective />
       <Services />
       <DesignAndBuild />
-      <div className="bg-white">
+      <div className="gradient">
         <Philosophy />
         <ReviewsSlider />
         <Testimonials />
         <Confidence/>
-      </div>
       <ContactHome />
       <OurPartners />
+      </div>
     </>
   );
 }
