@@ -1,4 +1,3 @@
-// @ts-nocheck
 
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -33,8 +32,8 @@ const CustomSlider = styled(Slider)({
 interface SliderFilterProps {
   rangeStart: number;
   rangeEnd: number;
-  setRangeStart: number;
-  setRangeEnd: number;
+  setRangeStart: React.Dispatch<React.SetStateAction<number>>;
+  setRangeEnd: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const SliderFilter: React.FC<SliderFilterProps> = ({
@@ -52,7 +51,7 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
   return (
     <>
 <div className="flex justify-center bg-[#141414] py-10">
-<div className="">
+<div className="w-full">
 
 <div className="flex flex-wrap mb-14 items-center justify-center gap-6">
     <div className="px-4 py-2 border border-[#FFFFFF3D]">
@@ -66,6 +65,7 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
     </div>
 </div>
 
+    <div className="w-full ">
     <Box   sx={{
         width: "100%", // Full width of the parent container
         maxWidth: "653px", // Max width of 653px
@@ -80,7 +80,8 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
           max={70}
         />
       </Box>
-      <div className="flex justify-between max-w-[653px] w-full mt-[-8px]">
+    </div>
+      <div className="mx-auto flex justify-between max-w-[653px] w-full mt-[-8px]">
         <Text
           as="p"
           className="text-[16px] text-white  font-arial font-normal  my-2 "

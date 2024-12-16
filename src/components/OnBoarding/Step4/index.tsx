@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
@@ -33,12 +33,12 @@ const Step4: React.FC<Step4Props> = ({ onNext, onPrevious }) => {
 
         <div className="flex mob:flex-wrap justify-end mt-5">
           <div className="flex gap-5 mt-6">
-            <button
+          <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
+              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
               Previous
-              <Image src={arrow} alt="" width={24} height={24} />
             </button>
             <button
               onClick={onNext}

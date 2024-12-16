@@ -1,29 +1,21 @@
-import React, { useState } from "react";
+import React, {  } from "react";
 import SliderFilter from "./SLiderFilter";
 
-
 const SlideBar = () => {
-    const [rangeStart, setRangeStart] = React.useState<number>(20);
-    const [rangeEnd, setRangeEnd] = React.useState<number>(37);
- 
-  
- 
-  
-  
+  const [rangeStart, setRangeStart] = React.useState<number>(20);
+  const [rangeEnd, setRangeEnd] = React.useState<number>(37);
+
   return (
     <div>
-         {/* accordin 1 price */}
-       
-             
-                    {/* filter slider */}
-                    <SliderFilter
-                      setRangeStart={setRangeStart}
-                      setRangeEnd={setRangeEnd}
-                      rangeStart={rangeStart}
-                      rangeEnd={rangeEnd}
-                    />
+      {/* filter slider */}
+      <SliderFilter
+        setRangeStart={setRangeStart}
+        setRangeEnd={setRangeEnd}
+        rangeStart={rangeStart}
+        rangeEnd={rangeEnd}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default SlideBar
+export default SlideBar;

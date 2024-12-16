@@ -83,7 +83,7 @@ const OurProcess = () => {
             {data.map((item) => (
               <div key={item.id} className="relative w-[504px] h-[444px] ">
                 <Image
-                  className="absolute z-0  w-full h-full"
+                  className="absolute z-0  w-full h-full "
                   src={item.bgImage}
                   alt=""
                   width={504}
@@ -92,7 +92,7 @@ const OurProcess = () => {
                 <div className="relative z-10 pl-8  pr-14 max-w-[516px]">
                   <div className="flex w-full justify-between items-center">
                     <Image
-                      className="w-[79px] h-[79px]"
+                      className="w-[79px] h-[79px] transition-transform duration-300 hover:scale-[1.1] cursor-pointer "
                       src={item.icon}
                       alt=""
                       width={79.52}
@@ -184,7 +184,7 @@ const OurProcess = () => {
               <div className="relative z-10 pl-16 pr-5 max-w-[516px]">
                 <div className="flex w-full justify-between items-center">
                   <Image
-                    className="w-[79px] h-[79px]"
+                    className="w-[79px] h-[79px] transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
                     src={design}
                     alt=""
                     width={79.52}
@@ -222,7 +222,7 @@ const OurProcess = () => {
                 <div className="relative z-10 pl-16 pr-5 max-w-[516px]">
                   <div className="flex w-full justify-between items-center">
                     <Image
-                      className="w-[79px] h-[79px]"
+                      className="w-[79px] h-[79px] transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
                       src={item.icon}
                       alt=""
                       width={79.52}

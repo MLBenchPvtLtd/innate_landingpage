@@ -1,4 +1,5 @@
 import ReviewsSlider from "@/components/Home/Reviews/Slider";
+import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonials";
 import Collective from "@/components/Services/Collective";
 import Consultation from "@/components/Services/Consultation";
@@ -12,14 +13,14 @@ const ServicesPage = () => {
   return (
     <div className="gradient">
       <HeroService />
+      <Services />
       <Collective />
-        <LatestProjects />
-        <Testimonials />
-        <OurProcess />
-        
-        <Marquee  />
-        <ReviewsSlider />
-        <Consultation />
+      <LatestProjects />
+      <Testimonials />
+      <OurProcess />
+      <Marquee />
+      <ReviewsSlider />
+      <Consultation />
     </div>
   );
 };
