@@ -11,6 +11,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TabProvider } from "@/context/TabContsxt";
+import MyProvider from "@/components/MyProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -47,11 +48,14 @@ export default function RootLayout({
       <body
         className={` ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
       >
-        <TabProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </TabProvider>
+        <MyProvider>
+          <TabProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </TabProvider>
+        </MyProvider>
+        
       </body>
     </html>
   );

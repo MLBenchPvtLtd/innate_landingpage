@@ -19,7 +19,7 @@ const HeroService = () => {
           Innate <br />
           Kitchens & <br /> Bathrooms
         </Text>
-        <button className="mt-[20px] font-inter font-bold border border-[#FFFFFF]  bg-transparent w-full max-w-[137px] h-[50px] text-[16px] leading-[22.4px]">
+        <button className="mt-[20px] font-inter font-bold border border-[#FFFFFF]  bg-transparent w-full max-w-[137px] h-[50px] text-[16px] leading-[22.4px]  hover:bg-white hover:text-black hover:border-black transition duration-300">
           Learn More
         </button>
       </div>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
-
+import arrow from "@/public/Arrow (1).png"
 import Drawer from "../ui/Drawer";
 
 import logo from "@/public/logo-innate.png";
@@ -121,13 +121,14 @@ const Navbar = () => {
                       <Link
                         href="/services"
                         onClick={() => handleTabChange("/services")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-normal leading-[25.5px]  ${
                           activeTab === "/services"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                         }`}
                       >
-                        Services
+                        <div className="flex items-center gap-1"> Services <Image src={arrow} alt="" width={24} height={24} /></div>
+                       
                       </Link>
                       {/* Dropdown menu */}
                       <ul className="absolute left-0 min-w-[180px] hidden group-hover:block bg-[#333333] text-white shadow-lg rounded-lg">

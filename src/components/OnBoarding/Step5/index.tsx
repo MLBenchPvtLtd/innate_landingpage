@@ -70,7 +70,7 @@ const Step5: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             {styles.map(({ id, imageSrc, title, description }) => (
         <div
           key={id}
-          className="flex items-center justify-center gap-[15px] w-[364px] h-[154px] border border-[#FFFFFF3D] rounded-[10px] p-[16px]"
+          className="flex items-center justify-start gap-[15px] w-[364px] h-[154px] border border-[#FFFFFF3D] rounded-[10px] p-[16px]"
         >
           <Image src={imageSrc} alt="" width={128} height={128} />
           <div>
