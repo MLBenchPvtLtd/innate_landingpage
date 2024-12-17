@@ -40,9 +40,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" absolute  min-h-[134px] z-50  w-full px-5">
+      <nav className=" absolute  min-h-[134px] z-50  w-full px-20 mob:px-5 ">
         <div className="flex justify-center items-center w-full min-h-[134px] ">
-          <div className=" max-w-[1203.5px]  min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
+          <div className="  min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex    justify-between w-full    pb-4">
               <Link
                 href="/"
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <button
                   // onClick={toggleMenu}
                   type="button"
-                  className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 bg-gray-700 dark:ring-gray-600"
+                  className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 bg-gray-700 dark:ring-gray-600"
                   aria-controls="navbar-default"
                   aria-expanded={isOpen ? "true" : "false"}
                 >
@@ -90,12 +90,12 @@ const Navbar = () => {
                   id="navbar-default"
                 >
                   {/* Your menu options */}
-                  <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[24px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
+                  <ul className="font-light mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[24px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
                     <li>
                       <Link
                         href="/about"
                         onClick={() => handleTabChange("/about")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
                           activeTab === "/about"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -108,7 +108,7 @@ const Navbar = () => {
                       <Link
                         href="/work"
                         onClick={() => handleTabChange("/work")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
                           activeTab === "/work"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -121,7 +121,7 @@ const Navbar = () => {
                       <Link
                         href="/services"
                         onClick={() => handleTabChange("/services")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px]  ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px]  ${
                           activeTab === "/services"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -135,7 +135,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm  font-light"
                           >
                             Architecture
                           </Link>
@@ -143,7 +143,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                             Kitchens & Bathrooms
                           </Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                             Construction
                           </Link>
@@ -159,7 +159,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                             Roofing
                           </Link>
@@ -167,7 +167,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                             Decks & Patio Covers
                           </Link>
@@ -175,7 +175,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                            Siding
                           </Link>
@@ -183,7 +183,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                            Windows & Doors
                           </Link>
@@ -191,7 +191,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href=""
-                            className="block px-4 py-2 hover:bg-[#444444] text-sm"
+                            className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                           >
                          Interior Design
                           </Link>
@@ -203,7 +203,7 @@ const Navbar = () => {
                       <Link
                         href="/press"
                         onClick={() => handleTabChange("/press")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
                           activeTab === "/press"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -216,7 +216,7 @@ const Navbar = () => {
                       <Link
                         href="/contact"
                         onClick={() => handleTabChange("/contact")}
-                        className={`block text-[16px] font-inter font-normal leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
                           activeTab === "/contact"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -238,7 +238,7 @@ const Navbar = () => {
                   <button
                     // onClick={toggleMenu}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm   bg-transparent text-white rounded-lg  "
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light   bg-transparent text-white rounded-lg  "
                     aria-controls="navbar-default"
                     aria-expanded={isOpen ? "true" : "false"}
                   >
@@ -263,7 +263,7 @@ const Navbar = () => {
                 <div className="relative z-40">
                   <Drawer isOpen={isOpen} onClose={onClose}>
                     <div className="flex items-center h-full w-full ">
-                      <ul className="font-normal  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
+                      <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
                           onClick={() => handleTabChange("/about")}

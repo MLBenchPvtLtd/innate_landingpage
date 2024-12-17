@@ -13,9 +13,9 @@ const ServicesPage = () => {
   return (
     <div className="gradient">
       <HeroService />
-      <Services />
       <Collective />
       <LatestProjects />
+      <Services />
       <Testimonials />
       <OurProcess />
       <Marquee />

@@ -15,7 +15,7 @@ const ButtonGetStarted: React.FC<ButtonProps> = ({ text = "Get Started", childre
   return (
     <>
      
-      <button className={cn("w-[166.63px] h-[50px] gap-2 border border-white text-white text-[16px] font-medium flex items-center justify-center ",  className)}>
+      <button className={cn("w-[166.63px] h-[50px] gap-2 hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-medium flex items-center justify-center ",  className)}>
         {children || text}  {/* Use children if available, otherwise use text */}
         <Image src={rightarrow} alt="" width={18} height={18} />
 

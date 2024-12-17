@@ -20,11 +20,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .gradient{
-  background: linear-gradient(to right, #0e1637 0%, #080a1c 25%,  #000000 100%);
+  background: linear-gradient(to left, #0e1637 0%, #080a1c 25%,  #000000 100%);
 
 }
 .gradient2{
-  background: linear-gradient(to right, #171d37 5%, #0f1221 25%, #0f1015 100%);
+  background: linear-gradient(to left, #171d37 5%, #0f1221 25%, #0f1015 100%);
 
 }
 .gradientabout{

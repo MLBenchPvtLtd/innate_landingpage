@@ -8,7 +8,7 @@ import arrowwhite from "@/public/images/work/Arrowwhite.png";
 import arrowblue from "@/public/images/work/Arrowblue.png";
 const Third = () => {
   return (
-    <div className="relative w-full z-10  mob:h-full h-screen min-h-[700px] flex justify-center items-center mob:px-5">
+    <div className="relative w-full z-10  mob:h-full h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">
       <Image
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src={slide}
@@ -17,7 +17,7 @@ const Third = () => {
         height={757}
       />
 
-      <div className="xl:w-full w-[1203px] max-w-[1203px] relative z-10 xl:px-5 h-screen min-h-[700px]">
+      <div className="w-full  relative z-10  h-screen min-h-[700px]">
         <div className="absolute bottom-14 left-0">
           <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-24">
             Residential

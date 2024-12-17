@@ -15,11 +15,11 @@ import Testimonials from "@/components/Home/Testimonials";
 export default function Home() {
   return (
     <>
+      <div className="gradient">
       <HomeSlider />
       <Collective />
       <Services />
       <DesignAndBuild />
-      <div className="gradient">
         <Philosophy />
         <ReviewsSlider />
         <Testimonials />

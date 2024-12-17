@@ -11,7 +11,7 @@ interface MyProviderProps {
 const MyProvider: React.FC<MyProviderProps> = ({ children }) => {
   // You can add any state or functionality you need here
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ once: false });
   }, []);
 
 

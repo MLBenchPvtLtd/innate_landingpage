@@ -12,7 +12,7 @@ import job from "@/public/images/services/job.png";
 import demolition from "@/public/images/services/demolition.png";
 import instalation from "@/public/images/services/installation.png";
 import cleanup from "@/public/images/services/cleanup.png";
-import point from "@/public/images/services/point.png"
+import point from "@/public/images/services/point.png";
 
 const data = [
   {
@@ -81,7 +81,13 @@ const OurProcess = () => {
           {/* left */}
           <div className="max-w-[504px] w-full flex flex-wrap gap-[150px]">
             {data.map((item) => (
-              <div key={item.id} className="relative w-[504px] h-[444px] ">
+              <div
+                key={item.id}
+                className="relative w-[504px] h-[444px] "
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
                 <Image
                   className="absolute z-0  w-full h-full "
                   src={item.bgImage}
@@ -173,7 +179,12 @@ const OurProcess = () => {
           </div>
           {/* right */}
           <div className=" mt-[100px]">
-            <div className="relative w-[504px] min-h-[494px] mt-[200px]">
+            <div
+              className="relative w-[504px] min-h-[494px] mt-[200px]"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <Image
                 className="absolute z-0 w-full h-full"
                 src={bgright}
@@ -211,6 +222,9 @@ const OurProcess = () => {
               <div
                 key={item.id}
                 className="relative w-[504px] h-[434px] mt-[170px]"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
               >
                 <Image
                   className="absolute z-0 w-full h-full"
