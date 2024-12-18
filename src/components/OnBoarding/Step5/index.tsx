@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
@@ -11,58 +11,38 @@ import s4 from "@/public/images/onboarding/s4.png";
 import s5 from "@/public/images/onboarding/s5.png";
 import s6 from "@/public/images/onboarding/s6.png";
 
-interface Step1Props {
+interface Step5Props {
   onNext: () => void;
   onPrevious: () => void;
+  onChange: (data: { selectedStyle: { id: number | null, title: string, description: string } }) => void;
 }
 
-const Step5: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
-
+const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   const styles = [
-    {
-      id: 1,
-      imageSrc: s1,
-      title: "Modern",
-      description: "Streamlined, functional spaces with sleek materials",
-    },
-    {
-      id: 2,
-      imageSrc: s2,
-      title: "Mid-Century",
-      description: "Streamlined, functional spaces with sleek materials",
-    },
-    {
-      id: 3,
-      imageSrc: s3,
-      title: "Spanish",
-      description: "Streamlined, functional spaces with sleek materials",
-    },
-    {
-      id: 4,
-      imageSrc: s4,
-      title: "Coastal",
-      description: "Cozy spaces and beachy vibes",
-    },
-    {
-      id: 5,
-      imageSrc: s5,
-      title: "Farmhouse",
-      description: "Rustic Materials",
-    },
-    {
-      id: 6,
-      imageSrc: s6,
-      title: "Other",
-      description: "Share your vision",
-    },
+    { id: 1, imageSrc: s1, title: "Modern", description: "Streamlined, functional spaces with sleek materials" },
+    { id: 2, imageSrc: s2, title: "Mid-Century", description: "Streamlined, functional spaces with sleek materials" },
+    { id: 3, imageSrc: s3, title: "Spanish", description: "Streamlined, functional spaces with sleek materials" },
+    { id: 4, imageSrc: s4, title: "Coastal", description: "Cozy spaces and beachy vibes" },
+    { id: 5, imageSrc: s5, title: "Farmhouse", description: "Rustic Materials" },
+    { id: 6, imageSrc: s6, title: "Other", description: "Share your vision" },
   ];
 
+  useEffect(() => {
+    if (selectedId !== null) {
+      // Get the selected style data
+      const selectedStyle = styles.find(style => style.id === selectedId);
+      if (selectedStyle) {
+        onChange({ selectedStyle }); // Pass the entire style object to the parent component
+      }
+    }
+  }, [selectedId, onChange, styles]);
+
   return (
-    <div className=" gradient flex items-center justify-center px-5">
+    <div className="gradient flex items-center justify-center px-5">
       <div className="max-w-[1140px] w-full py-20">
-        <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-8 ">
+        <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
           What style best fits your vision?
         </Text>
         <div className="flex flex-wrap gap-5">
@@ -89,7 +69,7 @@ const Step5: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
           <div className="flex gap-5 mt-6">
             <button
               onClick={onPrevious}
-              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               <Image
                 className="rotate-180"
@@ -102,7 +82,7 @@ const Step5: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             </button>
             <button
               onClick={onNext}
-              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />
