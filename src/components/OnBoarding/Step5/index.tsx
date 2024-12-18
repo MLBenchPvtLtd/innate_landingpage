@@ -14,7 +14,7 @@ import s6 from "@/public/images/onboarding/s6.png";
 interface Step5Props {
   onNext: () => void;
   onPrevious: () => void;
-  onChange: (data: { selectedStyle: { id: number | null, title: string, description: string } }) => void;
+  onChange: (data: { selectedStyle: { id: number | null; title: string; description: string } }) => void;
 }
 
 const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
@@ -31,13 +31,20 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
 
   useEffect(() => {
     if (selectedId !== null) {
-      // Get the selected style data
-      const selectedStyle = styles.find(style => style.id === selectedId);
+      const selectedStyle = styles.find((style) => style.id === selectedId);
       if (selectedStyle) {
-        onChange({ selectedStyle }); // Pass the entire style object to the parent component
+        onChange({ selectedStyle }); // Pass the selected style to the parent
       }
     }
   }, [selectedId, onChange, styles]);
+
+  const handleNextClick = () => {
+    if (selectedId === null) {
+      alert("Please select a style before proceeding.");
+      return;
+    }
+    onNext();
+  };
 
   return (
     <div className="gradient flex items-center justify-center px-5">
@@ -51,9 +58,7 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
               key={id}
               onClick={() => setSelectedId(id)}
               className={`flex items-center justify-start gap-[15px] w-[364px] h-[154px] rounded-[10px] p-[16px] ${
-                selectedId === id
-                  ? "border border-white"
-                  : "border border-[#FFFFFF3D]"
+                selectedId === id ? "border border-white" : "border border-[#FFFFFF3D]"
               }`}
             >
               <Image src={imageSrc} alt="" width={128} height={128} />
@@ -81,7 +86,7 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={onNext}
+              onClick={handleNextClick} // Validation on Next button
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next

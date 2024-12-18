@@ -38,10 +38,18 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
     onChange({ selectedOptions, comment: updatedComment }); // Pass updated state
   };
 
+  const handleNextClick = () => {
+    if (selectedOptions.length === 0) {
+      alert("Please select at least one option to proceed.");
+      return;
+    }
+    onNext();
+  };
+
   return (
-    <div className=" gradient flex items-center justify-center py-20">
+    <div className="gradient flex items-center justify-center py-20">
       <div className="w-full max-w-[1180px]">
-        <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-10">
+        <Text as="h1" className="text-[40px] font-firaSans font-normal mb-10">
           How do you want to get started?
         </Text>
 
@@ -68,7 +76,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
             value={comment}
             onChange={handleCommentChange}
             placeholder="For Other add here"
-            className="text-white/60 tab:w-full w-[490px] mt-5 bg-transparent border-b border-white/30  p-2 focus:outline-none "
+            className="text-white/60 tab:w-full w-[490px] mt-5 bg-transparent border-b border-white/30 p-2 focus:outline-none"
           />
         </div>
 
@@ -89,7 +97,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={onNext}
+              onClick={handleNextClick}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next

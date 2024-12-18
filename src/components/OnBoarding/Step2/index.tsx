@@ -29,6 +29,14 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
     onChange({ selectedOptions: updatedOptions }); // Pass updated data
   };
 
+  const handleNextClick = () => {
+    if (selectedOptions.length === 0) {
+      alert("Please select at least one option to proceed.");
+      return;
+    }
+    onNext();
+  };
+
   return (
     <div className="py-20 gradient flex items-center justify-center">
       <div className="w-full max-w-[1180px] ">
@@ -67,7 +75,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={onNext}
+              onClick={handleNextClick} // Updated handler for validation
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next

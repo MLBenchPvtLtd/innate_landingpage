@@ -60,10 +60,51 @@ const OnBoarding: React.FC = () => {
   
   
 
-  const handleStep8Next = () => {
+  const handleStep8Next = async (): Promise<void> => {
     console.log("All data collected so far:", formData);
-    handleNext(); // Proceed to the next step
+  
+    // Define your API endpoint
+    const apiEndpoint = "/api/contactFlow"; // Replace with your actual API URL
+  
+    try {
+      // Check if formData is valid before sending the API request
+      if (!formData || Object.keys(formData).length === 0) {
+        alert("Please complete the form before proceeding.");
+        return;
+      }
+  
+      // Call the API with the collected data
+      const response: Response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error(`API call failed with status: ${response.status}`);
+      }
+  
+      // Parse the API response
+      const data: { success: boolean; message: string } = await response.json();
+      console.log("API response:", data);
+  
+      // Check the response success
+      if (data.success) {
+        handleNext(); // Proceed to the next step
+      } else {
+        alert(`Error: ${data.message}`);
+      }
+    } catch (error) {
+      console.error("Error calling contactFlow API:", error instanceof Error ? error.message : error);
+      alert("Something went wrong. Please try again.");
+    }
   };
+  
+  
+  
 
   // Calculate progress as a percentage
   const progress = ((currentStep / totalSteps) * 100).toFixed(2);

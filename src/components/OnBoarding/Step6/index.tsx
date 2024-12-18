@@ -20,11 +20,19 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
     onChange({ address: e.target.value }); // Send the address to the parent component
   };
 
+  const handleNextClick = () => {
+    if (!address.trim()) {
+      alert("Please enter your address before proceeding.");
+      return;
+    }
+    onNext();
+  };
+
   return (
     <div className="gradient flex items-center justify-center px-5">
       <div className="max-w-[1140px] w-full py-20">
-        <div className="">
-          <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3 ">
+        <div>
+          <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">
             Enter your address to get a starting cost
           </Text>
           <Text>
@@ -56,7 +64,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={onNext}
+              onClick={handleNextClick} // Validate input on Next button click
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next
