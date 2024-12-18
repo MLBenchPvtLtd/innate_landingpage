@@ -10,12 +10,14 @@ import Philosophy from "@/components/Home/Philosophy";
 import ReviewsSlider from "@/components/Home/Reviews/Slider";
 import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonials";
+import Navbar from "@/components/Navbar";
 
 
 export default function Home() {
   return (
     <>
       <div className="gradient">
+      <Navbar />
       <HomeSlider />
       <Collective />
       <Services />

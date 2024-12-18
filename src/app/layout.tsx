@@ -8,7 +8,7 @@ import {
   Bodoni_Moda,
 } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 import { TabProvider } from "@/context/TabContsxt";
 import MyProvider from "@/components/MyProvider";
@@ -50,7 +50,7 @@ export default function RootLayout({
       >
         <MyProvider>
           <TabProvider>
-            <Navbar />
+           
             {children}
             <Footer />
           </TabProvider>
