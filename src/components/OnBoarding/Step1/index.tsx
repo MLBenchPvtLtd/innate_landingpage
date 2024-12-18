@@ -23,11 +23,10 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
   const handleCheckboxChange = (option: string) => {
-    setSelectedOptions(
-      (prevSelected) =>
-        prevSelected.includes(option)
-          ? prevSelected.filter((item) => item !== option) 
-          : [...prevSelected, option] 
+    setSelectedOptions((prevSelected) =>
+      prevSelected.includes(option)
+        ? prevSelected.filter((item) => item !== option)
+        : [...prevSelected, option]
     );
   };
 
@@ -54,15 +53,28 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
         </div>
         <div className="flex mob:flex-wrap justify-between">
           <div className="">
-            <Text className="text-[#FFFFFF]/60 mt-5">For Other add here</Text>
-            <div className="h-[1px] w-full max-w-[490px] mt-2 bg-[#FFFFFF]/30"></div>
+            <input
+              type="text"
+              placeholder="For Other add here"
+              className="text-white/60 tab:w-full w-[490px] mt-5 bg-transparent border-b border-white/30  p-2 focus:outline-none "
+            />
+
+            {/* <div className="h-[1px] w-full max-w-[490px] mt-2 bg-[#FFFFFF]/30"></div> */}
           </div>
+
+          {/* buttons */}
           <div className="flex gap-5 mt-6">
-          <button
+            <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
-              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
+              <Image
+                className="rotate-180"
+                src={arrow}
+                alt=""
+                width={24}
+                height={24}
+              />
               Previous
             </button>
             <button

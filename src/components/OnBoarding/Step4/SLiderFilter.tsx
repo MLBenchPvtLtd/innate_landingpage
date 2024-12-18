@@ -55,12 +55,12 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
 
 <div className="flex flex-wrap mb-14 items-center justify-center gap-6">
     <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]">$50k</Text>
+        <Text className="text-center text-[20px]"> {"<"}${rangeStart}K</Text>
         <Text className="text-center">Target budget</Text>
     </div>
     <div className="h-[1px] w-[24px] bg-white"></div>
     <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]">$50k</Text>
+        <Text className="text-center text-[20px]">${rangeEnd}K+</Text>
         <Text className="text-center">Target budget</Text>
     </div>
 </div>

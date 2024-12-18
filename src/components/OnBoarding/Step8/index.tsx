@@ -19,13 +19,14 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious }) => {
             as="h1"
             className="text-[40px]  font-firaSans font-normal mb-3 "
           >
-           Almost Done!
+            Almost Done!
           </Text>
           <Text>
-          We’ll use this info to get in touch with you to schedule a consultation or send a rough bid.
+            We’ll use this info to get in touch with you to schedule a
+            consultation or send a rough bid.
           </Text>
           <input
-            placeholder="Address"
+            placeholder="Name"
             type="text"
             name=""
             id=""
@@ -38,16 +39,21 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious }) => {
             id=""
             className="pl-4 mt-3 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
-       
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-5">
           <div className="flex gap-5 mt-6">
-          <button
+            <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
-              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
+              <Image
+                className="rotate-180"
+                src={arrow}
+                alt=""
+                width={24}
+                height={24}
+              />
               Previous
             </button>
             <button
