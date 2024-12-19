@@ -11,7 +11,10 @@ import Step7 from "./Step7";
 import Step8 from "./Step8";
 import LastStep from "./LastStep";
 
-
+import logo from "@/public/logo-innate.png";
+import facebook from "@/public/fbb.png";
+import linkedin from "@/public/LinkedIn.png";
+import instagaram from "@/public/Instagram.png";
 
 const OnBoarding: React.FC = () => {
   // Initialize state with a function that retrieves the saved step from localStorage
@@ -73,14 +76,26 @@ const OnBoarding: React.FC = () => {
         return;
       }
   
+      // Add images to the formData
+      const formDataWithImages = {
+        ...formData,
+        images: {
+          logo: logo.src,
+          facebook: facebook.src,
+          linkedin: linkedin.src,
+          instagram: instagaram.src,
+        },
+      };
+      console.log("API response:", formDataWithImages);
       // Call the API with the collected data
       const response: Response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithImages),
       });
+      console.log("API response:", formDataWithImages);
   
       // Check if the response is successful
       if (!response.ok) {
