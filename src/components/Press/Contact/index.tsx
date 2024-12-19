@@ -1,6 +1,6 @@
 import Text from "@/components/ui/Text";
 import React from "react";
-import Form from "./Form";
+import Form from "@/components/Contact/Form";
 
 const Contact = () => {
   return (

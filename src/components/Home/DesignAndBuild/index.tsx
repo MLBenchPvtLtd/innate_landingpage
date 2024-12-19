@@ -4,9 +4,13 @@ import React from "react";
 
 import Button from "@/components/ui/Button";
 
-import avoid from "@/public/images/home/avoidsurprise.png";
-import savetime from "@/public/images/home/savetime.png";
-import stress from "@/public/images/home/avoidstress.png";
+import stressbg from "@/public/images/home/dsignbuild/avoidbg.png";
+import stresstop from "@/public/images/home/dsignbuild/avoidtop.png";
+
+import avoidleft from "@/public/images/home/dsignbuild/avoidleft.png";
+import avoidright from "@/public/images/home/dsignbuild/avoidright.png";
+import avoidcenter from "@/public/images/home/dsignbuild/avoidcenter.png";
+import savetime from "@/public/images/home/savetimee.png";
 import track from "@/public/images/home/cabinetry.png";
 import rightarrow from "@/public/images/press/RightArrowblue.png";
 
@@ -15,14 +19,43 @@ const DesignAndBuild = () => {
     <div className="w-full h-full gradient py-16 px-5">
       <Text
         as="h1"
-        className="text-center mob:text-[30px] mob:leading-[33px] mob:px-5"
+        className="text-center font-normal mob:text-[30px] mt-6 mb-4 mob:leading-[33px] mob:px-5"
       >
-        Design and build the Innate way
+        Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
       <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-full min-h-[439px] mt-16 mb-8 max-w-[1140px] mx-auto rounded-[50px] mob:rounded-[19.05px]  gradient2">
-        <div className="w-full max-w-[437.84px]">
-          <Image src={avoid} alt="" width={437.84} height={376} />
+        <div className="w-full max-w-[437.84px] relative flex justify-center items-center">
+          <Image
+          data-aos="zoom-in"
+          data-aos-duration="1000"  
+          data-aos-delay="0" 
+            className="relative z-10"
+            src={avoidcenter}
+            alt=""
+            width={346.31}
+            height={303}
+          />
+          <Image
+           data-aos="fade-left"
+           data-aos-duration="1000"  
+           data-aos-delay="200" 
+            className="absolute left-0 z-0"
+            src={avoidleft}
+            alt=""
+            width={186.54}
+            height={244.25}
+          />
+          <Image
+           data-aos="fade-right"
+           data-aos-duration="1000"  
+           data-aos-delay="200" 
+            className="absolute right-0 z-0"
+            src={avoidright}
+            alt=""
+            width={186.54}
+            height={244.25}
+          />
         </div>
         <div className="">
           <Text as="h2" className="">
@@ -50,17 +83,29 @@ const DesignAndBuild = () => {
           </Text>
           <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent  backdrop-blur-md  ">
             Get Started
-            <Image src={rightarrow} alt="" width={18} height={18} />
+            <Image  src={rightarrow} alt="" width={18} height={18} />
           </Button>
         </div>
         <div className="w-full max-w-[431.81px]">
-          <Image src={savetime} alt="" width={431.81} height={369} />
+          <Image    data-aos="zoom-in"
+          data-aos-duration="1000"  
+          data-aos-delay="0"  src={savetime} alt="" width={431.81} height={369} />
         </div>
       </div>
       {/* avoid stress */}
       <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-full min-h-[439px] my-8 max-w-[1140px] mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2">
-        <div className="w-full max-w-[430px]">
-          <Image src={stress} alt="" width={430} height={369} />
+        <div className="w-full max-w-[430px] flex justify-end items-end relative">
+          <Image 
+          data-aos="fade-right"
+          data-aos-duration="1000"  
+          data-aos-delay="200" 
+          className="mb-[-50px]" src={stressbg} alt="" width={346} height={293} />
+          <Image
+          data-aos="fade-up"
+          data-aos-duration="1000"  
+          data-aos-delay="0" 
+          className="absolute top-[-70px] left-0" src={stresstop} alt="" width={263} height={98} />
+
         </div>
         <div className="">
           <Text as="h2" className="">
@@ -93,7 +138,11 @@ const DesignAndBuild = () => {
           </Button>
         </div>
         <div className="w-full max-w-[448px]">
-          <Image src={track} alt="" width={448} height={369} />
+          <Image
+          data-aos="fade-up"
+          data-aos-duration="1000"  
+          data-aos-delay="0" 
+          src={track} alt="" width={448} height={369} />
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -10,22 +9,21 @@ function valuetext(value: number) {
 }
 
 const CustomSlider = styled(Slider)({
-  color: "#434343", // Change the color of the slider
+  color: "#434343",
   "& .MuiSlider-thumb": {
-    width: 20, // Change the size of the handle
+    width: 20,
     height: 20,
     color: "#FFFFFF",
-    padding: 0,
     "&:hover, &.Mui-focusVisible, &.Mui-active": {
-      boxShadow: "none", // Remove the shadow on hover and focus
+      boxShadow: "none",
     },
   },
   "& .MuiSlider-track": {
-    height: 14, // Adjust the height of the track if needed
+    height: 14,
     color: "#0B44A0",
   },
   "& .MuiSlider-rail": {
-    height: 14, // Adjust the height of the rail if needed
+    height: 14,
   },
 });
 
@@ -34,6 +32,7 @@ interface SliderFilterProps {
   rangeEnd: number;
   setRangeStart: React.Dispatch<React.SetStateAction<number>>;
   setRangeEnd: React.Dispatch<React.SetStateAction<number>>;
+  onChange: (data: { rangeStart: number; rangeEnd: number }) => void; // Notify parent about changes
 }
 
 const SliderFilter: React.FC<SliderFilterProps> = ({
@@ -41,13 +40,14 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
   rangeEnd,
   setRangeStart,
   setRangeEnd,
+  onChange,
 }) => {
   const handleChange = (event: Event, newValue: number | number[]) => {
     const [start, end] = newValue as number[];
     setRangeStart(start);
     setRangeEnd(end);
+    onChange({ rangeStart: start, rangeEnd: end }); // Notify parent
   };
-
   return (
     <>
 <div className="flex justify-center bg-[#141414] py-10">
@@ -55,12 +55,12 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
 
 <div className="flex flex-wrap mb-14 items-center justify-center gap-6">
     <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]">$50k</Text>
+        <Text className="text-center text-[20px]"> {"<"}${rangeStart}K</Text>
         <Text className="text-center">Target budget</Text>
     </div>
     <div className="h-[1px] w-[24px] bg-white"></div>
     <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]">$50k</Text>
+        <Text className="text-center text-[20px]">${rangeEnd}K+</Text>
         <Text className="text-center">Target budget</Text>
     </div>
 </div>
@@ -71,14 +71,13 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
         maxWidth: "653px", // Max width of 653px
         margin: "0 auto", // Centers the box horizontally
       }}>
-        <CustomSlider
-          getAriaLabel={() => "Temperature range"}
-          value={[rangeStart, rangeEnd]}
-          onChange={handleChange}
-          // valueLabelDisplay="auto"
-          getAriaValueText={valuetext}
-          max={70}
-        />
+      <CustomSlider
+            getAriaLabel={() => "Budget range"}
+            value={[rangeStart, rangeEnd]}
+            onChange={handleChange}
+            getAriaValueText={valuetext}
+            max={70}
+          />
       </Box>
     </div>
       <div className="mx-auto flex justify-between max-w-[653px] w-full mt-[-8px]">

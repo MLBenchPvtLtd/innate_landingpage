@@ -10,7 +10,7 @@ import logo from "@/public/logo-innate.png";
 import Image from "next/image";
 import { useTabContext } from "@/context/TabContsxt";
 
-const Navbar = () => {
+const NavbarOther = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeTab, setActiveTab } = useTabContext();
   const onClose = () => setIsOpen(false);
@@ -42,7 +42,7 @@ const Navbar = () => {
     <>
       <nav className=" absolute  min-h-[134px] z-50  w-full px-20 mob:px-5 ">
         <div className="flex justify-center items-center w-full min-h-[134px] ">
-          <div className="  min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
+          <div className=" max-w-[1200px] min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex    justify-between w-full    pb-4">
               <Link
                 href="/"
@@ -350,4 +350,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarOther;
