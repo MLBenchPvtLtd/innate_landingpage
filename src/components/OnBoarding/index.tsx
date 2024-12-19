@@ -75,7 +75,6 @@ const OnBoarding: React.FC = () => {
         alert("Please complete the form before proceeding.");
         return;
       }
-  
       // Add images to the formData
       const formDataWithImages = {
         ...formData,
