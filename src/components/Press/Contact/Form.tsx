@@ -24,13 +24,13 @@ const Form = () => {
         placeholder="Project Address"
         className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white placeholder-white"
       />
-      <select className="w-full py-2 mb-6 border-b-2 border-white bg-transparent  focus:outline-none text-[16px] text-white bg-transparent placeholder-white">
+      <select className="w-full py-2 mb-6 border-b-2 border-white   focus:outline-none text-[16px] text-white bg-transparent  placeholder-white">
         <option value="" disabled selected hidden>
           Project Type
         </option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        <option className="text-black" value="option1">Option 1</option>
+        <option className="text-black" value="option2">Option 2</option>
+        <option className="text-black"value="option3">Option 3</option>
       </select>
       <input
         type="text"

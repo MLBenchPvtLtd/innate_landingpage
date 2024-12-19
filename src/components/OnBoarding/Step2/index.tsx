@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Text from "@/components/ui/Text";
-
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import Image from "next/image";
 
-interface Step1Props {
+interface Step2Props {
   onNext: () => void;
   onPrevious: () => void;
+  onChange: (data: { selectedOptions: string[] }) => void; // Data structure
 }
 
-const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
+const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   const options = [
     "Designer",
     "Engineer",
@@ -21,19 +21,27 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
   const handleCheckboxChange = (option: string) => {
-    setSelectedOptions(
-      (prevSelected) =>
-        prevSelected.includes(option)
-          ? prevSelected.filter((item) => item !== option) 
-          : [...prevSelected, option] 
-    );
+    const updatedOptions = selectedOptions.includes(option)
+      ? selectedOptions.filter((item) => item !== option)
+      : [...selectedOptions, option];
+
+    setSelectedOptions(updatedOptions);
+    onChange({ selectedOptions: updatedOptions }); // Pass updated data
+  };
+
+  const handleNextClick = () => {
+    if (selectedOptions.length === 0) {
+      alert("Please select at least one option to proceed.");
+      return;
+    }
+    onNext();
   };
 
   return (
     <div className="py-20 gradient flex items-center justify-center">
       <div className="w-full max-w-[1180px] ">
-        <Text as="h1" className="text-[40px]  font-firaSans font-normal mb-10">
-        Got it! What professional do you need help finding?
+        <Text as="h1" className="text-[40px] font-firaSans font-normal mb-10">
+          Got it! What professional do you need help finding?
         </Text>
 
         <div className="flex flex-col gap-3">
@@ -50,19 +58,25 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             </label>
           ))}
         </div>
+
         <div className="flex mob:flex-wrap justify-end mt-20">
-        
           <div className="flex gap-5 mt-6">
-          <button
+            <button
               onClick={onPrevious}
-              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
-              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
+              <Image
+                className="rotate-180"
+                src={arrow}
+                alt=""
+                width={24}
+                height={24}
+              />
               Previous
             </button>
             <button
-              onClick={onNext}
-              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+              onClick={handleNextClick} // Updated handler for validation
+              className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />
@@ -74,4 +88,4 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   );
 };
 
-export default Step1;
+export default Step2;

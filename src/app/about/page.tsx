@@ -3,7 +3,7 @@ import React from 'react'
 
 const AboutPage = () => {
   return (
-    <div className='w-full h-full gradientabout '>
+    <div className='w-full h-full gradient '>
       <HeroAbout/>
     </div>
   )

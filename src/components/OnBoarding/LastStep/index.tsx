@@ -7,11 +7,10 @@ import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import Link from "next/link";
 
 interface LastStepProps {
-  onNext: () => void;
   onPrevious: () => void;
 }
 
-const LastStep: React.FC<LastStepProps> = ({ onNext, onPrevious }) => {
+const LastStep: React.FC<LastStepProps> = ({  onPrevious }) => {
   return (
     <div className="gradient flex items-center justify-center px-5">
       <div className="max-w-[1140px] w-full py-20">
@@ -27,9 +26,8 @@ const LastStep: React.FC<LastStepProps> = ({ onNext, onPrevious }) => {
             href="/"
             className="mt-16 flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
           >
-            Home 
+            Home
             <Image src={arrow} alt="" width={24} height={24} />
-
           </Link>
         </div>
 
@@ -39,16 +37,22 @@ const LastStep: React.FC<LastStepProps> = ({ onNext, onPrevious }) => {
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
-              <Image className="rotate-180" src={arrow} alt="" width={24} height={24} />
+              <Image
+                className="rotate-180"
+                src={arrow}
+                alt=""
+                width={24}
+                height={24}
+              />
               Previous
             </button>
-            <button
-              onClick={onNext}
+            <Link
+              href="/"
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

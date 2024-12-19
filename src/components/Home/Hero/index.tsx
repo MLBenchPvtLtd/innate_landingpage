@@ -15,12 +15,12 @@ const Hero = () => {
       />
     
      
-      <div className="w-full max-w-[1203px] relative z-10 xl:px-5 mt-[140px]">
+      <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
         <Text as="h1" className="my-3">
         Design+ Build <br />
         It’s Innate
         </Text>
-        <button className="mt-[20px] border border-[#FFFFFF] font-bold font-inter backdrop-blur-[57px] bg-opacity-10 bg-[#30332e] w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px]">
+        <button className="mt-[20px] border border-[#FFFFFF] font-medium font-inter backdrop-blur-[57px] bg-opacity-10 bg-[#30332e] w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300">
         Book a Consultation
         </button>
         

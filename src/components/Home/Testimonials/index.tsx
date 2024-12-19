@@ -14,7 +14,9 @@ const Testimonials = () => {
         Testimonials
       </Text>
 
-      <div className="flex flex-wrap justify-center gap-[20px]">
+      <div
+        className="flex flex-wrap justify-center gap-[20px]"
+      >
         <div className="w-full max-w-[364px] border border-black rounded-[10px]">
           <iframe
             src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6
@@ -34,9 +36,7 @@ const Testimonials = () => {
                 <Text className="mt-1 text-white ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">
-              This service is amazing!
-            </Text>
+            <Text className="text-white  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
         <div className="w-full max-w-[364px] border border-[#0000001A] rounded-[10px]">
@@ -58,9 +58,7 @@ const Testimonials = () => {
                 <Text className="mt-1 text-white ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">
-              This service is amazing!
-            </Text>
+            <Text className="text-white  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
         <div className="w-full max-w-[364px] border border-[#0000001A] rounded-[10px]">
@@ -82,9 +80,7 @@ const Testimonials = () => {
                 <Text className="mt-1 text-white ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">
-              This service is amazing!
-            </Text>
+            <Text className="text-white  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
       </div>

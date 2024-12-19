@@ -8,9 +8,10 @@ import {
   Bodoni_Moda,
 } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 import { TabProvider } from "@/context/TabContsxt";
+import MyProvider from "@/components/MyProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -45,13 +46,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
+        className={`gradient ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
       >
-        <TabProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </TabProvider>
+        <MyProvider>
+          <TabProvider>
+           
+            {children}
+            <Footer />
+          </TabProvider>
+        </MyProvider>
+        
       </body>
     </html>
   );

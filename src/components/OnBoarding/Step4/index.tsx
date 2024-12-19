@@ -6,12 +6,13 @@ import Text from "@/components/ui/Text";
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import SlideBar from "./SlideBar";
 
-interface Step4Props {
+interface Step2Props {
   onNext: () => void;
   onPrevious: () => void;
+  onChange: (data: { selectedOptions: string[] }) => void; // Data structure
 }
 
-const Step4: React.FC<Step4Props> = ({ onNext, onPrevious }) => {
+const Step4: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
  
 
   return (
@@ -28,7 +29,7 @@ const Step4: React.FC<Step4Props> = ({ onNext, onPrevious }) => {
             What’s your budget range?
           </Text>
           {/* <Image src={range} alt="" width={1140} height={278} /> */}
-          <SlideBar/>
+          <SlideBar onChange={onChange}/>
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-5">

@@ -11,18 +11,25 @@ const Philosophy = () => {
         <div className="max-w-[586px]">
           <Text className="text-white text-[20px]">Philosophy</Text>
           <Text className="text-[32px] text-white  font-semibold leading-[41.2px] mt-3 mb-4">
-          When design is both functional and beautiful, it has the most impact on peoples lives.
+            When design is both functional and beautiful, it has the most impact
+            on peoples lives.
           </Text>
-        
-          
         </div>
         <div className="mob:mt-5">
-          <Image className="mr-8 mob:mr-0" src={rightimg} alt="rightimg" width={398} height={261} />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="mr-8 mob:mr-0"
+            src={rightimg}
+            alt="rightimg"
+            width={398}
+            height={261}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-
-export default Philosophy
+export default Philosophy;

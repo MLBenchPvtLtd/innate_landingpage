@@ -28,7 +28,7 @@ const Reviews = () => {
           height={64}
         />
 
-        <Text className="text-center text-[24px] font-medium leading-[31.2px] text-white  max-w-[879px] mx-auto">
+        <Text className="text-center text-[24px] font-light leading-[31.2px] text-white  max-w-[879px] mx-auto">
           I found Michael because he came highly recommended as both a designer
           and a builder. I wanted to update the style of my kitchen and bathroom
           but being unfamiliar with the construction process, I needed a

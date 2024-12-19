@@ -50,7 +50,7 @@ const Text = forwardRef<HTMLHeadingElement | HTMLParagraphElement, Props>(
       <p
         ref={ref}
         className={cn(
-          "   text-[#D9D9D9] text-[16px] font-normal leading-[24px] font-inter  ",
+          "   text-[#D9D9D9] text-[16px] font-light leading-[24px] font-inter  ",
           className
         )}
         onClick={onClick}
