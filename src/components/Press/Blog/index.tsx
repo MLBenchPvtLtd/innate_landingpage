@@ -19,7 +19,7 @@ const Blog = () => {
   return (
     <div className=" pt-16">
       <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] mx-auto">
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog1} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
@@ -41,7 +41,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog2} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Press</Text>
@@ -61,7 +61,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog3} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
@@ -82,7 +82,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog4} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
@@ -103,7 +103,7 @@ const Blog = () => {
       </div>
       {/* row2 */}
       <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
-        <div className="max-w-[558px] border border-white rounded-[10px]">
+        <div className="max-w-[558px] border border-black rounded-[10px]">
           <Image src={blogb} alt="" width={558} height={294} />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
@@ -125,7 +125,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog5} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Press</Text>
@@ -146,7 +146,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-[267px] border border-white rounded-[10px]">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
           <Image src={blog2} alt="" width={267} height={192} />
           <div className="p-4">
             <Text className="text-white">Press</Text>
