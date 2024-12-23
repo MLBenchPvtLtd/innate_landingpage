@@ -13,7 +13,7 @@ const HeroPress = () => {
         >
           Press
         </Text>
-        <div className="flex gap-[18px] items-center absolute left-0 bottom-10">
+        <div className="flex gap-[18px] items-center absolute left-10 bottom-10">
           <Image src={filter} alt="" width={37} height={37} />
           <Text className="text-[20px] ">
             Filter{" "}
