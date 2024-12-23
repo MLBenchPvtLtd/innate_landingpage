@@ -9,7 +9,7 @@ import profile3 from "@/public/images/home/profile (2).png";
 
 const Testimonials = () => {
   return (
-    <div className="max-w-[1140px] w-full mx-auto py-16 tab:px-5">
+    <div className=" max-w-[1140px] w-full mx-auto py-32 tab:px-5">
       
 
       <div
@@ -22,9 +22,9 @@ const Testimonials = () => {
             title="YouTube Video Player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-[224px] rounded-lg"
+            className="w-full h-[200px] rounded-xl"
           ></iframe>
-          <div className="p-4 bg-black">
+          <div className="p-4 ">
             <div className="flex gap-[11px] items-center  0">
               <Image src={profile1} alt="" width={48} height={48} />
               <div className="">
@@ -44,9 +44,9 @@ const Testimonials = () => {
             title="YouTube Video Player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-[224px] rounded-lg"
+            className="w-full h-[200px] rounded-xl"
           ></iframe>
-          <div className="p-4 bg-black">
+          <div className="p-4 ">
             <div className="flex gap-[11px] items-center  0">
               <Image src={profile2} alt="" width={48} height={48} />
               <div className="">
@@ -66,9 +66,9 @@ const Testimonials = () => {
             title="YouTube Video Player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-[224px] rounded-lg"
+            className="w-full h-[200px] rounded-xl"
           ></iframe>
-          <div className="p-4 bg-black">
+          <div className="p-4 ">
             <div className="flex gap-[11px] items-center  0">
               <Image src={profile3} alt="" width={48} height={48} />
               <div className="">

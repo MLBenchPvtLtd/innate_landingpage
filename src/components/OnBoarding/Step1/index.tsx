@@ -29,6 +29,10 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
       : [...selectedOptions, option];
 
     setSelectedOptions(updatedOptions);
+    if(updatedOptions.includes("Accessory Dwelling Unit (ADU)"))
+    {
+      localStorage.setItem("ADU","true");
+    }
     onChange({ selectedOptions: updatedOptions, comment }); // Pass updated state
   };
 

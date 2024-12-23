@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import frame1 from "@/public/images/home/Frame1.png";
-import frame2 from "@/public/images/home/Frame2 (2).png";
+import frame2 from "@/public/images/home/frame2 (3).jpg";
 import frame3 from "@/public/images/home/Frame3.png";
 import frame4 from "@/public/images/home/Frame4.png";
 import frame5 from "@/public/images/home/Frame5.png";
@@ -22,9 +22,9 @@ import roof8 from "@/public/images/home/roof8.png";
 
 const Services = () => {
   return (
-    <div className="">
+    <div className="py-32">
       <div className="flex flex-wrap justify-center w-full  mx-auto">
-        <div className="w-[33.3%] min-h-[484px] border-[0.5px] border-white tab:w-full group relative overflow-hidden">
+        <div className="w-[33.3%] min-h-[484px] border border-white tab:w-full group relative overflow-hidden">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -41,7 +41,7 @@ const Services = () => {
             {/* Content */}
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-full"
                 src={roof1}
                 alt=""
                 width={95}
@@ -59,7 +59,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-[33.3%] border-l-0 border-r-0  border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.3%] border-l-0 border-r-0 border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -90,7 +90,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="w-[33.3%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.4%] border border-white   min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -124,7 +124,7 @@ const Services = () => {
       </div>
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
-        <div className="w-[49.9%] border-[0.5px] border-y-0 border-r-0 border-white  tab:w-full relative group">
+        <div className="w-[50%] border border-y-0 border-r-0 border-white  tab:w-full relative group">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -155,7 +155,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-[49.9%] border-[0.5px] border-y-0 border-white  tab:w-full relative group min-h-[484px]  overflow-hidden">
+        <div className="w-[50%] border border-y-0 border-white  tab:w-full relative group min-h-[484px]  overflow-hidden">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -189,7 +189,7 @@ const Services = () => {
       </div>
       {/*  */}
       <div className="flex flex-wrap justify-center w-full   mx-auto">
-        <div className="w-[33.3%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.3%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -220,7 +220,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="w-[33.3%] border-[0.5px] border-l-0 border-r-0 border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.3%] border border-l-0 border-r-0 border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -251,7 +251,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="w-[33.3%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.4%] border border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>

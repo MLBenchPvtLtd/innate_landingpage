@@ -22,7 +22,7 @@ const HeroAbout = () => {
       <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center ">
         <Image src={firm} alt="" width={558} height={598} />
         <div className="w-full max-w-[457px]">
-          <Text as="h1">The Firm</Text>
+          <Text as="h1" className="font-inter font-light">The Firm</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Culture
           </Text>
@@ -38,7 +38,7 @@ const HeroAbout = () => {
       </div>
       <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 ">
         <div className="w-full max-w-[457px]">
-          <Text as="h1">Michael Wishart</Text>
+          <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Founder
           </Text>
@@ -64,7 +64,7 @@ const HeroAbout = () => {
         </div>
         <Image src={michel} alt="" width={508} height={357} />
       </div>
-      <Text as="h2" className="text-center text-[40px] mt-8">Our Team</Text>
+      <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light">Our Team</Text>
 
       <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
         <div className="w-full max-w-[266px]">

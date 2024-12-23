@@ -27,18 +27,13 @@ const Blog = () => {
               Do you need a soils report or civil engineer for an addition in
               Bellevue?
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm ">
               When planning to build an addition in Bellevue, Washington,
               understanding the city’s zoning regulations is essential for a
               smooth and compliant construction process. Bellevue’s zoning
             </Text>
 
-            <Link
-              href={`/blogs/1`}
-              className="text-white flex items-center mt-5"
-            >
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+            
           </div>
         </div>
         <div className="max-w-[267px] border border-black rounded-[10px]">
@@ -48,17 +43,12 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               The Cost of Architecture
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm  ">
               The cost of architecture is a contentious topic and a difficult
               one to find a consensus on. The American Institute of Architects
               suggests that design
             </Text>
-            <Link
-              href={`/blogs/2`}
-              className="text-white flex items-center mt-5"
-            >
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+            
           </div>
         </div>
         <div className="max-w-[267px] border border-black rounded-[10px]">
@@ -68,18 +58,13 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               Are you being ripped off by your insurance company?
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm  ">
               Are you feeling the weight of uncertainty after filing a water
               damage claim with your insurance company? Have you ever wondered
               if the estimate you
             </Text>
 
-            <Link
-              href={`/blogs/3`}
-              className="text-white flex items-center mt-5"
-            >
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+           
           </div>
         </div>
         <div className="max-w-[267px] border border-black rounded-[10px]">
@@ -89,15 +74,13 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               New construction CRM app JobSync available on apple app store
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm  ">
               In the fast-paced world of construction management, efficiency and
               precision are paramount. That’s why we’re excited to introduce
               JobSync, our revolutionary proprietary software that seamlessly
             </Text>
 
-            <Link   href={`/blogs/4`} className="text-white flex items-center mt-5">
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+            
           </div>
         </div>
       </div>
@@ -110,7 +93,7 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               The Best CRM and Construction Project Management Software
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm ">
               In the intricate world of construction, effective management of
               both customer relationships and project timelines is paramount for
               success. Construction companies operate within a dynamic
@@ -118,7 +101,7 @@ const Blog = () => {
 
             <Link
               href={`/blogs/5`}
-              className="text-white flex items-center mt-5"
+              className="text-gray-200 pt-5   flex items-center mt-5"
             >
               LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
             </Link>
@@ -132,18 +115,13 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               Why aren’t general contractors getting back to me?
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm  ">
               When getting bids for construction, it can be quite a daunting
               process. When you reach out to a general contractor and ask for a
               bid,
             </Text>
 
-            <Link
-              href={`/blogs/6`}
-              className="text-white flex items-center mt-5"
-            >
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+            
           </div>
         </div>
         <div className="max-w-[267px] border border-black rounded-[10px]">
@@ -153,17 +131,12 @@ const Blog = () => {
             <Text className="text-white text-[20px] leading-[28px] my-2">
               Why Do I Need a Project Manager?
             </Text>
-            <Text className="text-white ">
+            <Text className="text-gray-400  text-sm  ">
               A project manager is absolutely crucial to the construction
               process for several reasons:Coordination, budget control....
             </Text>
 
-            <Link
-              href={`/blogs/7`}
-              className="text-white flex items-center mt-5"
-            >
-              LEARN MORE <Image src={arrow} alt="" width={18} height={18} />
-            </Link>
+           
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link'
 
 import slide from "@/public/images/home/slide1innate.png";
 import Text from "@/components/ui/Text";
@@ -13,17 +14,19 @@ const Hero = () => {
         width={1440}
         height={757}
       />
-    
-     
+
+
       <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
         <Text as="h1" className="my-3">
-        Design+ Build <br />
-        It’s Innate
+          Design+ Build <br />
+          It’s Innate
         </Text>
-        <button className="mt-[20px] border border-[#FFFFFF] font-medium font-inter backdrop-blur-[57px] bg-opacity-10 bg-[#30332e] w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300">
-        Book a Consultation
-        </button>
-        
+        <Link href="#contactHome">
+          <button className="mt-[20px] border border-[#FFFFFF] font-medium font-inter backdrop-blur-[57px] bg-opacity-10 bg-[#30332e] w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300">
+            Book a Consultation
+          </button>
+        </Link>
+
         <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-20">Project</Text>
         <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">Palm Springs ADU</Text>
       </div>

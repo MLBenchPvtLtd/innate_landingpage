@@ -26,7 +26,7 @@ const Marquee = (props: Props) => {
   const duplicatedImageUrls = [...imageUrls, ...imageUrls];
 
   return (
-    <div className="py-14">
+    <div className="py-28">
       <h2 className="text-[24px] text-white font-medium text-center mb-8">
         Partnered with top brands in the industry
       </h2>

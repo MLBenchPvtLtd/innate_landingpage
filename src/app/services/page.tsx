@@ -20,9 +20,10 @@ const ServicesPage = () => {
       <Services />
       <Testimonials />
       <OurProcess />
-      <Marquee />
+      
       <ReviewsSlider />
       <Consultation />
+      <Marquee />
     </div>
   );
 };

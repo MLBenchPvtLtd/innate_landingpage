@@ -8,10 +8,8 @@ import leftdot from "@/public/images/home/left“.png";
 import rightdot from "@/public/images/home/right“.png";
 const Reviews = () => {
   return (
-    <div className="py-16">
-      <Text as="h1" className="text-center text-white  mb-12">
-        Don’t just take our word for it!
-      </Text>
+    <div className="py-32">
+     
       <div className="w-full max-w-[1104px] mx-auto relative">
         <Image
           className="absolute left-0 top-[-40px]"
