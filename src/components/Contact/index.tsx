@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="mx-auto w-full max-w-[1200px] flex justify-center lg:flex-wrap gap-[170px] lg:gap-[50px]">
         <div className="max-w-[444px]">
           <Text as="h1" className="text-[40px] text-white font-medium ">
-            CONTACT
+            Contact Us
           </Text>
           <Text className=" mt-4 text-[#D9D9D9]">
             If you’re looking for an architect, engineer or builder to help with
