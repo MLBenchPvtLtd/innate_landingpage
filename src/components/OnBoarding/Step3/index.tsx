@@ -4,7 +4,7 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import step3 from "@/public/images/onboarding/step3.png"
+import savetime from "@/public/images/home/savetimee.png";
  
 interface Step1Props {
   onNext: () => void;
@@ -13,8 +13,8 @@ interface Step1Props {
 
 const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   return (
-    <div className="gradient py-20 flex items-center justify-center px-5">
-      <div className="max-w-[1140px] w-full ">
+    <div className="gradient py-20 flex items-start justify-center px-5 min-h-[858px]">
+      <div className="max-w-[90%] w-full ">
         <div className="flex flex-wrap items-center justify-between mob:gap-10">
           <div className="max-w-[499px]">
             <Text
@@ -29,11 +29,11 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             </Text>
           </div>
           <div className="">
-            <Image src={step3} alt="" width={473} height={404} />
+            <Image src={savetime} alt="" width={473} height={404} />
           </div>
         </div>
 
-        <div className="flex mob:flex-wrap justify-end mt-10">
+        <div className="flex mob:flex-wrap justify-between mt-10">
           <div className="flex gap-5 mt-6">
           <button
               onClick={onPrevious}

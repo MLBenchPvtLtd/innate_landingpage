@@ -1,16 +1,16 @@
 import Text from "@/components/ui/Text";
 import React from "react";
 import Form from "@/components/Contact/Form";
-import Link from "next/link";
 import Image from "next/image";
 import rightarrow from "@/public/images/press/RightArrowblue.png";
+import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="py-16 px-5">
-      <div className="mx-auto w-full max-w-[1140px] flex justify-center lg:flex-wrap gap-[200px] lg:gap-[50px]">
-        <div className="max-w-[444px]">
-          <Text as="h1" className="text-[40px] text-white font-medium ">
+    <div className="py-16 px-20 mob:px-5">
+      <div className="mx-auto w-full max-w-full flex justify-bewteen lg:flex-wrap gap-[200px] lg:gap-[50px] ">
+        <div className="max-w-[40%] mob:max-w-[90%]">
+          <Text as="h1" className="text-[40px] font-medium text-white">
             Contact Us
           </Text>
           <Text className=" mt-4 text-[#D9D9D9]">
@@ -33,7 +33,7 @@ const Contact = () => {
           <Link href="/onboarding" className="w-[172.63px]">
             <button
               type="submit"
-              className="w-[172.63px] h-[50px] mt-8 hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-medium flex items-center justify-center gap-1"
+              className="w-[172.63px] h-[50px] mt-8 border border-white text-white hover:bg-white hover:text-black hover:border-black text-[16px] font-medium flex items-center justify-center gap-1"
             >
               Start project
               <Image src={rightarrow} alt="" width={18} height={18} />
@@ -41,7 +41,9 @@ const Contact = () => {
           </Link>
         </div>
         {/* right form */}
-        <Form />
+        {/* <div className="w-full flex justify-end px-0 mx-0"> */}
+          <Form />
+        {/* </div> */}
       </div>
     </div>
   );

@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import Text from "@/components/ui/Text";
+import arrowwhite from "@/public/images/work/Arrowwhite.png";
 // import React, { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -16,22 +19,29 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import Third from "../Content/Third";
+import First from "../Content/Japandi/First";
+import Second from "../Content/Japandi/Second";
+import Third from "../Content/Japandi/Third";
+import Fourth from "../Content/Japandi/Fourth";
+import Fifth from "../Content/Japandi/Fifth";
+import Sixth from "../Content/Japandi/Sixth";
+import Seventh from "../Content/Japandi/Seventh";
+import Eight from "../Content/Japandi/Eight";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
 function WorkSlider3() {
-    const swiper = useSwiper();
+  const swiper = useSwiper();
 
-    const handleprevbtn = () => {
-      swiper?.slidePrev();
-      console.log("slidePrev");
-    };
-  
-    const handleNextvbtn = () => {
-      swiper?.slideNext();
-      console.log("slideNext");
-    };
+  const handleprevbtn = () => {
+    swiper?.slidePrev();
+    console.log("slidePrev");
+  };
+
+  const handleNextvbtn = () => {
+    swiper?.slideNext();
+    console.log("slideNext");
+  };
   return (
     <div className=" w-full overflow-hidden">
       <div
@@ -41,33 +51,53 @@ function WorkSlider3() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
+        <div className="absolute bottom-40 left-0 p-5 mob:p-10 w-full z-10 bg-opacity-50 ">
+          <div className="text-center">
+            <Text as="h1" className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24">
+              Japandi ADU
+            </Text>
+            <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
+              Kent, Washington
+            </Text>
+            <Link
+              href=""
+              className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
+            >
+              LEARN MORE <Image src={arrowwhite} alt="" width={18} height={18} />
+            </Link>
+          </div>
+        </div>
         <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative">
-        <Image
-          className="cards-custom-prev3"
-          onClick={handleprevbtn}
-          src={leftarrow}
-          alt="moveprevbtn"
-        />
-        <Image
-          className="cards-custom-next3"
-          onClick={handleNextvbtn}
-          src={rightarrow}
-          alt="movenextbtn"
-        />
+          <Image
+            className="cards-custom-prev3"
+            onClick={handleprevbtn}
+            src={leftarrow}
+            alt="moveprevbtn"
+          />
+          <Image
+            className="cards-custom-next3"
+            onClick={handleNextvbtn}
+            src={rightarrow}
+            alt="movenextbtn"
+          />
           <Swiper
-          
+
             slidesPerView={1}
             speed={2000}
             loop={true}
             navigation={{
-                nextEl: ".cards-custom-next3",
-                prevEl: ".cards-custom-prev3",
-              }}
+              nextEl: ".cards-custom-next3",
+              prevEl: ".cards-custom-prev3",
+            }}
             modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <Third />
+              <First />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Second />
             </SwiperSlide>
 
             <SwiperSlide>
@@ -75,8 +105,25 @@ function WorkSlider3() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Third />
+              <Fourth />
             </SwiperSlide>
+
+            <SwiperSlide>
+              <Fifth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Sixth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Seventh />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Eight />
+            </SwiperSlide>
+
           </Swiper>
         </div>
       </div>

@@ -10,7 +10,7 @@ import ButtonGetStarted from "@/components/ui/ButtonGetStarted";
 const Consultation = () => {
   return (
     <div className="py-16 px-5">
-      <div className="w-full max-w-[1140px] mx-auto bg-black min-h-[410px] mob:py-16 rounded-[10px] relative flex items-center justify-center">
+      <div className="w-full max-w-[1140px] mx-auto  min-h-[410px] mob:py-16 rounded-[10px] relative flex items-center justify-center">
         <Image
           className="bottom-0 left-0 absolute"
           src={leftbg}

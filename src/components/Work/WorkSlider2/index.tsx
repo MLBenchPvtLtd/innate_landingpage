@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 // import React, { useEffect, useRef, useState } from "react";
-
+import Link from "next/link";
+import Text from "@/components/ui/Text";
+import arrowwhite from "@/public/images/work/Arrowwhite.png";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import {
   Keyboard,
@@ -16,22 +18,29 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import Second from "../Content/Second";
+import First from "../Content/GrayBathroom/First";
+import Second from "../Content/GrayBathroom/Second";
+import Third from "../Content/GrayBathroom/Third";
+import Fourth from "../Content/GrayBathroom/Fourth";
+import Fifth from "../Content/GrayBathroom/Fifth";
+import Sixth from "../Content/GrayBathroom/Sixth";
+import Seventh from "../Content/GrayBathroom/Seventh";
+import Eight from "../Content/GrayBathroom/Eight";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
 function WorkSlider2() {
-    const swiper = useSwiper();
+  const swiper = useSwiper();
 
-    const handleprevbtn = () => {
-      swiper?.slidePrev();
-      console.log("slidePrev");
-    };
-  
-    const handleNextvbtn = () => {
-      swiper?.slideNext();
-      console.log("slideNext");
-    };
+  const handleprevbtn = () => {
+    swiper?.slidePrev();
+    console.log("slidePrev");
+  };
+
+  const handleNextvbtn = () => {
+    swiper?.slideNext();
+    console.log("slideNext");
+  };
   return (
     <div className=" w-full overflow-hidden">
       <div
@@ -41,33 +50,50 @@ function WorkSlider2() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
-        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative border-b-2">
-        <Image
-          className="cards-custom-prev2"
-          onClick={handleprevbtn}
-          src={leftarrow}
-          alt="moveprevbtn"
-        />
-        <Image
-          className="cards-custom-next2"
-          onClick={handleNextvbtn}
-          src={rightarrow}
-          alt="movenextbtn"
-        />
+        <div className="absolute bottom-40 left-0 p-5  w-full z-10 bg-opacity-50 ">
+          <div className="text-center">
+            <Text as="h1" className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24">
+              Gray Luxury Bathroom
+            </Text>
+            <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
+              Kent, Washington
+            </Text>
+            <Link
+              href=""
+              className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
+            >
+              LEARN MORE <Image src={arrowwhite} alt="" width={18} height={18} />
+            </Link>
+          </div>
+
+        </div>
+        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative " >
+          <Image
+            className="cards-custom-prev2"
+            onClick={handleprevbtn}
+            src={leftarrow}
+            alt="moveprevbtn"
+          />
+          <Image
+            className="cards-custom-next2"
+            onClick={handleNextvbtn}
+            src={rightarrow}
+            alt="movenextbtn"
+          />
           <Swiper
-           
+
             slidesPerView={1}
             speed={2000}
             loop={true}
             navigation={{
-                nextEl: ".cards-custom-next2",
-                prevEl: ".cards-custom-prev2",
-              }}
+              nextEl: ".cards-custom-next2",
+              prevEl: ".cards-custom-prev2",
+            }}
             modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <Second />
+              <First />
             </SwiperSlide>
 
             <SwiperSlide>
@@ -75,7 +101,27 @@ function WorkSlider2() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Second />
+              <Third />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fourth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fifth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Sixth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Seventh />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Eight />
             </SwiperSlide>
           </Swiper>
         </div>

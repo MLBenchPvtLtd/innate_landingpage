@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import user from "@/public/images/onboarding/users-01.png";
+import Swal from "sweetalert2";
 
 interface Step6Props {
   onNext: () => void;
@@ -20,17 +21,29 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
     onChange({ address: e.target.value }); // Send the address to the parent component
   };
 
+  useEffect(() => {
+    const savedData = sessionStorage.getItem("step6"); 
+    setAddress(savedData || "");
+  }, []);
+
   const handleNextClick = () => {
     if (!address.trim()) {
-      alert("Please enter your address before proceeding.");
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please enter your address before proceeding.',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
+    sessionStorage.setItem("step6", address);
     onNext();
   };
 
   return (
-    <div className="gradient flex items-center justify-center px-5">
-      <div className="max-w-[1140px] w-full py-20">
+    <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
+      <div className="max-w-[90%] w-full py-20">
         <div>
           <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">
             Enter your address to get a starting cost
