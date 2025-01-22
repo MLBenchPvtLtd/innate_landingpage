@@ -49,7 +49,7 @@ function HomeSlider() {
           </Text>
 
           <button
-            className="mt-[20px] mb-[160px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
+            className="mt-[20px] mb-[130px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
             onClick={() => scrollToSection('contactHome')}
           >
             Book Consultation
@@ -58,7 +58,7 @@ function HomeSlider() {
           <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5">
             Project
           </Text>
-          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[60px]">
+          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[52px] mob:mb-[130px]">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>

@@ -19,8 +19,10 @@ import roof5 from '@/public/images/home/roof5.png'
 import roof6 from '@/public/images/home/roof6.png'
 import roof7 from '@/public/images/home/roof7.png'
 import roof8 from '@/public/images/home/natural Disaster Logo.png'
+import { useRouter } from 'next/navigation'
 
 const Services = () => {
+  const router = useRouter()
   return (
     <div className="pt-24 pb-5">
       <div className="flex flex-wrap justify-center w-full mx-auto">
@@ -57,7 +59,10 @@ const Services = () => {
                 Roofing
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
                 </Button>
               </div>
@@ -94,7 +99,10 @@ const Services = () => {
                 Decks
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
                 </Button>
               </div>
@@ -134,7 +142,10 @@ const Services = () => {
                 Kitchens & Bathrooms
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
                 </Button>
               </div>
@@ -175,9 +186,12 @@ const Services = () => {
                 Architectural Services
               </Text>
               <div className="flex justify-center">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
-                </Button>{' '}
+                </Button>
               </div>
             </div>
           </div>
@@ -214,9 +228,12 @@ const Services = () => {
                 New Construction & ADU
               </Text>
               <div className="flex justify-center">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
-                </Button>{' '}
+                </Button>
               </div>
             </div>
           </div>
@@ -253,9 +270,12 @@ const Services = () => {
                 Siding
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
-                </Button>{' '}
+                </Button>
               </div>
             </div>
           </div>
@@ -290,9 +310,12 @@ const Services = () => {
                 Windows & Doors
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
-                </Button>{' '}
+                </Button>
               </div>
             </div>
           </div>
@@ -321,9 +344,12 @@ const Services = () => {
                 Natural Disaster Migitation
               </Text>
               <div className="flex justify-center w-full">
-                <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
+                <Button
+                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  onClick={() => router.push('/services')}
+                >
                   Learn More
-                </Button>{' '}
+                </Button>
               </div>
             </div>
           </div>
