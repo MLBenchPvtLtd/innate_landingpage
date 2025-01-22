@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10">
           <Text>Northwest</Text>
           <Text className="text-[#D9D9D9] mt-3 ">
-            12819 SE 38th St #340 <br /> Bellevue, WA 98006 <br /> (425)
+          22647 Ventura Blvd <br /> Woodland Hills, CA 91364 <br /> (425)
             866-5206
           </Text>
         </div>

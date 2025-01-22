@@ -114,7 +114,7 @@ const Blog = () => {
         </div>
       </div>
       {/* row2 */}
-      <div className="w-full max-w-full  flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
+      <div className="w-full max-w-full  flex flex-wrap justify-start  gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
         <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
           <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
@@ -160,7 +160,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]">
+        {/* <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]">
           <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Press</Text>
@@ -174,7 +174,7 @@ const Blog = () => {
 
 
           </div>
-        </div>
+        </div> */}
       </div>
     </div >
   );

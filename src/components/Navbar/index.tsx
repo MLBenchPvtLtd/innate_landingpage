@@ -72,74 +72,6 @@ const Navbar = () => {
     saveTabTitle(activeTab);
   }, [activeTab]);
 
-  // const dropdownContent = (
-  //   <ul className="bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Architecture
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Kitchens & Bathrooms
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Construction
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Roofing
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Decks & Patio Covers
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Siding
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Windows & Doors
-  //       </a>
-  //     </li>
-  //     <li>
-  //       <a
-  //         href=""
-  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-  //       >
-  //         Natural Disaster Mitigation
-  //       </a>
-  //     </li>
-  //   </ul>
-  // );
 
   return (
     <>
@@ -225,7 +157,13 @@ const Navbar = () => {
                           : "text-[#FFFFFF]"
                           }`}
                       >
-                        <div className="flex items-center gap-1 "> Services <Image src={downwardarrow} alt="" width={24} height={24} /></div>
+                        <div className="flex items-center gap-1 ">
+                          <Link
+                            href="/services"
+                            className=""
+                          > Services
+                          </Link>
+                          <Image src={downwardarrow} alt="" width={24} height={24} /></div>
 
                       </div>
                       {/* Dropdown menu */}
@@ -458,7 +396,7 @@ const Navbar = () => {
                       {/* <div> */}
                       {/* <div className=" " > */}
                       <div className="flex items-center text-center text-[20px] font-inter font-medium leading-[25.5px]  mt-10 text-[#FFFFFF]">
-                        <Image src={arrow} alt="Dropdown arrow" className="rotate-180 cursor-pointer hover:text-[#2CFF06]" width={50} height={50} onClick={() => setIsServicesOpen(false)} />
+                        <Image src={arrow} alt="Dropdown arrow" className="rotate-180 cursor-pointer hover:text-[#2CFF06]" width={24} height={24} onClick={() => setIsServicesOpen(false)} />
                         Services
                       </div>
                       {/* </div> */}
@@ -479,7 +417,7 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/serives"
+                          href="/services"
                           onClick={() => handleTabChange("/work")}
                           className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
                             ? "text-[#2CFF06]"
@@ -493,7 +431,7 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/serives"
+                          href="/services"
                           onClick={() => handleTabChange("/work")}
                           className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
                             ? "text-[#2CFF06]"
