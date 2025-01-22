@@ -24,10 +24,10 @@ function HomeSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    { component: <Slide1 />, delay: 36000, projectName: 'Bosma-ADU' },
+    { component: <Slide1 />, delay: 36000, projectName: 'Website-Homepage' },
     { component: <Slide2 />, delay: 26000, projectName: 'Norman-bath' },
-    { component: <Slide3 />, delay: 42000, projectName: 'pellegrino' },
-    { component: <Slide4 />, delay: 14000, projectName: 'website-homepage' },
+    { component: <Slide3 />, delay: 42000, projectName: 'Pellegrino' },
+    { component: <Slide4 />, delay: 14000, projectName: 'Bosma-ADU' },
   ]
 
   const scrollToSection = (id: string) => {
@@ -49,7 +49,7 @@ function HomeSlider() {
           </Text>
 
           <button
-            className="mt-[20px] mb-[130px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
+            className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
             onClick={() => scrollToSection('contactHome')}
           >
             Book Consultation
@@ -58,7 +58,7 @@ function HomeSlider() {
           <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5">
             Project
           </Text>
-          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[52px] mob:mb-[130px]">
+          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[116px] mob:mb-[200px]">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>

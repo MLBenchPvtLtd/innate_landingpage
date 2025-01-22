@@ -26,7 +26,7 @@ const DesignAndBuild = () => {
         Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
-      <div className="flex  lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] mt-16 mb-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
           <Image
             data-aos="zoom-in"
@@ -78,7 +78,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Save Time */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Save Time
@@ -109,13 +109,13 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
         <div className="w-full max-w-[430px] flex justify-end items-end relative mob:mt-12 mob:order-2">
           <Image
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="mb-[-50px]"
+            // className="mb-[-50px]"
             src={stressbg}
             alt=""
             width={346}
@@ -152,7 +152,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Track Progress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Track Progress
