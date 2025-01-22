@@ -5,16 +5,16 @@ export async function POST(req: NextRequest) {
   try {
     // Parse the request body
     const data = await req.json();
+    console.log(JSON.stringify(data, null, 2))
 
     // Configure the email transport using SMTP (for example, using Gmail)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      host: "smtp.titan.email",
+      port: 465,
+      secure: true,
       auth: {
-        user: "salmanamjad902@gmail.com",
-        pass: "bpfw lpov nuis adbm",
+        user: "info@innate-nw.com",
+        pass: "Innate@123",
       },
     });
 
@@ -80,8 +80,8 @@ export async function POST(req: NextRequest) {
           Selected Options (Step 1):
         </p>
         <p style="font-size: 22px; font-weight: 500;">${data.step1.selectedOptions.join(
-          ", "
-        )}</p>
+      ", "
+    )}</p>
       </div>
   
       <div style="display: flex; margin-bottom: 20px;">
@@ -110,25 +110,36 @@ export async function POST(req: NextRequest) {
           Selected Options (Step 2):
         </p>
         <p style="font-size: 22px; font-weight: 500;">${data.step2.selectedOptions.join(
-          ", "
-        )}</p>
+      ", "
+    )}</p>
       </div>
   
       <div style="display: flex; margin-bottom: 20px;">
-        <p
-          style="
-            font-size: 22px;
-            min-width: 300px;
-            font-weight: 500;
-            color: #ffffffb2;
-          "
-        >
-          Selected Range (Step 4):
-        </p>
-        <p style="font-size: 22px; font-weight: 500;">${data.step4.selectedOptions.join(
-          ", "
-        )}</p>
-      </div>
+  <p
+    style="
+      font-size: 22px;
+      min-width: 300px;
+      font-weight: 500;
+      color: #ffffffb2;
+    "
+  >
+    Selected Range (Step 4):
+  </p>
+  <p style="font-size: 22px; font-weight: 500;">
+    ${Array.isArray(data.step4.selectedOptions)
+        ? data.step4.selectedOptions.join(", ")
+        : `
+          Title: ${data.step4.selectedOptions.title}<br>
+          Description: ${data.step4.selectedOptions.description}<br>
+          <img src="${data.step4.selectedOptions.imageSrc.src}" 
+            alt="${data.step4.selectedOptions.title}" 
+            width="200" 
+          />
+        `
+      }
+  </p>
+</div>
+
   
       <div style="margin-bottom: 20px;">
         <p
@@ -141,15 +152,12 @@ export async function POST(req: NextRequest) {
         >
           Selected Style (Step 5):
         </p>
-        <p style="font-size: 22px; font-weight: 500;">Title: ${
-          data.step5.selectedStyle.title
-        }</p>
-        <p style="font-size: 22px; font-weight: 500;">Description: ${
-          data.step5.selectedStyle.description
-        }</p>
-        <img src="${data.step5.selectedStyle.imageSrc.src}" alt="${
-      data.step5.selectedStyle.title
-    }" width="200" />
+        <p style="font-size: 22px; font-weight: 500;">Title: ${data.step5.selectedStyle.title
+      }</p>
+        <p style="font-size: 22px; font-weight: 500;">Description: ${data.step5.selectedStyle.description
+      }</p>
+        <img src="${data.step5.selectedStyle.imageSrc.src}" alt="${data.step5.selectedStyle.title
+      }" width="200" />
       </div>
   
       <div style="display: flex; margin-bottom: 20px;">
@@ -235,8 +243,8 @@ export async function POST(req: NextRequest) {
 
     // Set up email options
     const mailOptions = {
-      from: "salmanamjad902@gmail.com", // sender address
-      to: "salmanamjad902@gmail.com", // recipient address
+      from: "info@innate-nw.com",
+      to: "info@innate-nw.com",
       subject: "New Form Submission",
       html: emailTemplate,
     };
@@ -246,6 +254,7 @@ export async function POST(req: NextRequest) {
 
     // Return success response
     return NextResponse.json({
+      success: true,
       message: "Data received and email sent successfully",
     });
   } catch (error: unknown) {

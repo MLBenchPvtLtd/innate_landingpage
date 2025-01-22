@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
+import Swal from "sweetalert2";
 
 interface Step8Props {
   onNext: () => void;
@@ -14,6 +15,15 @@ interface Step8Props {
 const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+
+  useEffect(() => {
+      const savedData = sessionStorage.getItem("step8");
+      if (savedData) {
+        const { name, phone } = JSON.parse(savedData);
+        setName(name || "");
+        setPhone(phone || "");
+      }
+    }, []);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -27,15 +37,22 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
 
   const handleNextClick = () => {
     if (!name.trim() || !phone.trim()) {
-      alert("Please fill in both your name and phone number before proceeding.");
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please fill in both your name and phone number before proceeding.',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
+    sessionStorage.setItem("step8", JSON.stringify({ name, phone }));
     onNext();
   };
 
   return (
     <div className="gradient flex items-center justify-center px-5">
-      <div className="max-w-[1140px] w-full py-20">
+      <div className="max-w-[90%] w-full py-20">
         <div>
           <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">
             Almost Done!
@@ -51,11 +68,26 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
             onChange={handleNameChange} // Handle name change
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
+          <br />
           <input
             placeholder="Phone"
             type="number"
             value={phone}
-            onChange={handlePhoneChange} // Handle phone change
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value.length <= 14) {
+                handlePhoneChange(e);
+              }
+              else{
+                Swal.fire({
+                  title: 'Error!',
+                  text: "Enter max 14 digits",
+                  icon: 'error',
+                  showConfirmButton: false,
+                  timer: 2000,
+                });
+              }
+            }} // Handle phone change
             className="pl-4 mt-3 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
         </div>
