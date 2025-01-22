@@ -1,12 +1,12 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
-import Text from "../ui/Text";
+import Text from '../ui/Text'
 
-import logo from "@/public/logo-innate.png";
-import insta from "@/public/instagaram.svg";
-import fb from "@/public/facebook.svg";
-import linkedin from "@/public/linkedin.svg";
+import logo from '@/public/logo-innate.png'
+import insta from '@/public/instagaram.svg'
+import fb from '@/public/facebook.svg'
+import linkedin from '@/public/linkedin.svg'
 
 const Footer = () => {
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="max-w-[142px] mob:max-w-full">
           <Text>Vancouver</Text>
-          <Text className="text-[#D9D9D9] mt-3">Appointment Only</Text>
+          {/* <Text className="text-[#D9D9D9] mt-3">Appointment Only</Text> */}
         </div>
         <div className="">
           <div className="flex gap-4 ml-3">
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
