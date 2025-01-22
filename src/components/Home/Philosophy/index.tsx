@@ -13,7 +13,7 @@ const Philosophy = () => {
             <Text className="text-[32px] text-white font-semibold leading-[41.2px] mt-3 mb-4 mob:text-[28px]">
               When design is both functional and beautiful,
               <span className="block lg:inline">
-                it has the most impact on people's lives.
+                it has the most impact on people&apos;s lives.
               </span>
             </Text>
           </div>
