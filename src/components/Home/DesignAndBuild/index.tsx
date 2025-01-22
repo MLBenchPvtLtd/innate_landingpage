@@ -13,8 +13,10 @@ import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'
 import savetime from '@/public/images/home/savetimee.png'
 import track from '@/public/images/home/cabinetry.png'
 import rightarrow from '@/public/images/press/RightArrowblue.png'
+import { useRouter } from 'next/navigation'
 
 const DesignAndBuild = () => {
+  const router = useRouter()
   return (
     <div className="w-full h-full gradient py-16 px-5 mob:pt-5">
       <Text
@@ -25,9 +27,7 @@ const DesignAndBuild = () => {
       </Text>
       {/* avoid surprise */}
       <div className="flex  lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
-
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -67,7 +67,10 @@ const DesignAndBuild = () => {
             After doing an in-person site visit, we will provide an accurate,
             comprehensive and transparent bid, broken down by trade.
           </Text>
-          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md ">
+          <Button
+            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            onClick={() => router.push('/onboarding')}
+          >
             Get Started
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
@@ -84,7 +87,10 @@ const DesignAndBuild = () => {
             Our network of vetted architects, engineers and craftsmen save you
             the time and hassle of putting together your own team.
           </Text>
-          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md">
+          <Button
+            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            onClick={() => router.push('/onboarding')}
+          >
             Get Started
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
@@ -103,7 +109,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
         <div className="w-full max-w-[430px] flex justify-end items-end relative mob:mt-12 mob:order-2">
           <Image
             data-aos="fade-right"
@@ -135,7 +141,10 @@ const DesignAndBuild = () => {
             project to make sure it gets done right, on time, and on budget. Our
             subcontractors are vetted, experienced, and highly skilled.
           </Text>
-          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md">
+          <Button
+            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            onClick={() => router.push('/onboarding')}
+          >
             Get Started
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
@@ -152,7 +161,10 @@ const DesignAndBuild = () => {
             Our proprietary software, JobSync, centralizes timeline progress,
             payments, budget, and material selections.
           </Text>
-          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md">
+          <Button
+            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            onClick={() => router.push('/onboarding')}
+          >
             Get Started
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>

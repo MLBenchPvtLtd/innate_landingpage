@@ -24,6 +24,9 @@ const Marquee = (props: Props) => {
     { url: '/images/home/ad.png', width: 268, height: 100 },
     { url: '/images/home/bt1.png', width: 95, height: 100 },
     { url: '/images/home/dt.png', width: 178, height: 100 },
+    { url: '/images/home/and.png', width: 228, height: 100 },
+    { url: '/images/home/ch.png', width: 228, height: 100 },
+
     { url: '/images/home/JH.png', width: 278, height: 100 },
     { url: '/images/home/js.png', width: 228, height: 100 },
     { url: '/images/home/lic.png', width: 168, height: 100 },
