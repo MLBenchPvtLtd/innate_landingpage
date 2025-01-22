@@ -210,12 +210,22 @@ const Form = () => {
               name="phone"
               id="phone"
               value={formData.phone || ""}
+              onKeyDown={(e) => {
+                const invalidKeys = ["e", "E", "+", "-", ".", " "];
+                if (
+                  invalidKeys.includes(e.key) || 
+                  isNaN(Number(e.key)) && e.key !== "Backspace" 
+                ) {
+                  e.preventDefault();
+                }
+              }}
               onChange={(e) => {
                 const value = e.target.value;
                 if (value.length <= 14) {
                   handleChange(e);
+                  console.log(value)
                 }
-                else{
+                else {
                   Swal.fire({
                     title: 'Error!',
                     text: "Enter max 14 digits",
