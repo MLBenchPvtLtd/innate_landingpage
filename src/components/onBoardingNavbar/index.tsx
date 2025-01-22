@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import Image from "next/image";
 import Link from "next/link";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 // import arrow from "@/public/Arrow (1).png"
 // import Drawer from "../ui/Drawer";
 
@@ -11,10 +11,10 @@ import Image from "next/image";
 import { useTabContext } from "@/context/TabContsxt";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const { setActiveTab } = useTabContext();
   // const onClose = () => setIsOpen(false);
-  const onOpen = () => setIsOpen(true);
+  // const onOpen = () => setIsOpen(true);
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // const toggleDropdown = () => {
@@ -24,25 +24,25 @@ const Navbar = () => {
   const handleTabChange = (tab: string) => {
     setActiveTab(tab); // Update context
   };
-  useEffect(() => {
-    if (isOpen) {
-      // Select all list items
-      const listItems = document.querySelectorAll(".list-items");
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     // Select all list items
+  //     const listItems = document.querySelectorAll(".list-items");
 
-      // Set initial opacity to 0 and translateX to 20px
-      gsap.set(listItems, { opacity: 0, x: 20 });
+  //     // Set initial opacity to 0 and translateX to 20px
+  //     gsap.set(listItems, { opacity: 0, x: 20 });
 
-      // Iterate through list items and animate them
-      gsap.to(listItems, {
-        delay: 0.5,
-        opacity: 1,
-        x: 0,
-        duration: 0.7, // Animation duration
-        stagger: 0.2, // Stagger the animation by 0.2 seconds
-        ease: "power2.out", // Easing function
-      });
-    }
-  }, [isOpen]);
+  //     // Iterate through list items and animate them
+  //     gsap.to(listItems, {
+  //       delay: 0.5,
+  //       opacity: 1,
+  //       x: 0,
+  //       duration: 0.7, // Animation duration
+  //       stagger: 0.2, // Stagger the animation by 0.2 seconds
+  //       ease: "power2.out", // Easing function
+  //     });
+  //   }
+  // }, [isOpen]);
 
   return (
     <>
@@ -69,7 +69,7 @@ const Navbar = () => {
                   type="button"
                   className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 bg-gray-700 dark:ring-gray-600"
                   aria-controls="navbar-default"
-                  aria-expanded={isOpen ? "true" : "false"}
+                  // aria-expanded={isOpen ? "true" : "false"}
                 >
                   <span className="sr-only">Open main menu</span>
                   <svg
@@ -93,38 +93,7 @@ const Navbar = () => {
               </div>
 
               {/* tab and mob  menu*/}
-              <div className="hidden xl:block  ">
-                <div
-                  className="relative cursor-pointer flex pt-[5px]"
-                  onClick={onOpen}
-                >
-                  <button
-                    // onClick={toggleMenu}
-                    type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light   bg-transparent text-white rounded-lg  "
-                    aria-controls="navbar-default"
-                    aria-expanded={isOpen ? "true" : "false"}
-                  >
-                    <span className="sr-only">Open main menu</span>
-                    <svg
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 17 14"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 1h15M1 7h15M1 13h15"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                
-              </div>
+              
             </div>
           </div>
         </div>
