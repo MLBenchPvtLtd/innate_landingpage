@@ -40,25 +40,27 @@ function HomeSlider() {
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full overflow-hidden home-slider-parent">
-        <div className="absolute bottom-0 left-16 p-5 z-10 bg-opacity-50 mob:left-0">
-          <Text as="h2" className="my-3 text-white leading-[44px]">
-            <span className="text-[40px] font-light">Design+ Build</span>
-            <br />
-            <span className="text-[40px] font-light">It’s</span>{' '}
-            <span className="italic text-[40px]">Innate</span>
-          </Text>
+        <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-10 bg-opacity-50 mob:left-0">
+          <div className="mb-[70px]">
+            <Text as="h2" className="my-3 text-white leading-[44px]">
+              <span className="text-[40px] font-light">Design+ Build</span>
+              <br />
+              <span className="text-[40px] font-light">It’s</span>{' '}
+              <span className="italic text-[40px]">Innate</span>
+            </Text>
 
-          <button
-            className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
-            onClick={() => scrollToSection('contactHome')}
-          >
-            Book Consultation
-          </button>
+            <button
+              className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
+              onClick={() => scrollToSection('contactHome')}
+            >
+              Book Consultation
+            </button>
+          </div>
 
-          <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5">
+          <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5 mob:text-[18px] font-normal">
             Project
           </Text>
-          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[116px] mob:mb-[200px]">
+          <Text className="text-[28px] mob:text-[24px] leading-[36.4px] text-[#FFFFFF] font-medium">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>

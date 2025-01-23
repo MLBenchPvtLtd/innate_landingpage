@@ -43,12 +43,12 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
 
   return (
     <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
-      <div className="max-w-[90%] w-full py-20">
+      <div className="max-w-[90%] mob:max-w-full w-full py-20">
         <div>
-          <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">
+          <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-3">
             Enter your address to get a starting cost
           </Text>
-          <Text>
+          <Text className="text-[16px] font-normal mob:text-[14px]">
             Construction costs are highly dependent on your location. Share your
             address so we can give you a tailored estimate.
           </Text>
@@ -61,7 +61,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
           />
           <div className="flex gap-[12px] mt-5">
             <Image src={user} alt="" width={24} height={24} />
-            <Text>
+            <Text className="text-[16px] font-normal mob:text-[14px]">
               4 of your neighbors are currently working on projects with Innate.
             </Text>
           </div>
