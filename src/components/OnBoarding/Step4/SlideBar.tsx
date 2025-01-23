@@ -7,7 +7,7 @@ interface Step4Props {
 const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
   const [rangeStart, setRangeStart] = React.useState<number>(20);
   const [rangeEnd, setRangeEnd] = React.useState<number>(37);
-
+  
   // Update local state and notify parent
   const handleSliderChange = (
     start: React.SetStateAction<number>,
@@ -24,8 +24,11 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
     onChange({ selectedOptions });
   };
 
+
+
   useEffect(() => {
     const savedData = sessionStorage.getItem("step4");
+    console.log("step4",savedData);
     if (savedData) {
       const selectedOptions = JSON.parse(savedData);
       
@@ -40,7 +43,14 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
         }
       }
     }
-  }, []);
+    else{
+      const selectedOptions=[`Range: ${rangeStart}K - ${rangeEnd}K`]
+      sessionStorage.setItem("step4", JSON.stringify(selectedOptions));
+      onChange({ selectedOptions });
+    }
+
+
+  }, [rangeStart, rangeEnd, onChange]);
   return (
     <div>
       <SliderFilter

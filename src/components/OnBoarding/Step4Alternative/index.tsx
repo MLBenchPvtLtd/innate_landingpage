@@ -59,8 +59,8 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
 
     return (
         <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
-            <div className="max-w-[90%] w-full py-20">
-                <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
+            <div className="max-w-[90%] mob:max-w-full w-full py-20">
+                <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-3">
                     What type of Accessory Dwelling Unit (ADU) are you planning to build?
                 </Text>
 

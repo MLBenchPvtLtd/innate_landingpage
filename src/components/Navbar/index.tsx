@@ -159,7 +159,7 @@ const Navbar = () => {
                       >
                         <div className="flex items-center gap-1 ">
                           <Link
-                            href="/services"
+                            href=""
                             className=""
                           > Services
                           </Link>
