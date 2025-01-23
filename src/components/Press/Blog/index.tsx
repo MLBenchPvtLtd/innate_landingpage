@@ -23,12 +23,12 @@ const Blog = () => {
           <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
-              <Text className="text-white">Blog</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white font-light">Blog</Text>
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 Do you need a soils report or civil engineer for an addition in
                 Bellevue?
               </Text>
-              <Text className="text-gray-400  text-sm">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 When planning to build an addition in Bellevue, Washington,
                 understanding the city’s zoning regulations is essential for a
                 smooth and compliant construction process. Bellevue’s zoning
@@ -49,10 +49,10 @@ const Blog = () => {
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
               <Text className="text-white">Press</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 The Cost of Architecture
               </Text>
-              <Text className="text-gray-400 text-sm">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 The cost of architecture is a contentious topic and a difficult
                 one to find a consensus on. The American Institute of Architects
                 suggests that design
@@ -60,7 +60,7 @@ const Blog = () => {
             </div>
             <Link
               href={`/blogs/2`}
-              className="text-white flex items-center mt-5"
+              className="text-white flex items-center mt-5 text-[16px] font-normal"
             >
               LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
             </Link>
@@ -72,11 +72,11 @@ const Blog = () => {
           <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
-              <Text className="text-white">Blog</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white font-light">Blog</Text>
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 Are you being ripped off by your insurance company?
               </Text>
-              <Text className="text-gray-400  text-sm">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 Are you feeling the weight of uncertainty after filing a water
                 damage claim with your insurance company? Have you ever wondered
                 if the estimate you
@@ -94,11 +94,11 @@ const Blog = () => {
           <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
-              <Text className="text-white">Blog</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white font-light">Blog</Text>
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 New construction CRM app JobSync available on apple app store
               </Text>
-              <Text className="text-gray-400  text-sm ">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 In the fast-paced world of construction management, efficiency and
                 precision are paramount. That’s why we’re excited to introduce
                 JobSync, our revolutionary proprietary software that seamlessly
@@ -114,16 +114,16 @@ const Blog = () => {
         </div>
       </div>
       {/* row2 */}
-      <div className="w-full max-w-full  flex flex-wrap justify-start  gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
+      <div className="w-full max-w-full  flex flex-wrap justify-start mob:justify-center  gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
         <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
           <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
-              <Text className="text-white">Blog</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white font-light">Blog</Text>
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 The Best CRM and Construction Project Management Software
               </Text>
-              <Text className="text-gray-400  text-sm">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 In the intricate world of construction, effective management of
                 both customer relationships and project timelines is paramount for
                 success. Construction companies operate within a dynamic
@@ -143,10 +143,10 @@ const Blog = () => {
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
               <Text className="text-white">Press</Text>
-              <Text className="text-white text-[20px] leading-[28px] my-2">
+              <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
                 Why aren’t general contractors getting back to me?
               </Text>
-              <Text className="text-gray-400  text-sm ">
+              <Text className="text-gray-400  text-[16px] font-normal">
                 When getting bids for construction, it can be quite a daunting
                 process. When you reach out to a general contractor and ask for a
                 bid,
@@ -164,10 +164,10 @@ const Blog = () => {
           <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Press</Text>
-            <Text className="text-white text-[20px] leading-[28px] my-2">
+            <Text className="text-white text-[20px] leading-[28px] my-2 font-normal">
               Why Do I Need a Project Manager?
             </Text>
-            <Text className="text-gray-400  text-sm ">
+            <Text className="text-gray-400  text-[16px] font-normal">
               A project manager is absolutely crucial to the construction
               process for several reasons:Coordination, budget control....
             </Text>

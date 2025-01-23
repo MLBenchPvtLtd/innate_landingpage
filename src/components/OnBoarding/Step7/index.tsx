@@ -14,16 +14,16 @@ interface Step7Props {
 const Step7: React.FC<Step7Props> = ({ onNext, onPrevious }) => {
   return (
     <div className=" gradient flex items-center justify-center px-5 min-h-[858px]">
-      <div className="max-w-[90%] w-full py-20">
+      <div className="max-w-[90%] mob:max-w-full w-full py-20">
         <div className="flex flex-wrap items-center justify-around mob:gap-10">
           <div className="max-w-[90%]">
             <Text
               as="h1"
-              className="text-[40px]  font-firaSans font-normal mb-2 "
+              className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-2"
             >
               Transparent Bids
             </Text>
-            <Text className="text-[#D9D9D9]">
+            <Text className="text-[#D9D9D9] text-[16px] font-normal mob:text-[14px]">
             You’ll get a transparent bid that breaks down the price per trade.
             </Text>
           </div>

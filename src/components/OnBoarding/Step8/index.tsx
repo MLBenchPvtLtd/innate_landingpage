@@ -52,12 +52,12 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
 
   return (
     <div className="gradient flex items-center justify-center px-5">
-      <div className="max-w-[90%] w-full py-20">
+      <div className="max-w-[90%] mob:max-w-full w-full py-20">
         <div>
-          <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">
+          <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-3">
             Almost Done!
           </Text>
-          <Text>
+          <Text className="text-[16px] font-normal mob:text-[14px]"> 
             We’ll use this info to get in touch with you to schedule a
             consultation or send a rough bid.
           </Text>

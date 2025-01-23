@@ -57,7 +57,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   return (
     <div className="py-20 gradient flex items-start justify-center min-h-[858px]">
       <div className="w-full max-w-[90%] ">
-        <Text as="h1" className="text-[40px] font-firaSans font-normal mb-10">
+        <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-10">
           Got it! What professional do you need help finding?
         </Text>
 
@@ -87,7 +87,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
                   </svg>
                 )}
               </div>
-              <span className="text-[20px] text-[#D9D9D9]">{option}</span>
+              <span className="text-[20px] mob:text-[18px] text-[#D9D9D9] font-medium mob:font-normal">{option}</span>
             </label>
           ))}
         </div>
