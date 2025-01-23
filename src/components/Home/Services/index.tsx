@@ -8,7 +8,7 @@ import frame4 from '@/public/images/home/Frame4.png'
 import frame5 from '@/public/images/home/Frame5.png'
 import frame6 from '@/public/images/home/Frame6.png'
 import frame7 from '@/public/images/home/Frame7.png'
-import frame8 from '@/public/images/home/natural Disaster.jpg'
+import frame8 from '@/public/images/home/NaturalDisaster.png'
 import Text from '@/components/ui/Text'
 import Button from '@/components/ui/Button'
 import roof1 from '@/public/images/home/Roof 1.png'
@@ -320,7 +320,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="border-b border-[#FFFFFF99] w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px]">
+        <div className="border-b border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px]">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -341,7 +341,7 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-light text-center my-4">
-                Natural Disaster Migitation
+                Natural Disaster Mitigation
               </Text>
               <div className="flex justify-center w-full">
                 <Button

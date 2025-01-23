@@ -1,9 +1,9 @@
-import React from "react";
-import Image from "next/image";
-import slide from "@/public/images/work/DS4.png";
+import React from 'react'
+import Image from 'next/image'
+import slide from '@/public/images/work/DS4.png'
 const Fourth = () => {
   return (
-    <div className="relative w-full z-10 px-20 mob:px-5 mob:h-full h-screen min-h-[700px] flex justify-center items-center">
+    <div className="relative w-full z-10 px-20 mob:px-5 mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center">
       <Image
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src={slide}
@@ -11,10 +11,8 @@ const Fourth = () => {
         width={1440}
         height={757}
       />
-
-    
     </div>
-  );
-};
+  )
+}
 
-export default Fourth;
+export default Fourth
