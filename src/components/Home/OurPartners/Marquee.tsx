@@ -25,15 +25,17 @@ const Marquee = (props: Props) => {
     { url: '/images/home/bt1.png', width: 95, height: 100 },
     { url: '/images/home/dt.png', width: 178, height: 100 },
     { url: '/images/home/and.png', width: 228, height: 100 },
+    { url: '/images/home/dunn.png', width: 228, height: 100 },
+    { url: '/images/home/gaf.png', width: 98, height: 100 },
+    { url: '/images/home/ml.png', width: 228, height: 100 },
     { url: '/images/home/ch.png', width: 228, height: 100 },
-
     { url: '/images/home/JH.png', width: 278, height: 100 },
     { url: '/images/home/js.png', width: 228, height: 100 },
     { url: '/images/home/lic.png', width: 168, height: 100 },
     { url: '/images/home/marvin.png', width: 226, height: 100 },
     { url: '/images/home/mg.png', width: 188, height: 100 },
     { url: '/images/home/NU.png', width: 158, height: 100 },
-    { url: '/images/home/tt.png', width: 366, height: 100 },
+    { url: '/images/home/tt.png', width: 366, height: 150 },
     { url: '/images/home/Xactimate.png', width: 98, height: 100 },
   ]
 

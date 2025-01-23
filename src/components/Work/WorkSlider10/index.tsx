@@ -1,43 +1,43 @@
-"use client";
-import Image from "next/image";
+'use client'
+import Image from 'next/image'
 // import React, { useEffect, useRef, useState } from "react";
 
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import {
   Keyboard,
   Navigation,
   Scrollbar,
   Autoplay,
   // Pagination,
-} from "swiper/modules";
-import "swiper/css";
-import "swiper/css/scrollbar";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+} from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/scrollbar'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-import Link from "next/link";
+import Link from 'next/link'
 
-import Text from "@/components/ui/Text";
+import Text from '@/components/ui/Text'
 
-import arrowwhite from "@/public/images/work/Arrowwhite.png";
-import "../slider.css";
-import First from "../Content//Pierre/First";
-import Second from "../Content/Pierre/Second";
-import leftarrow from "@/public/images/work/Arrowleftblue.png"
-import rightarrow from "@/public/images/work/Arrowrightblue.png"
+import arrowwhite from '@/public/images/work/Arrowwhite.png'
+import '../slider.css'
+import First from '../Content//Pierre/First'
+import Second from '../Content/Pierre/Second'
+import leftarrow from '@/public/images/work/Arrowleftblue.png'
+import rightarrow from '@/public/images/work/Arrowrightblue.png'
 
 function WorkSlider3() {
-  const swiper = useSwiper();
+  const swiper = useSwiper()
 
   const handleprevbtn = () => {
-    swiper?.slidePrev();
-    console.log("slidePrev");
-  };
+    swiper?.slidePrev()
+    console.log('slidePrev')
+  }
 
   const handleNextvbtn = () => {
-    swiper?.slideNext();
-    console.log("slideNext");
-  };
+    swiper?.slideNext()
+    console.log('slideNext')
+  }
   return (
     <div className=" w-full overflow-hidden">
       <div
@@ -49,17 +49,21 @@ function WorkSlider3() {
       >
         <div className="absolute bottom-40 left-0 p-5 mob:p-14 w-full z-10 bg-opacity-50 ">
           <div className="text-center">
-            <Text as="h1" className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24 mob:mt-0">
+            <Text
+              as="h1"
+              className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24 mob:mt-0"
+            >
               Pierre ADU
             </Text>
             <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
               Littleton, Colorado
             </Text>
             <Link
-              href=""
+              href="/services"
               className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
             >
-              LEARN MORE <Image src={arrowwhite} alt="" width={18} height={18} />
+              LEARN MORE{' '}
+              <Image src={arrowwhite} alt="" width={18} height={18} />
             </Link>
           </div>
         </div>
@@ -77,13 +81,12 @@ function WorkSlider3() {
             alt="movenextbtn"
           />
           <Swiper
-
             slidesPerView={1}
             speed={2000}
             loop={true}
             navigation={{
-              nextEl: ".cards-custom-next10",
-              prevEl: ".cards-custom-prev10",
+              nextEl: '.cards-custom-next10',
+              prevEl: '.cards-custom-prev10',
             }}
             modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
             className="mySwiper"
@@ -95,14 +98,11 @@ function WorkSlider3() {
             <SwiperSlide>
               <Second />
             </SwiperSlide>
-
-
-
           </Swiper>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default WorkSlider3;
+export default WorkSlider3
