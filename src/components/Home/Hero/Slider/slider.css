@@ -38,3 +38,23 @@
   scale: 1 !important;
   transition: 0.5s ease-in-out !important;
 }
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: white;
+  /* Default bullet color */
+  opacity: 1;
+
+}
+
+
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #0B44A0 !important;
+}
+
+.mySwiper .swiper-pagination {
+  z-index: 100;
+  /* Adjust this value as needed */
+
+  /* Ensure z-index works */
+}

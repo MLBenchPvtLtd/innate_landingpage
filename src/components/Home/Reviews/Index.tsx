@@ -5,7 +5,13 @@ import avatar from '@/public/images/home/avatarimg.png'
 import leftdot from '@/public/images/home/left“.png'
 import rightdot from '@/public/images/home/right“.png'
 
-const Reviews = () => {
+interface ReviewsProps {
+  text: string
+  name: string
+  title: string
+}
+
+const Reviews: React.FC<ReviewsProps> = ({ text, name, title }) => {
   return (
     <div className="py-32">
       <div className="w-full max-w-[1104px] mx-auto relative">
@@ -25,23 +31,15 @@ const Reviews = () => {
         />
 
         <Text className="text-center text-[24px] font-light leading-[31.2px] text-white max-w-[879px] mx-auto mob:text-[18px]">
-          I found Michael because he came highly recommended as both a designer
-          and a builder. I wanted to update the style of my kitchen and bathroom
-          but being unfamiliar with the construction process, I needed a
-          contractor who could walk me through the process and help me with
-          material selections. His workers were detail orientated and polite,
-          and Michael always took the time to explain what was going on and ask
-          my input when decisions needed to be made. Bravo!
+          {text}
         </Text>
         <div className="flex gap-[11px] items-center justify-center mt-10">
           <Image src={avatar} alt="" width={70} height={70} />
           <div className="">
-            <Text className=" text-[24px] font-medium leading-[31.2px] text-white ">
-              Katerin C
+            <Text className="text-[24px] font-medium leading-[31.2px] text-white mob:text-[20px]">
+              {name}
             </Text>
-            <Text className="mt-1 text-white ">
-              Co-founder, Head of Product
-            </Text>
+            <Text className="mt-1 text-white mob:text-[14px]">{title}</Text>
           </div>
         </div>
       </div>

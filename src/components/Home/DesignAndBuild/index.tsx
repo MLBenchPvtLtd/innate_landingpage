@@ -1,12 +1,9 @@
 import Text from '@/components/ui/Text'
 import Image from 'next/image'
 import React from 'react'
-
 import Button from '@/components/ui/Button'
-
 import stressbg from '@/public/images/home/dsignbuild/avoidbg.png'
 import stresstop from '@/public/images/home/dsignbuild/avoidtop.png'
-
 import avoidleft from '@/public/images/home/dsignbuild/avoidleft.png'
 import avoidright from '@/public/images/home/dsignbuild/avoidright.png'
 import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'

@@ -1,15 +1,7 @@
 'use client'
 import Image from 'next/image'
-// import React, { useEffect, useRef, useState } from "react";
-
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import {
-  Keyboard,
-  Navigation,
-  Scrollbar,
-  Autoplay,
-  // Pagination,
-} from 'swiper/modules'
+import { Keyboard, Navigation, Scrollbar, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
@@ -37,18 +29,14 @@ function WorkSlider3() {
     swiper?.slideNext()
     console.log('slideNext')
   }
+
   return (
-    <div className=" w-full overflow-hidden">
-      <div
-      // className="overflow-hidden w-full "
-      // data-aos="fade-up"
-      // data-aos-delay="200"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      >
-        <div className="absolute bottom-96 left-0 p-5 mob:p-14 w-full z-10 bg-opacity-50 ">
+    <div className="w-full h-screen overflow-hidden flex justify-center items-center relative">
+      <div className="absolute inset-0 flex justify-center items-center">
+        {/* Text content */}
+        <div className="text-center p-5 mob:p-14 w-full z-10 bg-opacity-50">
           {imageLoaded && (
-            <div className="text-center">
+            <div>
               <Text
                 as="h1"
                 className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24 mob:mt-0"
@@ -60,7 +48,7 @@ function WorkSlider3() {
               </Text>
               <Link
                 href="/services"
-                className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
+                className="max-w-[150px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] mob:text-[14px] font-inter text-white border border-[#FFFFFF] px-[10px] py-2"
               >
                 LEARN MORE{' '}
                 <Image src={arrowwhite} alt="" width={18} height={18} />
@@ -68,39 +56,42 @@ function WorkSlider3() {
             </div>
           )}
         </div>
-        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative">
-          <Image
-            className="cards-custom-prev10"
-            onClick={handleprevbtn}
-            src={leftarrow}
-            alt="moveprevbtn"
-          />
-          <Image
-            className="cards-custom-next10"
-            onClick={handleNextvbtn}
-            src={rightarrow}
-            alt="movenextbtn"
-          />
-          <Swiper
-            slidesPerView={1}
-            speed={2000}
-            loop={true}
-            navigation={{
-              nextEl: '.cards-custom-next10',
-              prevEl: '.cards-custom-prev10',
-            }}
-            modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <First setImageLoaded={setImageLoaded} />
-            </SwiperSlide>
+      </div>
 
-            <SwiperSlide>
-              <Second />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+      {/* Swiper Slider */}
+      <div className="w-full overflow-hidden flex justify-center items-center relative">
+        <Image
+          className="cards-custom-prev10 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          onClick={handleprevbtn}
+          src={leftarrow}
+          alt="moveprevbtn"
+        />
+        <Image
+          className="cards-custom-next10 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          onClick={handleNextvbtn}
+          src={rightarrow}
+          alt="movenextbtn"
+        />
+
+        <Swiper
+          slidesPerView={1}
+          speed={2000}
+          loop={true}
+          navigation={{
+            nextEl: '.cards-custom-next10',
+            prevEl: '.cards-custom-prev10',
+          }}
+          modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <First setImageLoaded={setImageLoaded} />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Second />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   )

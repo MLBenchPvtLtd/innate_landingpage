@@ -1,24 +1,13 @@
 'use client'
 import Image from 'next/image'
-// import React, { useEffect, useRef, useState } from "react";
-
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import {
-  Keyboard,
-  Navigation,
-  Scrollbar,
-  Autoplay,
-  // Pagination,
-} from 'swiper/modules'
+import { Keyboard, Navigation, Scrollbar, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-
 import Link from 'next/link'
-
 import Text from '@/components/ui/Text'
-
 import arrowwhite from '@/public/images/work/Arrowwhite.png'
 import '../slider.css'
 import First from '../Content/ModernADU/First'
@@ -35,7 +24,6 @@ import { useState } from 'react'
 
 function WorkSlider3() {
   const [imageLoaded, setImageLoaded] = useState(false)
-
   const swiper = useSwiper()
 
   const handleprevbtn = () => {
@@ -47,94 +35,89 @@ function WorkSlider3() {
     swiper?.slideNext()
     console.log('slideNext')
   }
+
   return (
-    <div className=" w-full overflow-hidden">
-      <div
-      // className="overflow-hidden w-full "
-      // data-aos="fade-up"
-      // data-aos-delay="200"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      >
-        <div className="absolute bottom-96 left-0 p-5 mob:p-10 w-full z-10 bg-opacity-50 ">
-          {imageLoaded && (
-            <div className="text-center">
-              <Text
-                as="h1"
-                className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24"
-              >
-                Modern ADU
-              </Text>
-              <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
-                Kent, Washington
-              </Text>
-              <Link
-                href="/services"
-                className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
-              >
-                LEARN MORE{' '}
-                <Image src={arrowwhite} alt="" width={18} height={18} />
-              </Link>
-            </div>
-          )}
-        </div>
-        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative">
-          <Image
-            className="cards-custom-prev7"
-            onClick={handleprevbtn}
-            src={leftarrow}
-            alt="moveprevbtn"
-          />
-          <Image
-            className="cards-custom-next7"
-            onClick={handleNextvbtn}
-            src={rightarrow}
-            alt="movenextbtn"
-          />
-          <Swiper
-            slidesPerView={1}
-            speed={2000}
-            loop={true}
-            navigation={{
-              nextEl: '.cards-custom-next7',
-              prevEl: '.cards-custom-prev7',
-            }}
-            modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <First setImageLoaded={setImageLoaded} />
-            </SwiperSlide>
+    <div className="w-full h-screen overflow-hidden flex flex-col justify-center items-center relative">
+      <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 text-center z-10">
+        {imageLoaded && (
+          <div>
+            <Text
+              as="h1"
+              className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24"
+            >
+              Modern ADU
+            </Text>
+            <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
+              Kent, Washington
+            </Text>
+            <Link
+              href="/services"
+              className="max-w-[150px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] mob:text-[14px] font-inter text-white border border-[#FFFFFF] px-[10px] py-2"
+            >
+              LEARN MORE
+              <Image src={arrowwhite} alt="" width={18} height={18} />
+            </Link>
+          </div>
+        )}
+      </div>
 
-            <SwiperSlide>
-              <Second />
-            </SwiperSlide>
+      <div className="relative w-full h-full flex justify-center items-center">
+        <Image
+          className="cards-custom-prev7 absolute left-4 top-1/2 transform -translate-y-1/2"
+          onClick={handleprevbtn}
+          src={leftarrow}
+          alt="moveprevbtn"
+        />
+        <Image
+          className="cards-custom-next7 absolute right-4 top-1/2 transform -translate-y-1/2"
+          onClick={handleNextvbtn}
+          src={rightarrow}
+          alt="movenextbtn"
+        />
 
-            <SwiperSlide>
-              <Third />
-            </SwiperSlide>
+        <Swiper
+          slidesPerView={1}
+          speed={2000}
+          loop={true}
+          navigation={{
+            nextEl: '.cards-custom-next7',
+            prevEl: '.cards-custom-prev7',
+          }}
+          modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <First setImageLoaded={setImageLoaded} />
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <Fourth />
-            </SwiperSlide>
+          <SwiperSlide>
+            <Second />
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <Fifth />
-            </SwiperSlide>
+          <SwiperSlide>
+            <Third />
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <Sixth />
-            </SwiperSlide>
+          <SwiperSlide>
+            <Fourth />
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <Seventh />
-            </SwiperSlide>
+          <SwiperSlide>
+            <Fifth />
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <Eight />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+          <SwiperSlide>
+            <Sixth />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Seventh />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Eight />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   )

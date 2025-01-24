@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 // import NB5 from "@/public/images/home/NB5.mp4"
 // import Text from "@/components/ui/Text";
@@ -10,16 +10,20 @@ const Slide3 = () => {
   //   }
   // };
   return (
-    <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
+    <div className="relative h-screen mob:h-[100vh] flex justify-center items-center">
       <video
         preload="none"
-        className="fixed top-0 left-0 w-full h-full object-cover z-0"
+        className="fixed top-0 left-0 w-full h-[100vh] object-cover z-0"
         autoPlay
         loop
         muted
         playsInline
-      ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004008/NB5_ntcswx.mp4" type="video/mp4" /></video>
-
+      >
+        <source
+          src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004008/NB5_ntcswx.mp4"
+          type="video/mp4"
+        />
+      </video>
 
       {/* <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
         <Text as="h2" className="my-3 ">
@@ -37,7 +41,7 @@ const Slide3 = () => {
         <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">Palm Springs ADU</Text>
       </div> */}
     </div>
-  );
-};
+  )
+}
 
-export default Slide3;
+export default Slide3

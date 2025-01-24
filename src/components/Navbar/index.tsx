@@ -170,70 +170,103 @@ const Navbar = () => {
                       {isDropdownOpen && (
                         <ul className="absolute left-0 min-w-[200px] bg-[#333333] text-white shadow-lg rounded-lg">
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "Architecture");
+                                window.location.href = "/services";
+                              }}
                             >
                               Architecture
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "KitchensAndBathrooms");
+                                window.location.href = "/services";
+                              }}
                             >
                               Kitchens & Bathrooms
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "Construction");
+                                window.location.href = "/services";
+                              }}
                             >
                               Construction
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "Roofing");
+                                window.location.href = "/services";
+                              }}
                             >
                               Roofing
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "Decks");
+                                window.location.href = "/services";
+                              }}
                             >
                               Decks & Patio Covers
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "Siding");
+                                window.location.href = "/services";
+                              }}
                             >
                               Siding
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "WindowsAndDoors");
+                                window.location.href = "/services";
+                              }}
                             >
                               Windows & Doors
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link
-                              href="/services"
+                            <a
+                              href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                              onClick={() => {
+                                sessionStorage.setItem("serviceType", "NaturalDisasterMitigation");
+                                window.location.href = "/services";
+                              }}
                             >
-                              Natural Disaster Migitation
-                            </Link>
+                              Natural Disaster Mitigation
+                            </a>
                           </li>
                         </ul>
+
                       )}
                     </li>
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import slide from '@/public/images/work/DS1.png'
 
 interface FirstProps {
-  setImageLoaded: (loaded: boolean) => void // Function that takes a boolean and returns void
+  setImageLoaded: (loaded: boolean) => void
 }
 
 const First: React.FC<FirstProps> = ({ setImageLoaded }) => {
@@ -16,7 +16,7 @@ const First: React.FC<FirstProps> = ({ setImageLoaded }) => {
         width={1440}
         height={757}
         loading="lazy"
-        onLoad={() => setImageLoaded(true)} // Triggering the callback
+        onLoad={() => setImageLoaded(true)}
       />
     </div>
   )

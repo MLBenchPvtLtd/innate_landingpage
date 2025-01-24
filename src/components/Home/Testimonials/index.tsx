@@ -27,7 +27,6 @@ function Testimonials() {
       <div className="flex flex-wrap justify-center gap-[20px] mob:hidden">
         <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
-            {' '}
             {/* 16:9 Aspect Ratio */}
             <iframe
               src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6&rel=0"
@@ -39,16 +38,22 @@ function Testimonials() {
           </div>
           <div className="p-4">
             <div className="flex gap-[11px] items-center">
-              <Image src={profile1} alt="" width={48} height={48} />
+              <Image
+                src={profile1}
+                alt=""
+                width={48}
+                height={48}
+                className="self-start"
+              />
               <div>
                 <Text className="text-[20px] leading-[28px] text-white">
-                  Pellegrino Remodel
+                  Pellegrino Residence Interior Remodel Project
                 </Text>
                 <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-gray-400 text-sm mt-3">
-              This service is amazing!
+            <Text className="text-gray-400 text-sm mt-3 text-[16px]">
+              The team did a superb job
             </Text>
           </div>
         </div>
@@ -66,16 +71,22 @@ function Testimonials() {
           </div>
           <div className="p-4">
             <div className="flex gap-[11px] items-center">
-              <Image src={profile2} alt="" width={48} height={48} />
+              <Image
+                src={profile2}
+                alt=""
+                width={48}
+                height={48}
+                className="self-start"
+              />
               <div>
-                <Text className="text-[20px] leading-[28px] text-white">
-                  Pellegrino Remodel
+                <Text className="text-[20px] mob:text-[18px]leading-[28px] text-white ">
+                  Wedgewood ADU 950 SF ADU Project
                 </Text>
                 <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-gray-400 text-sm mt-3">
-              This service is amazing!
+            <Text className="text-gray-400 text-sm mt-3 text-[16px]">
+              From excavation to finishes
             </Text>
           </div>
         </div>
@@ -93,16 +104,22 @@ function Testimonials() {
           </div>
           <div className="p-4">
             <div className="flex gap-[11px] items-center">
-              <Image src={profile3} alt="" width={48} height={48} />
+              <Image
+                src={profile3}
+                alt=""
+                width={48}
+                height={48}
+                className="self-start"
+              />
               <div>
                 <Text className="text-[20px] leading-[28px] text-white">
-                  Pellegrino Remodel
+                  Norman Residence Kitchen and Bathroom Remodel
                 </Text>
                 <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-gray-400 text-sm mt-3">
-              This service is amazing!
+            <Text className="text-gray-400 text-sm mt-3 text-[16px]">
+              Michael had a great vision
             </Text>
           </div>
         </div>
@@ -172,16 +189,16 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile1} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white">
-                          Pellegrino Remodel
+                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
+                          Pellegrino Residence Interior Remodel Project
                         </Text>
                         <Text className="mt-1 text-gray-400">
                           CEO at TechCorp
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3">
-                      This service is amazing!
+                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                      The team did a superb job
                     </Text>
                   </div>
                 </div>
@@ -212,16 +229,16 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile2} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white">
-                          Pellegrino Remodel
+                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
+                          Wedgewood ADU 950 SF ADU Project
                         </Text>
                         <Text className="mt-1 text-gray-400">
                           CEO at TechCorp
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3">
-                      This service is amazing!
+                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                      From excavation to finishes
                     </Text>
                   </div>
                 </div>
@@ -251,16 +268,16 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile3} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white">
-                          Pellegrino Remodel
+                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
+                          Norman Residence Kitchen and Bathroom Remodel
                         </Text>
                         <Text className="mt-1 text-gray-400">
                           CEO at TechCorp
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3">
-                      This service is amazing!
+                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                      Michael had a great vision
                     </Text>
                   </div>
                 </div>
