@@ -19,7 +19,7 @@ const Confidence = () => {
           height={328}
         />
         <Image
-          className="top-36 right-0 absolute mob:max-w-[45%] mob:top-72"
+          className="top-36 right-0 absolute mob:max-w-[45%] mob:top-[340px]"
           src={rightbg}
           alt=""
           width={308}

@@ -4,6 +4,10 @@
   text-align: left !important;
 }
 
+.home-slider-parent {
+  position: relative;
+}
+
 @media only screen and (max-width: 1300px) {
   .home-slider-parent .swiper .swiper-pagination {
     padding-right: 0px;

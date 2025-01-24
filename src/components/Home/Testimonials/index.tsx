@@ -160,6 +160,13 @@ function Testimonials() {
                       allowFullScreen
                       className="absolute top-0 left-0 w-full h-full"
                     ></iframe>
+                    <a
+                      href="https://www.youtube.com/watch?v=CIfc5KXFhx8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0"
+                      aria-label="Open video in a new tab"
+                    ></a>
                   </div>
                   <div className="p-4 mob:pb-16">
                     <div className="flex gap-[11px] items-center">
@@ -183,16 +190,24 @@ function Testimonials() {
               <SwiperSlide className="mob:px-3">
                 <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
                   <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
-                    {' '}
                     {/* 16:9 Aspect Ratio */}
                     <iframe
                       src="https://www.youtube.com/embed/CIfc5KXFhx8?si=ka96dqKPIVHT7MoX?rel=0"
                       title="YouTube Video Player"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
+                      className="absolute top-0 left-0 w-full h-full pointer-events-none"
                     ></iframe>
+
+                    <a
+                      href="https://www.youtube.com/watch?v=CIfc5KXFhx8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0"
+                      aria-label="Open video in a new tab"
+                    ></a>
                   </div>
+
                   <div className="p-4">
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile2} alt="" width={48} height={48} />
@@ -224,6 +239,13 @@ function Testimonials() {
                       allowFullScreen
                       className="absolute top-0 left-0 w-full h-full"
                     ></iframe>
+                    <a
+                      href="https://www.youtube.com/watch?v=CIfc5KXFhx8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0"
+                      aria-label="Open video in a new tab"
+                    ></a>
                   </div>
                   <div className="p-4">
                     <div className="flex gap-[11px] items-center">

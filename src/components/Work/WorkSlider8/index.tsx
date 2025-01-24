@@ -28,8 +28,10 @@ import Fourth from '../Content/Norman/Fourth'
 import Fifth from '../Content/Norman/Fifth'
 import leftarrow from '@/public/images/work/Arrowleftblue.png'
 import rightarrow from '@/public/images/work/Arrowrightblue.png'
+import { useState } from 'react'
 
 function WorkSlider3() {
+  const [imageLoaded, setImageLoaded] = useState(false)
   const swiper = useSwiper()
 
   const handleprevbtn = () => {
@@ -50,25 +52,27 @@ function WorkSlider3() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
-        <div className="absolute bottom-40 left-0 p-5 mob:p-10 w-full z-10 bg-opacity-50 ">
-          <div className="text-center">
-            <Text
-              as="h1"
-              className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24 mob:mt-0"
-            >
-              Norman Bathroom
-            </Text>
-            <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
-              West Seattle, Washington
-            </Text>
-            <Link
-              href="/services"
-              className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
-            >
-              LEARN MORE{' '}
-              <Image src={arrowwhite} alt="" width={18} height={18} />
-            </Link>
-          </div>
+        <div className="absolute bottom-96 left-0 p-5 mob:p-10 w-full z-10 bg-opacity-50 ">
+          {imageLoaded && (
+            <div className="text-center">
+              <Text
+                as="h1"
+                className="text-[64px] mob:text-[48px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24 mob:mt-0"
+              >
+                Norman Bathroom
+              </Text>
+              <Text className="text-[28px] mob:mt-3 mob:text-[20px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">
+                West Seattle, Washington
+              </Text>
+              <Link
+                href="/services"
+                className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
+              >
+                LEARN MORE{' '}
+                <Image src={arrowwhite} alt="" width={18} height={18} />
+              </Link>
+            </div>
+          )}
         </div>
         <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative">
           <Image
@@ -95,7 +99,7 @@ function WorkSlider3() {
             className="mySwiper swiper-backface-hidden"
           >
             <SwiperSlide>
-              <First />
+              <First setImageLoaded={setImageLoaded} />
             </SwiperSlide>
 
             <SwiperSlide>
