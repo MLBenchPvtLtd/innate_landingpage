@@ -24,10 +24,14 @@ function HomeSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    { component: <Slide1 />, delay: 36000, projectName: 'Website-Homepage' },
-    { component: <Slide2 />, delay: 26000, projectName: 'Norman-bath' },
-    { component: <Slide3 />, delay: 42000, projectName: 'Pellegrino' },
-    { component: <Slide4 />, delay: 14000, projectName: 'Bosma-ADU' },
+    { component: <Slide1 />, delay: 36000, projectName: 'Innate NW' },
+    { component: <Slide2 />, delay: 26000, projectName: 'Norman Residence' },
+    {
+      component: <Slide3 />,
+      delay: 42000,
+      projectName: 'Pellegrino Residence',
+    },
+    { component: <Slide4 />, delay: 14000, projectName: 'Bosma ADU' },
   ]
 
   const scrollToSection = (id: string) => {
@@ -40,7 +44,7 @@ function HomeSlider() {
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full overflow-hidden home-slider-parent">
-        <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-10 bg-opacity-50 mob:left-0">
+        <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-20 bg-opacity-50 mob:left-0">
           <div className="mb-[70px]">
             <Text as="h2" className="my-3 text-white leading-[44px]">
               <span className="text-[40px] font-light">Design+ Build</span>
@@ -99,6 +103,7 @@ function HomeSlider() {
             <SwiperSlide key={index}>{slide.component}</SwiperSlide>
           ))}
         </Swiper>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.2)] to-black pagination-gradient z-10"></div>
       </div>
     </div>
   )
