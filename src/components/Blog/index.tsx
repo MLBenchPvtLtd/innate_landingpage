@@ -15,8 +15,6 @@ import native from "@/public/images/blog/native.png";
 interface Content {
   type: "text" | "image";
   text?: string;
-  text1?: string;
-  text2?: string;
   src?: string | StaticImageData;
   alt?: string;
 }
