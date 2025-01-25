@@ -36,7 +36,7 @@ const First = () => {
             </Text>
             <Link
               href="/services"
-              className="max-w-[126px] mob:text-[14px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] font-inter text-white "
+              className="max-w-[150px] mx-auto flex items-center justify-center text-center gap-1 text-[16px] mob:text-[14px] font-inter text-white border border-[#FFFFFF] px-[10px] py-2"
             >
               LEARN MORE{' '}
               <Image src={arrowwhite} alt="" width={18} height={18} />
