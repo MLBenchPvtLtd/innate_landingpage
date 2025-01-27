@@ -23,7 +23,7 @@ const DesignAndBuild = () => {
         Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] mt-16 mb-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-16 mb-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
           <Image
             data-aos="zoom-in"
@@ -75,7 +75,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Save Time */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Save Time
@@ -98,42 +98,37 @@ const DesignAndBuild = () => {
             data-aos-duration="1000"
             data-aos-delay="0"
             src={savetime}
+            className="w-[431.81px] h-[369px] mob:w-[324px] mob:h-[276.87px]"
             alt=""
-            width={431.81}
-            height={369}
           />
         </div>
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center mob:gap-[40px]">
         <div className="w-full max-w-[430px] flex justify-end items-end relative mob:mt-12 mob:order-2">
           <Image
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="200"
-            // className="mb-[-50px]"
+            className="w-[340.46px] h-[288.42px] mob:w-[260.71px] mob:h-[220.77px]"
             src={stressbg}
             alt=""
-            width={346}
-            height={293}
           />
           <Image
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="0"
-            className="absolute top-[-70px] left-0"
+            className="absolute top-[-70px] left-0 w-[263px] h-[98px] mob:w-[198.17px] mob:h-[73.84px] mob:top-[-60px]"
             src={stresstop}
             alt=""
-            width={263}
-            height={98}
           />
         </div>
         <div className="mob:order-1">
           <Text as="h2" className="">
             Avoid Stress
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl mob:leading-[20.55px]">
+          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl mob:leading-[20.55px] mob:mt-2">
             Our dedicated project managers attend to every detail of your
             project to make sure it gets done right, on time, and on budget. Our
             subcontractors are vetted, experienced, and highly skilled.
@@ -149,12 +144,12 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Track Progress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Track Progress
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
+          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
             Our proprietary software, JobSync, centralizes timeline progress,
             payments, budget, and material selections.
           </Text>
@@ -173,8 +168,7 @@ const DesignAndBuild = () => {
             data-aos-delay="0"
             src={track}
             alt=""
-            width={448}
-            height={369}
+            className="w-[448px] h-[364.8px] mob:w-[324px] mob:h-[263.83px]"
           />
         </div>
       </div>
