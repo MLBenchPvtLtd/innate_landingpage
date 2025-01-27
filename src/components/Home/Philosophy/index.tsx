@@ -10,7 +10,7 @@ const Philosophy = () => {
       <div className="flex justify-center items-center py-20 mob:my-12 px-14 mob:py-0 mob:px-0">
         <div className="w-[84%] flex mob:flex-col items-center justify-center mob:w-[100%]">
           <div className="w-[80%] mob:px-0 mob:w-[90%]">
-            <Text className="text-[32px] text-white font-semibold leading-[41.2px] mt-3 mb-4 mob:text-[28px]">
+            <Text className="text-[32px] text-white font-semibold leading-[41.2px] mt-3 mb-4 mob:text-[28px] mob:leading-[36.4px]">
               When design is both functional and beautiful,
               <span className="block lg:inline">
                 it has the most impact on people&apos;s lives.

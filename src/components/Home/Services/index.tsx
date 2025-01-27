@@ -55,12 +55,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Roofing
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -95,12 +95,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Decks
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -143,7 +143,7 @@ const Services = () => {
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -187,7 +187,7 @@ const Services = () => {
               </Text>
               <div className="flex justify-center">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -224,12 +224,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 New Construction & ADU
               </Text>
               <div className="flex justify-center">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -266,12 +266,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Siding
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -306,12 +306,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Windows & Doors
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More
@@ -340,12 +340,12 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Natural Disaster Mitigation
               </Text>
               <div className="flex justify-center w-full">
                 <Button
-                  className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300"
+                  className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
                   onClick={() => router.push('/services')}
                 >
                   Learn More

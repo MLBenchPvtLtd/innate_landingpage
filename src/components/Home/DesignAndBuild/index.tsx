@@ -60,12 +60,12 @@ const DesignAndBuild = () => {
           <Text as="h2" className="">
             Avoid Surprises
           </Text>
-          <Text className=" mt-3 mb-16 text-[22px] text-[#FFFFFF66] leading-[30.14px]">
+          <Text className=" mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
             After doing an in-person site visit, we will provide an accurate,
             comprehensive and transparent bid, broken down by trade.
           </Text>
           <Button
-            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px]"
             onClick={() => router.push('/onboarding')}
           >
             Get Started
@@ -80,12 +80,12 @@ const DesignAndBuild = () => {
           <Text as="h2" className="">
             Save Time
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] text-[#FFFFFF66] leading-[30.14px]">
+          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
             Our network of vetted architects, engineers and craftsmen save you
             the time and hassle of putting together your own team.
           </Text>
           <Button
-            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px]"
             onClick={() => router.push('/onboarding')}
           >
             Get Started
@@ -133,13 +133,13 @@ const DesignAndBuild = () => {
           <Text as="h2" className="">
             Avoid Stress
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl">
+          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl mob:leading-[20.55px]">
             Our dedicated project managers attend to every detail of your
             project to make sure it gets done right, on time, and on budget. Our
             subcontractors are vetted, experienced, and highly skilled.
           </Text>
           <Button
-            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px]"
             onClick={() => router.push('/onboarding')}
           >
             Get Started
@@ -154,12 +154,12 @@ const DesignAndBuild = () => {
           <Text as="h2" className="">
             Track Progress
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] text-[#FFFFFF66] leading-[30.14px]">
+          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
             Our proprietary software, JobSync, centralizes timeline progress,
             payments, budget, and material selections.
           </Text>
           <Button
-            className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md"
+            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px]"
             onClick={() => router.push('/onboarding')}
           >
             Get Started
