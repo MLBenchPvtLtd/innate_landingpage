@@ -49,11 +49,9 @@ const Services = () => {
             {/* Content */}
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof1}
-                alt=""
-                width={95}
-                height={95}
+                alt="roofing"
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Roofing
@@ -89,11 +87,9 @@ const Services = () => {
 
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof2}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Decks
@@ -132,11 +128,9 @@ const Services = () => {
 
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof3}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4">
                 Kitchens & Bathrooms
@@ -176,11 +170,9 @@ const Services = () => {
             />
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof4}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4">
                 Architectural Services
@@ -218,11 +210,9 @@ const Services = () => {
             />
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof5}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 New Construction & ADU
@@ -260,11 +250,9 @@ const Services = () => {
             />
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof6}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Siding
@@ -300,11 +288,9 @@ const Services = () => {
             />
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof7}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Windows & Doors
@@ -334,11 +320,9 @@ const Services = () => {
             />
             <div className="relative z-10">
               <Image
-                className="mx-auto"
+                className="mx-auto w-[95px] h-[95px] mob:w-[78px] mob:h-[78px]"
                 src={roof8}
                 alt=""
-                width={95}
-                height={95}
               />
               <Text className="text-[24px] font-light text-center my-4 font-medium">
                 Natural Disaster Mitigation
