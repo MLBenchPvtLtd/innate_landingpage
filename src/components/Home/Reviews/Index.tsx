@@ -30,7 +30,7 @@ const Reviews: React.FC<ReviewsProps> = ({ text, name, title }) => {
           height={64}
         />
 
-        <Text className="text-center text-[24px] font-light leading-[31.2px] text-white max-w-[879px] mx-auto mob:text-[18px]">
+        <Text className="text-center text-[24px] font-medium leading-[31.2px] text-white max-w-[879px] mx-auto mob:text-[18px] mob:leading-[25.2px] mob:font-normal">
           {text}
         </Text>
         <div className="flex gap-[11px] items-center justify-center mt-10">
@@ -39,7 +39,9 @@ const Reviews: React.FC<ReviewsProps> = ({ text, name, title }) => {
             <Text className="text-[24px] font-medium leading-[31.2px] text-white mob:text-[20px]">
               {name}
             </Text>
-            <Text className="mt-1 text-white mob:text-[14px]">{title}</Text>
+            <Text className="text-[16px] mt-1 text-white mob:text-[14px] font-normal">
+              {title}
+            </Text>
           </div>
         </div>
       </div>

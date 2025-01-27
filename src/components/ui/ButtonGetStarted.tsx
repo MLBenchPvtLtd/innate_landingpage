@@ -22,7 +22,7 @@ const ButtonGetStarted: React.FC<ButtonProps> = ({
     <>
       <button
         className={cn(
-          'w-[166.63px] h-[50px] gap-2 hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-medium flex items-center justify-center ',
+          'w-[166.63px] h-[50px] gap-2 hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-medium flex items-center justify-center mob:font-normal mob:text-[14px] mob:px-[24px] mob:py-[14px]',
           className,
         )}
         onClick={() => router.push('/onboarding')}

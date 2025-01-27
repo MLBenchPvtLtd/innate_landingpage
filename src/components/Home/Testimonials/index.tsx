@@ -46,10 +46,12 @@ function Testimonials() {
                 className="self-start"
               />
               <div>
-                <Text className="text-[20px] leading-[28px] text-white">
-                  Pellegrino Residence Interior Remodel Project
+                <Text className="text-[20px] leading-[28px] text-white font-normal">
+                  Pellegrino Residence
                 </Text>
-                <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400 font-normal">
+                  Interior Remodel Project
+                </Text>
               </div>
             </div>
             <Text className="text-gray-400 text-sm mt-3 text-[16px]">
@@ -80,9 +82,9 @@ function Testimonials() {
               />
               <div>
                 <Text className="text-[20px] mob:text-[18px]leading-[28px] text-white ">
-                  Wedgewood ADU 950 SF ADU Project
+                  Wedgewood ADU 950 SF
                 </Text>
-                <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400">ADU Project</Text>
               </div>
             </div>
             <Text className="text-gray-400 text-sm mt-3 text-[16px]">
@@ -113,9 +115,11 @@ function Testimonials() {
               />
               <div>
                 <Text className="text-[20px] leading-[28px] text-white">
-                  Norman Residence Kitchen and Bathroom Remodel
+                  Norman Residence
                 </Text>
-                <Text className="mt-1 text-gray-400">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400">
+                  Kitchen and Bathroom Remodel
+                </Text>
               </div>
             </div>
             <Text className="text-gray-400 text-sm mt-3 text-[16px]">
@@ -189,15 +193,15 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile1} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
-                          Pellegrino Residence Interior Remodel Project
+                        <Text className="text-[18px] leading-[25.2px] text-white font-normal">
+                          Pellegrino Residence
                         </Text>
-                        <Text className="mt-1 text-gray-400">
-                          CEO at TechCorp
+                        <Text className="mt-1 text-gray-400 text-[14px] font-normal leading-[21px]">
+                          Interior Remodel Project
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                    <Text className="text-gray-400 mt-3 text-[14px] leading-[21px] font-normal">
                       The team did a superb job
                     </Text>
                   </div>
@@ -229,15 +233,15 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile2} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
-                          Wedgewood ADU 950 SF ADU Project
+                        <Text className="text-[18px] leading-[25.2px] text-white font-normal">
+                          Wedgewood ADU 950 SF
                         </Text>
-                        <Text className="mt-1 text-gray-400">
-                          CEO at TechCorp
+                        <Text className="mt-1 text-gray-400 text-[14px] font-normal leading-[21px]">
+                          ADU Project
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                    <Text className="text-gray-400 mt-3 text-[14px] leading-[21px] font-normal">
                       From excavation to finishes
                     </Text>
                   </div>
@@ -268,15 +272,15 @@ function Testimonials() {
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile3} alt="" width={48} height={48} />
                       <div>
-                        <Text className="text-[20px] leading-[28px] text-white mob:text-[18px]">
-                          Norman Residence Kitchen and Bathroom Remodel
+                        <Text className="text-[18px] leading-[25.2px] text-white font-normal">
+                          Norman Residence
                         </Text>
-                        <Text className="mt-1 text-gray-400">
-                          CEO at TechCorp
+                        <Text className="mt-1 text-gray-400 text-[14px] font-normal leading-[21px]">
+                          Kitchen and Bathroom Remodel
                         </Text>
                       </div>
                     </div>
-                    <Text className="text-gray-400 text-sm mt-3 mob:text-[14px]">
+                    <Text className="text-gray-400 mt-3 text-[14px] leading-[21px] font-normal">
                       Michael had a great vision
                     </Text>
                   </div>
