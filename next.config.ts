@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    if (process.env.NEXT_PUBLIC_ENV === 'development') {
+      return [];
+    }
+    else {
+      return [
+        {
+          source: '/:path*',
+          destination: 'https://www.innate-nw.com/:path*',
+          permanent: true,
+        },
+      ];
+    }
+  },
 };
 
 export default nextConfig;
