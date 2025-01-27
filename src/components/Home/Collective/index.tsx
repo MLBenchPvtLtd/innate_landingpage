@@ -17,7 +17,7 @@ const Collective = () => {
               collaborating to create beautiful spaces and structures that meet
               the unique needs of our clients.
             </Text>
-            <Text>
+            <Text className="mob:text-[14px] font-normal">
               Innate is an architecture, engineering and construction firm
               capable of handling the entire project from permit to build. Our
               approach focuses on quality design and construction that will
@@ -26,7 +26,7 @@ const Collective = () => {
               is often expensive, and so we are typically not the cheapest bid.
             </Text>
             <Button
-              className="max-w-[137px] h-[50px] text-[16px] font-normal mt-7"
+              className="max-w-[137px]  h-[50px] text-[16px] px-[24px] py-[14px] font-normal mt-7 mob:max-w-[126px] mob:h-[48px] mob:text-[14px]"
               onClick={() => router.push('/about')}
             >
               Learn More

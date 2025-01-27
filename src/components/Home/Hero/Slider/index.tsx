@@ -46,15 +46,22 @@ function HomeSlider() {
       <div className="w-full overflow-hidden home-slider-parent">
         <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-20 bg-opacity-50 mob:left-0">
           <div className="mb-[70px]">
-            <Text as="h2" className="my-3 text-white leading-[44px]">
-              <span className="text-[40px] font-light">Design+ Build</span>
+            <Text
+              as="h2"
+              className="my-3 text-white leading-[44px] mob:leading-[36.4px]"
+            >
+              <span className="text-[40px] font-thin mob:text-[28px]">
+                Design+ Build
+              </span>
               <br />
-              <span className="text-[40px] font-light">It’s</span>{' '}
-              <span className="italic text-[40px]">Innate</span>
+              <span className="text-[40px] font-thin mob:text-[28px]">
+                It’s
+              </span>{' '}
+              <span className="italic text-[40px] mob:text-[28px]">Innate</span>
             </Text>
 
             <button
-              className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
+              className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-normal max-w-[200px] h-[50px] text-[16px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent px-[24px] py-[14px] mob:text-[14px] mob:max-w-[181px] h-[48px]"
               onClick={() => scrollToSection('contactHome')}
             >
               Book Consultation

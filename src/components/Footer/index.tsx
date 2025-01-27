@@ -17,16 +17,18 @@ const Footer = () => {
           <Image src={logo} alt="" width={222.17} height={48} />
         </div>
         <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10">
-          <Text>Northwest</Text>
-          <Text className="text-[#D9D9D9] mt-3 ">
-          22647 Ventura Blvd <br /> Woodland Hills, CA 91364 <br /> (425)
+          <Text className="font-normal">Northwest</Text>
+          <Text className="text-[#D9D9D9] mt-3 font-normal mob:text-[14px]">
+            12819 SE 38th St #340 <br /> Bellevue, WA 98006 <br /> (425)
             866-5206
           </Text>
         </div>
 
-        <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10">
+        <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10 font-medium">
           <Text>Los Angeles</Text>
-          <Text className="text-[#D9D9D9] mt-3">Appointment Only</Text>
+          <Text className="text-[#D9D9D9] mt-3 font-normal mob:text-[14px]">
+            Appointment Only
+          </Text>
         </div>
         <div className="mob:flex mob:flex-col mob:justify-center text-center mob:mt-10">
           <div className="flex gap-4 ml-3 mob:justify-center">
@@ -61,7 +63,9 @@ const Footer = () => {
               />
             </a>
           </div>
-          <Text className="text-[#D9D9D9] mt-3">© Innate NW, LLC</Text>
+          <Text className="text-[#D9D9D9] mt-3 font-normal mob:text-[14px]">
+            © Innate NW, LLC
+          </Text>
         </div>
       </div>
     </div>
