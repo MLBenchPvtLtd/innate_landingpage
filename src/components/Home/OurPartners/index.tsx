@@ -6,8 +6,8 @@ import Marquee from './Marquee'
 
 const OurPartners = () => {
   return (
-    <div className="px-5 pt-16 mob:pt-0">
-      <Text className="text-[24px] font-medium text-center mob:mb-[-106px] mob:font-normal mob:text-[20px]">
+    <div className="px-5 pt-16 mob:pt-0 mob:bg-black mob:pb-[100px]">
+      <Text className="text-[24px] font-medium text-center mob:mb-[-144px] mob:font-normal mob:text-[20px]">
         Loved by Our Partners at
       </Text>
       <div className="w-full h-[250px] max-w-[95%] mx-auto flex lg:flex-wrap lg:justify-center lg:gap-[40px] justify-between items-center">

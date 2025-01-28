@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import slide from '@/public/images/work/PA1.jpg'
+import slide from '@/public/images/work/PA2.jpg'
 interface FirstProps {
   setImageLoaded: (loaded: boolean) => void // Function that takes a boolean and returns void
 }

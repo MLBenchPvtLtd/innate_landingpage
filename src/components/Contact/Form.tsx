@@ -176,9 +176,9 @@ const Form = () => {
             />
             <label
               htmlFor="name"
-              className={`absolute left-0 text-sm text-white transition-all ${
+              className={`absolute left-0 text-[16px] text-white transition-all mob:text-[14px] font-normal ${
                 formData.name
-                  ? '-top-4 text-sm'
+                  ? '-top-4 text-[16px] mob:text-[14px]'
                   : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
               }`}
             >
@@ -200,9 +200,9 @@ const Form = () => {
             />
             <label
               htmlFor="email"
-              className={`absolute left-0 text-sm text-white transition-all ${
+              className={`absolute left-0 font-normal text-white transition-all text-[16px] mob:text-[14px] ${
                 formData.email
-                  ? '-top-4 text-sm'
+                  ? '-top-4 text-[16px] mob:text-[14px]'
                   : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
               }`}
             >
@@ -246,9 +246,9 @@ const Form = () => {
             />
             <label
               htmlFor="phone"
-              className={`absolute left-0 text-sm text-white transition-all ${
+              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${
                 formData.phone && formData.phone.toString().length > 0
-                  ? '-top-4 text-sm'
+                  ? '-top-4 text-[16px] mob:text-[14px]'
                   : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
               }`}
             >
@@ -269,9 +269,9 @@ const Form = () => {
             />
             <label
               htmlFor="projectAddress"
-              className={`absolute left-0 text-sm text-white transition-all ${
+              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${
                 formData.projectAddress
-                  ? '-top-4 text-sm'
+                  ? '-top-4 text-[16px] mob:text-[14px]'
                   : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
               }`}
             >
@@ -284,7 +284,7 @@ const Form = () => {
             value={formData.projectType}
             onChange={handleChange}
             required
-            className="w-full py-2 mb-9 border-b-2 border-[#FFFFFF3D] focus:outline-none text-[16px] text-white placeholder-white bg-transparent"
+            className="w-full py-2 mb-9 border-b-2 border-[#FFFFFF3D] focus:outline-none text-[16px] mob:text-[14px] font-normal text-white placeholder-white bg-transparent"
           >
             <option value="" disabled className="text-[#AAAAAA] bg-[#333333]">
               Project Type
@@ -354,9 +354,9 @@ const Form = () => {
             />
             <label
               htmlFor="message"
-              className={`absolute left-0 text-sm text-white transition-all ${
+              className={`absolute left-0 text-[16px] font-normal mob:text-[14px] text-white transition-all ${
                 formData.message
-                  ? '-top-4 text-sm'
+                  ? '-top-4 text-[16px] mob:text-[14px]'
                   : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
               }`}
             >
@@ -366,7 +366,7 @@ const Form = () => {
 
           <button
             type="submit"
-            className="w-[130.63px] h-[50px] hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-normal flex items-center justify-center gap-1 px-[24px] py-[14px] mob:gap-2 mob:text-[14px] "
+            className="w-[130.63px] h-[50px] hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-normal flex items-center justify-center gap-1 px-[24px] py-[14px] mob:gap-2 mob:text-[14px] mob:h-[48px] mob:w-[125.63px]"
             onClick={handleClick}
           >
             Submit
