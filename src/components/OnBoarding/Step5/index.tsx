@@ -72,8 +72,8 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
 
   return (
     <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
-      <div className="max-w-[90%] w-full py-20">
-        <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
+      <div className="max-w-[90%] mob:max-w-full w-full py-20">
+        <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-8">
           What style best fits your vision?
         </Text>
         <div className="flex flex-wrap gap-5 mob:flex-row">
@@ -86,8 +86,8 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
             >
               <Image src={imageSrc} alt="" width={128} height={128} />
               <div>
-                <Text className="text-[20px] leading-[28px] mb-1 text-left">{title}</Text>
-                <Text className="text-left">{description}</Text>
+                <Text className="text-[20px] mob:text-[18px] leading-[28px] mb-1 text-left">{title}</Text>
+                <Text className="text-left mob:text-[14px]">{description}</Text>
               </div>
             </button>
           ))}

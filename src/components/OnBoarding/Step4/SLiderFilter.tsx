@@ -50,10 +50,10 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
   };
   return (
     <>
-      <div className="flex justify-center bg-[#141414] py-10">
+      <div className="flex justify-center w-full bg-[#141414] py-10">
         <div className="w-full ">
 
-          <div className="flex flex-wrap mb-14 items-center justify-center gap-6">
+          <div className="flex flex-wrap mb-14 items-center justify-center gap-6 mob:gap-1 ">
             <div className="px-4 py-2 border border-[#FFFFFF3D]">
               <Text className="text-center text-[20px]"> {"<"}${rangeStart}K</Text>
               <Text className="text-center">Target budget</Text>

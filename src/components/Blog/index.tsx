@@ -15,8 +15,6 @@ import native from "@/public/images/blog/native.png";
 interface Content {
   type: "text" | "image";
   text?: string;
-  text1?: string;
-  text2?: string;
   src?: string | StaticImageData;
   alt?: string;
 }
@@ -165,25 +163,25 @@ const Blog: FC<ArticleProps> = ({ id }) => {
 
   return (
     <>
-      <div className="w-full max-w-[90%] flex gap-[90px] lg:flex-wrap lg:gap-[50px] mx-auto pt-28 lg:px-5">
-        <div className="w-full max-w-[90%] ">
-          <h2 className="text-[40px] font-medium leading-[52px] mob:text-[35px]">
+      <div className="w-full max-w-[90%] mob:max-w-[100%] flex gap-[90px] lg:flex-wrap lg:gap-[50px] mx-auto pt-28 lg:px-5">
+        <div className="w-full max-w-[90%] mob:max-w-[100%]">
+          <h2 className="text-[40px] font-medium leading-[52px] mob:text-[36px] mob:font-semibold font-inter mob:text-center">
             {section.title}
           </h2>
-          <div className="flex tab:flex-wrap tab:gap-3 justify-between mt-6 mb-4">
-            <Text className="text-[20px] text-[#D9D9D9]">
+          <div className="flex tab:flex-wrap tab:gap-3 justify-between mt-6 mb-4  mob:justify-center">
+            <Text className="text-[20px] text-[#D9D9D9] mob:order-3 font-normal">
               Published: {section.publishedDate}
             </Text>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mob:order-2">
               <Image src={share} alt="" width={32} height={32} />
               <a href="https://www.facebook.com/innateaec" target="_blank"><Image src={fb} alt="" width={32} height={32} /></a>
               <a href="https://www.linkedin.com/company/innate-nw/" target="_blank"><Image src={linkedin} alt="" width={32} height={32} /></a>
             </div>
           </div>
           {section.content.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 mob:w-full">
               {item.type === "image" && item.src ? (
-                <div className="relative w-full aspect-[10/5]">
+                <div className="relative w-full aspect-[10/5] mob:aspect-[7/5] ">
                   <Image
                     src={item.src}
                     alt={item.alt || ""}
@@ -208,7 +206,7 @@ const Blog: FC<ArticleProps> = ({ id }) => {
                         }
                         // Handle non-numbered lines, render as regular list items
                         return (
-                          <li className="my-5" key={idx}>
+                          <li className="my-5 text-[16px] font-normal mob:text-[14px]" key={idx}>
                             {line.trim()}
                           </li>
                         );
@@ -241,7 +239,7 @@ const Blog: FC<ArticleProps> = ({ id }) => {
             </Text>
             <Text
               as="h2"
-              className="text-[30px] leading-[42px] font-semibold mt-[40px] mb-[34px]"
+              className="text-[30px] mob:text-[28px] leading-[42px] font-semibold mt-[40px] mb-[34px]"
             >
               You May Like
             </Text>
@@ -249,10 +247,10 @@ const Blog: FC<ArticleProps> = ({ id }) => {
             <div className="flex items-center gap-[16px] mb-[28px]">
               <Image className="" src={carbon} alt="" width={99} height={98} />
               <div className="">
-                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D]">
+                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D] font-normal">
                   Carbon Economy
                 </button>
-                <Text className="text-[14px] leading-[21px] mt-[10px]">
+                <Text className="text-[14px] leading-[21px] mt-[10px] font-normal">
                   Empowering Indigenous Economies through Carbon.
                 </Text>
               </div>
@@ -266,10 +264,10 @@ const Blog: FC<ArticleProps> = ({ id }) => {
                 height={98}
               />
               <div className="">
-                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D]">
+                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D] font-normal">
                   Heritage Sustained
                 </button>
-                <Text className="text-[14px] leading-[21px] mt-[10px]">
+                <Text className="text-[14px] leading-[21px] mt-[10px] font-normal">
                   Preserving Culture, Heritage, and Land.
                 </Text>
               </div>
@@ -283,10 +281,10 @@ const Blog: FC<ArticleProps> = ({ id }) => {
                 height={98}
               />
               <div className="">
-                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D]">
+                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D] font-normal">
                   Resilient Growth
                 </button>
-                <Text className="text-[14px] leading-[21px] mt-[10px]">
+                <Text className="text-[14px] leading-[21px] mt-[10px] font-normal">
                   Climate Resilience and Community Growth.
                 </Text>
               </div>
@@ -294,10 +292,10 @@ const Blog: FC<ArticleProps> = ({ id }) => {
             <div className="flex items-center gap-[16px] mb-[28px]">
               <Image className="" src={native} alt="" width={99} height={98} />
               <div className="">
-                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D]">
+                <button className="px-2 py-1 rounded-[50px] text-[14px] font-inter bg-[#d9d9d931] border border-[#D9D9D94D] font-normal">
                   Native Stewardship
                 </button>
-                <Text className="text-[14px] leading-[21px] mt-[10px]">
+                <Text className="text-[14px] leading-[21px] mt-[10px] font-normal">
                   Biodiversity Protection through Indigenous Stewardship.
                 </Text>
               </div>

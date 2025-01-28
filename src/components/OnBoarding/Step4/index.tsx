@@ -16,15 +16,15 @@ const Step4: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
  
 
   return (
-    <div className=" gradient flex py-20 items-center justify-center px-5 min-h-[858px]">
-      <div className="max-w-[90%] w-full ">
-        <div className="">
-          <Text className="text-[20px]  font-firaSans font-normal mb-2 ">
+    <div className=" gradient flex py-20 items-center justify-center px-5 mob:px-0 min-h-[858px]">
+      <div className="max-w-[90%] mob:max-w-full w-full ">
+        <div className="mob:w-full">
+          <Text className="text-[20px] mob:text-[18px]  font-firaSans font-normal mb-2 ">
             OPTIONAL
           </Text>
           <Text
             as="h1"
-            className="text-[40px]  font-firaSans font-normal mb-5 "
+            className="text-[40px] mob:text-[30px]  font-firaSans font-medium mob:font-semibold mb-5 "
           >
             What’s your budget range?
           </Text>
@@ -42,8 +42,9 @@ const Step4: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={onNext}
+              onClick={()=>{onNext();console.log(sessionStorage.getItem("step4"))}}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+            
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />

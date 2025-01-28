@@ -19,11 +19,11 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
           <div className="max-w-[499px]">
             <Text
               as="h1"
-              className="text-[40px]  font-firaSans font-normal mb-2 "
+              className="text-[40px] mob:text-[30px]  font-firaSans font-medium mob:font-semibold mb-2 "
             >
               You’re in the right place!
             </Text>
-            <Text className="text-[#D9D9D9]">
+            <Text className="text-[#D9D9D9] text-[16px] mob:text-[14px] font-normal">
               Innate has a team of in-house architects, engineers and craftsmen
               ready to complete your project!
             </Text>
