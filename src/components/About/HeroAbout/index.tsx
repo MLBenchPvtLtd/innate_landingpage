@@ -13,24 +13,28 @@ import arrow from '@/public/images/about/arrow.png'
 import userImg from '@/public/images/about/user.jpg'
 const HeroAbout = () => {
   return (
-    <div className="min-h-screen pt-32 px-5">
+    <div className="min-h-screen pt-32 px-5 mob:pt-16">
       <Text
         as="h1"
-        className="max-w-[971px] text-center text-[2.71vw] mob:text-[42px] leading-[70px] mob:leading-[60px] pt-20 pb-32 mx-auto font-light font-serif"
+        className="max-w-[971px] font-bold text-center text-[2.71vw] mob:text-[40px] leading-[70px] mob:leading-[43.2px] pt-20 pb-32 mx-auto font-light font-serif mob:pb-24"
       >
         “Architecture and craftsmanship is in our DNA”
       </Text>
       <div
-        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around mob:justify-center lg:gap-10 items-center "
+        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around mob:justify-center gap-20 items-center mob:gap-10"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
       >
-        <Image src={firm} alt="" className="w-1/2 mob:w-full" height={598} />
+        <Image
+          src={firm}
+          alt=""
+          className="w-[558px] h-[397px] mob:w-[350px] mob:h-[311px] rounded-[10px]"
+        />
         <div className="w-full max-w-1/2 ms-10 mob:ms-0">
           <Text
             as="h1"
-            className="font-inter font-light font-medium text-[40px] mob:text-[30px] mob:font-normal"
+            className="font-inter font-light font-medium text-[40px] mob:text-[30px] mob:font-semibold"
           >
             The Firm
           </Text>
@@ -48,7 +52,7 @@ const HeroAbout = () => {
         </div>
       </div>
       <div
-        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between mob:justify-center lg:gap-10 items-center py-16 "
+        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between mob:justify-center gap-12 mob:gap-10 items-center py-16 "
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
@@ -86,13 +90,12 @@ const HeroAbout = () => {
         <Image
           src={michel}
           alt=""
-          className="w-2/3 mob:w-full mob:order-1"
-          height={357}
+          className="w-[558px] h-[598px] mob:w-[350px] mob:h-[431px] rounded-[10px]"
         />
       </div>
       <Text
         as="h2"
-        className="text-center text-[40px] mt-8 font-inter font-medium mob:text-[30px] mob:font-semibold"
+        className="text-center text-[40px] mt-8 font-inter font-medium mob:text-[30px] mob:font-semibold mob:mt-2"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
@@ -100,7 +103,7 @@ const HeroAbout = () => {
         Our Team
       </Text>
 
-      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap gap-[25px] justify-center items-center pt-16 pb-16 mob:pt-12 mob:pb-24">
         <div className="w-full max-w-[25%] mob:max-w-full">
           <div
             className="aspect-[2/2] relative overflow-hidden"
@@ -109,7 +112,7 @@ const HeroAbout = () => {
             data-aos-delay="200"
           >
             <Image
-              className="w-1/4 object-cover mob:w-full"
+              className="object-cover w-[266px] h-[261px] mob:w-[350px]"
               src={gelberg}
               alt=""
               fill
@@ -139,7 +142,12 @@ const HeroAbout = () => {
             data-aos-duration="1000"
             data-aos-delay="400"
           >
-            <Image className="w-1/4 object-cover" src={sophia} alt="" fill />
+            <Image
+              className="object-cover w-[266px] h-[261px] mob:w-[350px]"
+              src={sophia}
+              alt=""
+              fill
+            />
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">
@@ -165,7 +173,12 @@ const HeroAbout = () => {
             data-aos-duration="1000"
             data-aos-delay="600"
           >
-            <Image className="w-1/4 object-cover" src={userImg} alt="" fill />
+            <Image
+              className="object-cover w-[266px] h-[261px] mob:w-[350px] rounded-[10px]"
+              src={userImg}
+              alt=""
+              fill
+            />
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">
@@ -191,7 +204,12 @@ const HeroAbout = () => {
             data-aos-duration="1000"
             data-aos-delay="800"
           >
-            <Image className="object-cover" src={userImg} alt="" fill />
+            <Image
+              className="object-cover w-[266px] h-[261px] mob:w-[350px] rounded-[10px]"
+              src={userImg}
+              alt=""
+              fill
+            />
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import slide from '@/public/images/work/NB3.jpg'
+import slide from '@/public/images/work/NB1.jpg'
 const Third = () => {
   return (
     <div className="relative w-full z-10  mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">

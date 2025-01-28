@@ -50,11 +50,11 @@ function HomeSlider() {
               as="h2"
               className="my-3 text-white leading-[44px] mob:leading-[36.4px]"
             >
-              <span className="text-[40px] font-thin mob:text-[28px]">
+              <span className="text-[40px] font-light mob:text-[28px]">
                 Design+ Build
               </span>
               <br />
-              <span className="text-[40px] font-thin mob:text-[28px]">
+              <span className="text-[40px] font-light mob:text-[28px]">
                 It’s
               </span>{' '}
               <span className="italic text-[40px] mob:text-[28px]">Innate</span>

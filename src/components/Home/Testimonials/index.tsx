@@ -7,6 +7,7 @@ import Text from '@/components/ui/Text'
 import profile1 from '@/public/images/home/profile.png'
 import profile2 from '@/public/images/home/profile (1).png'
 import profile3 from '@/public/images/home/profile (2).png'
+import './Testimonials.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -23,7 +24,7 @@ import 'swiper/css/pagination'
 
 function Testimonials() {
   return (
-    <div className=" w-full mx-auto pt-44 pb-20 tab:px-5 mob:py-10">
+    <div className=" w-full mx-auto pt-44 pb-20 tab:px-5 mob:py-10 mob:pt-[80px]">
       <div className="flex flex-wrap justify-center gap-[20px] mob:hidden">
         <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
@@ -128,7 +129,7 @@ function Testimonials() {
           </div>
         </div>
       </div>
-      <div className=" w-full overflow-hidden sm:hidden">
+      <div className="w-full overflow-hidden sm:hidden">
         <div
         // className="overflow-hidden w-full "
         // data-aos="fade-up"
@@ -164,13 +165,16 @@ function Testimonials() {
                 prevEl: '.custom-prev ',
               }}
               pagination={{
+                el: '.custom-pagination-parent',
                 clickable: true,
+                bulletClass: 'custom-bullet',
+                bulletActiveClass: 'custom-bullet-active',
               }}
               modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
               className="mySwiper"
             >
               <SwiperSlide className="mob:px-3">
-                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
+                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-gray-800 rounded-[10px]">
                   <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
                     {' '}
                     {/* 16:9 Aspect Ratio */}
@@ -189,7 +193,7 @@ function Testimonials() {
                       aria-label="Open video in a new tab"
                     ></a>
                   </div>
-                  <div className="p-4 mob:pb-16">
+                  <div className="p-4">
                     <div className="flex gap-[11px] items-center">
                       <Image src={profile1} alt="" width={48} height={48} />
                       <div>
@@ -209,7 +213,7 @@ function Testimonials() {
               </SwiperSlide>
 
               <SwiperSlide className="mob:px-3">
-                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
+                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-gray-800 rounded-[10px]">
                   <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
                     {/* 16:9 Aspect Ratio */}
                     <iframe
@@ -249,7 +253,7 @@ function Testimonials() {
               </SwiperSlide>
 
               <SwiperSlide className="mob:px-3">
-                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
+                <div className="w-full max-w-[25%] border mob:max-w-[100%] border-gray-800 rounded-[10px]">
                   <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
                     {' '}
                     {/* 16:9 Aspect Ratio */}
@@ -287,6 +291,7 @@ function Testimonials() {
                 </div>
               </SwiperSlide>
             </Swiper>
+            <div className="custom-pagination-parent"></div>
           </div>
         </div>
       </div>
