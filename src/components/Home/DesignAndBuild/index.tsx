@@ -23,44 +23,38 @@ const DesignAndBuild = () => {
         Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-16 mb-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
+      <div className="flex lg:flex-wrap gap-[47px] items-center px-[43px] pt-[43px] pb-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px] mob:pt-[12px] mob:pb-[28px]">
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-delay="0"
-            className="relative z-10"
+            className="relative z-20 w-[251.2px] h-[279.13px] sm:w-[340.31px] sm:h-[360.99px]"
             src={avoidcenter}
             alt=""
-            width={346.31}
-            height={303}
           />
           <Image
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="absolute left-0 z-0"
+            className="absolute left-0 z-0 w-[137.99px] h-[180.68px] sm:w-[186.54px] sm:h-[244.25px]"
             src={avoidleft}
             alt=""
-            width={186.54}
-            height={244.25}
           />
           <Image
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="absolute right-0 z-0"
+            className="absolute right-0 z-0 w-[137.99px] h-[180.68px] sm:w-[186.54px] sm:h-[244.25px]"
             src={avoidright}
             alt=""
-            width={186.54}
-            height={244.25}
           />
         </div>
         <div className="mob:order-1">
           <Text as="h2" className="">
             Avoid Surprises
           </Text>
-          <Text className=" mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
+          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px] mob:mt-0">
             After doing an in-person site visit, we will provide an accurate,
             comprehensive and transparent bid, broken down by trade.
           </Text>
@@ -75,12 +69,12 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Save Time */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
+      <div className="flex lg:flex-wrap gap-[47px] items-center px-[43px] pt-[43px] pb-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px] mob:pt-[12px] mob:pb-[28px]">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Save Time
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
+          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px] mob:mt-0">
             Our network of vetted architects, engineers and craftsmen save you
             the time and hassle of putting together your own team.
           </Text>
@@ -105,7 +99,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[36px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] my-10 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center mob:gap-[40px]">
+      <div className="flex lg:flex-wrap gap-[47px] items-center px-[43px] pt-[43px] pb-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px] mob:pt-[12px] mob:pb-[28px]">
         <div className="w-full max-w-[430px] flex justify-end items-end relative mob:mt-12 mob:order-2">
           <Image
             data-aos="fade-right"
@@ -128,13 +122,13 @@ const DesignAndBuild = () => {
           <Text as="h2" className="">
             Avoid Stress
           </Text>
-          <Text className="mt-3 mb-16 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl mob:leading-[20.55px] mob:mt-2">
+          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px] mob:mt-0 mob:mb-6">
             Our dedicated project managers attend to every detail of your
             project to make sure it gets done right, on time, and on budget. Our
             subcontractors are vetted, experienced, and highly skilled.
           </Text>
           <Button
-            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px]"
+            className="max-w-[202px] mob:max-w-[116.38px] mob:h-[35.61px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md mob:text-[11.21px] mob:mt-2"
             onClick={() => router.push('/onboarding')}
           >
             Get Started
@@ -144,12 +138,12 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Track Progress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px]">
+      <div className="flex lg:flex-wrap gap-[47px] items-center px-[43px] pt-[43px] pb-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px] mob:pt-[16px] mob:pb-[34px]">
         <div className="mob:order-1">
           <Text as="h2" className="">
             Track Progress
           </Text>
-          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px]">
+          <Text className="mt-3 mb-12 text-[22px] mob:text-[15px] text-[#FFFFFF66] leading-[30.14px] mob:leading-[20.55px] mob:mt-0">
             Our proprietary software, JobSync, centralizes timeline progress,
             payments, budget, and material selections.
           </Text>

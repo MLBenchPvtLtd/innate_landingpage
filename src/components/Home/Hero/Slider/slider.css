@@ -11,7 +11,6 @@
 @media only screen and (max-width: 1300px) {
   .home-slider-parent .swiper .swiper-pagination {
     padding-right: 0px;
-
     padding-left: 80px;
     text-align: left !important;
   }

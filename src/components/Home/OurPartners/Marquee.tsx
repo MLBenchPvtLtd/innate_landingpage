@@ -61,7 +61,7 @@ const Marquee = () => {
         <Image
           src={ad}
           alt="abc"
-          className={cn('mx-10 mob:mx-4 mt-2')}
+          className={cn('mx-10 mob:mx-4')}
           width={220}
           height={220} // You can modify height independently if needed
         />
@@ -118,51 +118,51 @@ const Marquee = () => {
         <Image
           src={JH}
           alt="abc"
-          className={cn('mx-10 mob:mx-4 mb-7')}
+          className={cn('mx-10 mob:mx-4 mb-8')}
           width={230}
           height={230} // You can modify height independently if needed
         />
         <Image
           src={lic}
           alt="abc"
-          className={cn('mx-10 mob:mx-4')}
+          className={cn('mx-10 mob:mx-4 mb-2')}
           width={120}
           height={120} // You can modify height independently if needed
         />
         <Image
           src={marvin}
           alt="abc"
-          className={cn('mx-10 mob:mx-4')}
+          className={cn('mx-10 mob:mx-4 mb-4')}
           width={200}
           height={200} // You can modify height independently if needed
         />
         <Image
           src={mg}
           alt="abc"
-          className={cn('mx-10 mob:mx-4 mb-2')}
+          className={cn('mx-10 mob:mx-4 mb-4')}
           width={200}
           height={120} // You can modify height independently if needed
         />
         <Image
           src={NU}
           alt="abc"
-          className={cn('mx-10 mob:mx-4')}
-          width={120}
-          height={120} // You can modify height independently if needed
+          className={cn('ml-10 mr-0 mob:mx-4 mb-2')}
+          width={140}
+          height={140} // You can modify height independently if needed
         />
         <Image
           src={tt}
           alt="abc"
-          className={cn('mx-10 mob:mx-4 mb-3')}
-          width={270}
-          height={270} // You can modify height independently if needed
+          className={cn('ml-10 mr-10 mob:ml-2 mob:mr-2 mb-3 mb-8')}
+          width={300}
+          height={300} // You can modify height independently if needed
         />
         <Image
           src={Xactimate}
           alt="abc"
-          className={cn('mx-10 mob:mx-4')}
-          width={100}
-          height={100} // You can modify height independently if needed
+          className={cn('ml-10 mr-16 mob:ml-10 mob:mr-16')}
+          width={90}
+          height={90} // You can modify height independently if needed
         />
         <Image
           src={bt1}
