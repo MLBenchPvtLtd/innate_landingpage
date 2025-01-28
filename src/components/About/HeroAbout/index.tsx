@@ -6,10 +6,11 @@ import Text from '@/components/ui/Text'
 import firm from '@/public/images/about/firm.png'
 import michel from '@/public/images/about/michel.png'
 import gelberg from '@/public/images/about/gelberg.png'
-import amin from '@/public/images/about/amin.png'
+// import amin from '@/public/images/about/amin.png'
 import sophia from '@/public/images/about/sophia.png'
-import mridul from '@/public/images/about/mridul.png'
+// import mridul from '@/public/images/about/mridul.png'
 import arrow from '@/public/images/about/arrow.png'
+import userImg from '@/public/images/about/user.jpg'
 const HeroAbout = () => {
   return (
     <div className="min-h-screen pt-32 px-5">
@@ -164,11 +165,11 @@ const HeroAbout = () => {
             data-aos-duration="1000"
             data-aos-delay="600"
           >
-            <Image className="w-1/4 object-cover" src={mridul} alt="" fill />
+            <Image className="w-1/4 object-cover" src={userImg} alt="" fill />
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">
-              Mridul Alif
+              Andres Quiroga
             </Text>
           </div>
           <div
@@ -178,7 +179,7 @@ const HeroAbout = () => {
             data-aos-delay="500"
           >
             <Text className="text-[18px] font-normal leading-[24px] mob:text-[16px]">
-              Architect
+              Project Manager
             </Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
@@ -190,11 +191,11 @@ const HeroAbout = () => {
             data-aos-duration="1000"
             data-aos-delay="800"
           >
-            <Image className="object-cover" src={amin} alt="" fill />
+            <Image className="object-cover" src={userImg} alt="" fill />
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">
-              Amin Foysal
+              Felix Lopez
             </Text>
           </div>
           <div
@@ -204,7 +205,7 @@ const HeroAbout = () => {
             data-aos-delay="700"
           >
             <Text className="text-[18px] font-normal leading-[24px] mob:text-[16px]">
-              Web Design
+              Superintendent
             </Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
