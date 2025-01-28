@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^innate-nw\.com [NC]
+RewriteRule ^(.*)$ https://www.innate-nw.com/$1 [L,R=301]
