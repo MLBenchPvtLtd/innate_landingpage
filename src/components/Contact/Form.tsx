@@ -22,9 +22,6 @@ const Form = () => {
   const [loading, setLoading] = useState(false)
 
   const validateEmail = (email: string) => {
-    // if (email.includes("@"))
-    //   return true;
-    // return false;
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     if (regex.test(email)) {
       return true
