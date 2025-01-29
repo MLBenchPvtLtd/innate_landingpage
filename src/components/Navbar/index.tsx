@@ -1,44 +1,48 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client'
+import React, { useEffect, useState } from 'react'
 // import Image from "next/image";
-import Link from "next/link";
-import { gsap } from "gsap";
-import arrow from "@/public/Arrow Right.png";
-import downwardarrow from "@/public/Arrow (1).png";
-import Drawer from "../ui/Drawer";
+import Link from 'next/link'
+import { gsap } from 'gsap'
+import arrow from '@/public/Arrow Right.png'
+import downwardarrow from '@/public/Arrow (1).png'
+import Drawer from '../ui/Drawer'
 // import Tippy from '@tippyjs/react';
 // import 'tippy.js/dist/tippy.css';
 // import 'tippy.js/themes/light.css';
 
-import logo from "@/public/logo-innate.png";
-import Image from "next/image";
-import { useTabContext } from "@/context/TabContsxt";
+import logo from '@/public/logo-innate.png'
+import Image from 'next/image'
+import { useTabContext } from '@/context/TabContsxt'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { activeTab, setActiveTab } = useTabContext();
-  const onServicesClose = () => { setIsServicesOpen(false); }
-  const onClose = () => { setIsOpen(false); setIsDropdownOpen(false); console.log(isOpen) }
-  const onOpen = () => setIsOpen(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-
+  const [isOpen, setIsOpen] = useState(false)
+  const { activeTab, setActiveTab } = useTabContext()
+  const onServicesClose = () => {
+    setIsServicesOpen(false)
+  }
+  const onClose = () => {
+    setIsOpen(false)
+    setIsDropdownOpen(false)
+    console.log(isOpen)
+  }
+  const onOpen = () => setIsOpen(true)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
+    setIsDropdownOpen((prev) => !prev)
     // console.log(isDropdownOpen);
-  };
+  }
   const handleTabChange = (tab: string) => {
-    setActiveTab(tab); // Update context
-  };
+    setActiveTab(tab) // Update context
+  }
   useEffect(() => {
     if (isOpen) {
       // Select all list items
-      const listItems = document.querySelectorAll(".list-items");
+      const listItems = document.querySelectorAll('.list-items')
 
       // Set initial opacity to 0 and translateX to 20px
-      gsap.set(listItems, { opacity: 0, x: 20 });
+      gsap.set(listItems, { opacity: 0, x: 20 })
 
       // Iterate through list items and animate them
       gsap.to(listItems, {
@@ -47,49 +51,46 @@ const Navbar = () => {
         x: 0,
         duration: 0.7, // Animation duration
         stagger: 0.2, // Stagger the animation by 0.2 seconds
-        ease: "power2.out", // Easing function
-      });
+        ease: 'power2.out', // Easing function
+      })
     }
-  }, [isOpen]);
+  }, [isOpen])
   const saveTabTitle = (tab: string) => {
     const tabTitles: Record<string, string> = {
-      "/": "Home",
-      "/about": "About",
-      "/contact": "Contact",
-      "/services": "Services",
-      "/onboarding": "on Boarding",
-      "/press": "Press",
-      "/work": "Work",
+      '/': 'Home',
+      '/about': 'About',
+      '/contact': 'Contact',
+      '/services': 'Services',
+      '/onboarding': 'on Boarding',
+      '/press': 'Press',
+      '/work': 'Work',
       // Add more mappings as needed
-    };
+    }
 
     // Update the document's title based on the active tab
-    document.title = tabTitles[tab] || "My App";
-  };
+    document.title = tabTitles[tab] || 'My App'
+  }
 
   // Automatically set the tab title when `activeTab` changes
   useEffect(() => {
-    saveTabTitle(activeTab);
-  }, [activeTab]);
-
+    saveTabTitle(activeTab)
+  }, [activeTab])
 
   return (
     <>
-      <nav className=" absolute  min-h-[134px] z-50  w-full px-16 md:px-20 mob:px-5 ">
+      <nav className="absolute min-h-[134px] z-50 w-full px-16 md:px-20 mob:px-5 ">
         <div className="flex justify-center items-center w-full min-h-[134px] ">
-          <div className="  min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
-            <div className="flex    justify-between w-full    pb-4">
+          <div className="min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto pb-[24px] mob:pb-[50px]">
+            <div className="flex justify-between w-full pb-4">
               <Link
                 href="/"
                 className="flex  mob:justify-start space-x-3 rtl:space-x-reverse"
               >
                 <Image
-                  className="mob:max-w-[200px]"
-                  onClick={() => handleTabChange("/")}
+                  className="w-[259.2px] h-[56px] mob:w-[175.89px] mob:h-[38px] z-50"
+                  onClick={() => handleTabChange('/')}
                   src={logo}
                   alt="Flowbite Logo"
-                  width={259}
-                  height={56}
                 />
               </Link>
               <div className="flex xl:pr-4 xl:hidden  pt-2">
@@ -98,7 +99,7 @@ const Navbar = () => {
                   type="button"
                   className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 bg-gray-700 dark:ring-gray-600"
                   aria-controls="navbar-default"
-                  aria-expanded={isOpen ? "true" : "false"}
+                  aria-expanded={isOpen ? 'true' : 'false'}
                 >
                   <span className="sr-only">Open main menu</span>
                   <svg
@@ -119,8 +120,9 @@ const Navbar = () => {
                 </button>
 
                 <div
-                  className={`${isOpen ? "block" : "hidden"
-                    } w-full md:block md:w-auto`}
+                  className={`${
+                    isOpen ? 'block' : 'hidden'
+                  } w-full md:block md:w-auto`}
                   id="navbar-default"
                 >
                   {/* Your menu options */}
@@ -128,11 +130,12 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/about"
-                        onClick={() => handleTabChange("/about")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === "/about"
-                          ? "text-[#2CFF06]"
-                          : "text-[#FFFFFF]"
-                          }`}
+                        onClick={() => handleTabChange('/about')}
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
+                          activeTab === '/about'
+                            ? 'text-[#2CFF06]'
+                            : 'text-[#FFFFFF]'
+                        }`}
                       >
                         About
                       </Link>
@@ -140,31 +143,40 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/work"
-                        onClick={() => handleTabChange("/work")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === "/work"
-                          ? "text-[#2CFF06]"
-                          : "text-[#FFFFFF]"
-                          }`}
+                        onClick={() => handleTabChange('/work')}
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
+                          activeTab === '/work'
+                            ? 'text-[#2CFF06]'
+                            : 'text-[#FFFFFF]'
+                        }`}
                       >
                         Work
                       </Link>
                     </li>
                     <li className="relative group">
                       <div
-                        onClick={() => { handleTabChange("/services"); toggleDropdown() }}
-                        className={` cursor-pointer block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === "/services"
-                          ? "text-[#2CFF06]"
-                          : "text-[#FFFFFF]"
-                          }`}
+                        onClick={() => {
+                          handleTabChange('/services')
+                          toggleDropdown()
+                        }}
+                        className={` cursor-pointer block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
+                          activeTab === '/services'
+                            ? 'text-[#2CFF06]'
+                            : 'text-[#FFFFFF]'
+                        }`}
                       >
                         <div className="flex items-center gap-1 ">
-                          <Link
-                            href=""
-                            className=""
-                          > Services
+                          <Link href="" className="">
+                            {' '}
+                            Services
                           </Link>
-                          <Image src={downwardarrow} alt="" width={24} height={24} /></div>
-
+                          <Image
+                            src={downwardarrow}
+                            alt=""
+                            width={24}
+                            height={24}
+                          />
+                        </div>
                       </div>
                       {/* Dropdown menu */}
                       {isDropdownOpen && (
@@ -174,8 +186,11 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "Architecture");
-                                window.location.href = "/services";
+                                sessionStorage.setItem(
+                                  'serviceType',
+                                  'Architecture',
+                                )
+                                // window.location.href = '/services'
                               }}
                             >
                               Architecture
@@ -186,8 +201,11 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "KitchensAndBathrooms");
-                                window.location.href = "/services";
+                                sessionStorage.setItem(
+                                  'serviceType',
+                                  'KitchensAndBathrooms',
+                                )
+                                // window.location.href = '/services'
                               }}
                             >
                               Kitchens & Bathrooms
@@ -198,8 +216,11 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "Construction");
-                                window.location.href = "/services";
+                                sessionStorage.setItem(
+                                  'serviceType',
+                                  'Construction',
+                                )
+                                // window.location.href = '/services'
                               }}
                             >
                               Construction
@@ -210,8 +231,8 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "Roofing");
-                                window.location.href = "/services";
+                                sessionStorage.setItem('serviceType', 'Roofing')
+                                // window.location.href = '/services'
                               }}
                             >
                               Roofing
@@ -222,8 +243,8 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "Decks");
-                                window.location.href = "/services";
+                                sessionStorage.setItem('serviceType', 'Decks')
+                                // window.location.href = '/services'
                               }}
                             >
                               Decks & Patio Covers
@@ -234,8 +255,8 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "Siding");
-                                window.location.href = "/services";
+                                sessionStorage.setItem('serviceType', 'Siding')
+                                // window.location.href = '/services'
                               }}
                             >
                               Siding
@@ -246,8 +267,11 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "WindowsAndDoors");
-                                window.location.href = "/services";
+                                sessionStorage.setItem(
+                                  'serviceType',
+                                  'WindowsAndDoors',
+                                )
+                                // window.location.href = '/services'
                               }}
                             >
                               Windows & Doors
@@ -258,26 +282,29 @@ const Navbar = () => {
                               href="#"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                               onClick={() => {
-                                sessionStorage.setItem("serviceType", "NaturalDisasterMitigation");
-                                window.location.href = "/services";
+                                sessionStorage.setItem(
+                                  'serviceType',
+                                  'NaturalDisasterMitigation',
+                                )
+                                // window.location.href = '/services'
                               }}
                             >
                               Natural Disaster Mitigation
                             </a>
                           </li>
                         </ul>
-
                       )}
                     </li>
 
                     <li>
                       <Link
                         href="/press"
-                        onClick={() => handleTabChange("/press")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === "/press"
-                          ? "text-[#2CFF06]"
-                          : "text-[#FFFFFF]"
-                          }`}
+                        onClick={() => handleTabChange('/press')}
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
+                          activeTab === '/press'
+                            ? 'text-[#2CFF06]'
+                            : 'text-[#FFFFFF]'
+                        }`}
                       >
                         Press
                       </Link>
@@ -285,11 +312,12 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/contact"
-                        onClick={() => handleTabChange("/contact")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === "/contact"
-                          ? "text-[#2CFF06]"
-                          : "text-[#FFFFFF]"
-                          }`}
+                        onClick={() => handleTabChange('/contact')}
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
+                          activeTab === '/contact'
+                            ? 'text-[#2CFF06]'
+                            : 'text-[#FFFFFF]'
+                        }`}
                       >
                         Contact
                       </Link>
@@ -304,42 +332,45 @@ const Navbar = () => {
                   className="relative cursor-pointer flex pt-[5px]"
                   onClick={() => {
                     if (isOpen) {
-                      onClose();
-                      onServicesClose();
+                      onClose()
+                      onServicesClose()
                     } else {
-                      onOpen();
+                      onOpen()
                     }
                   }}
-
                 >
                   <button
                     type="button"
-                    className={`relative z-50 flex flex-col items-center justify-center w-10 h-10 rounded-md focus:outline-none ${isOpen}? "hidden" : `}
+                    className={`relative z-50 flex flex-col items-center justify-center w-10 h-10 rounded-md focus:outline-none bottom-[8px] ${isOpen}? "hidden" : `}
                     aria-controls="navbar-default"
-                    aria-expanded={isOpen ? "true" : "false"}
+                    aria-expanded={isOpen ? 'true' : 'false'}
                   >
                     <span
-                      className={`block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-[4px]" : ""}`}
+                      className={`block mob:w-[39px] mob:h-[2px] bg-white transition-transform duration-300 ease-in-out ${
+                        isOpen ? 'rotate-45 translate-y-[4px]' : ''
+                      }`}
                     ></span>
                     <span
-                      className={`block w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-[4px]" : ""}`}
+                      className={`block mob:w-[39px] mob:h-[2px] bg-white mt-1.5 transition-transform duration-300 ease-in-out ${
+                        isOpen ? '-rotate-45 -translate-y-[4px]' : ''
+                      }`}
                     ></span>
                   </button>
-
                 </div>
 
                 {/* side menu */}
                 <div className="relative z-40">
-                  <Drawer isOpen={isOpen} >
-                    <div className="flex h-full w-full z-0 ">
+                  <Drawer isOpen={isOpen}>
+                    <div className="flex h-full w-full z-0 pt-10">
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
-                          onClick={() => handleTabChange("/about")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/about"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/about')}
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
+                            activeTab === '/about'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             About
@@ -349,11 +380,12 @@ const Navbar = () => {
 
                         <Link
                           href="/work"
-                          onClick={() => handleTabChange("/work")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/work')}
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
+                            activeTab === '/work'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Work
@@ -362,13 +394,23 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <li className="flex ms-5 py-[15px] list-items z-40">
-                          <div className="z-50 block text-center text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] cursor-pointer" onClick={toggleDropdown}>
-                            <div className="flex items-center gap-1"
+                          <div
+                            className="z-50 block text-center text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] cursor-pointer"
+                            onClick={toggleDropdown}
+                          >
+                            <div
+                              className="flex items-center gap-1"
                               aria-controls="navbar-default"
-                              aria-expanded={isServicesOpen ? "true" : "false"}
-                              onClick={() => setIsServicesOpen(true)}>
+                              aria-expanded={isServicesOpen ? 'true' : 'false'}
+                              onClick={() => setIsServicesOpen(true)}
+                            >
                               Services
-                              <Image src={arrow} alt="Dropdown arrow" width={24} height={24} />
+                              <Image
+                                src={arrow}
+                                alt="Dropdown arrow"
+                                width={24}
+                                height={24}
+                              />
                             </div>
                           </div>
                           {/* <Tippy
@@ -392,11 +434,12 @@ const Navbar = () => {
 
                         <Link
                           href="/press"
-                          onClick={() => handleTabChange("/press")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/press"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/press')}
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
+                            activeTab === '/press'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Press
@@ -406,11 +449,12 @@ const Navbar = () => {
 
                         <Link
                           href="/contact"
-                          onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/contact')}
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
+                            activeTab === '/contact'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Contact
@@ -421,15 +465,21 @@ const Navbar = () => {
                   </Drawer>
                 </div>
 
-
                 {/* services menu */}
                 <div className="relative z-40">
-                  <Drawer isOpen={isServicesOpen} >
-                    <div className="flex flex-col h-full w-full z-0 ">
+                  <Drawer isOpen={isServicesOpen}>
+                    <div className="flex flex-col h-full w-full z-0 pt-10">
                       {/* <div> */}
                       {/* <div className=" " > */}
-                      <div className="flex items-center text-center text-[20px] font-inter font-medium leading-[25.5px]  mt-10 text-[#FFFFFF]">
-                        <Image src={arrow} alt="Dropdown arrow" className="rotate-180 cursor-pointer hover:text-[#2CFF06]" width={24} height={24} onClick={() => setIsServicesOpen(false)} />
+                      <div className="flex items-center text-center text-[22px] font-inter font-normal leading-[25.5px]  mt-10 text-[#FFFFFF] pl-5">
+                        <Image
+                          src={arrow}
+                          alt="Dropdown arrow"
+                          className="rotate-180 cursor-pointer hover:text-[#2CFF06]"
+                          width={24}
+                          height={24}
+                          onClick={() => setIsServicesOpen(false)}
+                        />
                         Services
                       </div>
                       {/* </div> */}
@@ -437,11 +487,12 @@ const Navbar = () => {
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/about")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/about"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/about')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/about'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Architecture
@@ -451,11 +502,12 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/work")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/work')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/work'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Kitchens & Bathrooms
@@ -465,11 +517,12 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/work")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/work')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/work'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Construction
@@ -480,11 +533,12 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/press")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/press"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/press')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/press'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Roofing
@@ -494,11 +548,12 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/contact')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/contact'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Decks & Patio Covers
@@ -507,11 +562,12 @@ const Navbar = () => {
 
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/contact')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/contact'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Siding
@@ -519,11 +575,12 @@ const Navbar = () => {
                         </Link>
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/contact')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/contact'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Windows & Doors
@@ -531,11 +588,12 @@ const Navbar = () => {
                         </Link>
                         <Link
                           href="/services"
-                          onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
+                          onClick={() => handleTabChange('/contact')}
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
+                            activeTab === '/contact'
+                              ? 'text-[#2CFF06]'
+                              : 'text-[#FFFFFF]'
+                          }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Natural Disaster Mitigation
@@ -545,14 +603,13 @@ const Navbar = () => {
                     </div>
                   </Drawer>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

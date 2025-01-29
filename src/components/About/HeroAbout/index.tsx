@@ -7,7 +7,7 @@ import firm from '@/public/images/about/firm.png'
 import michel from '@/public/images/about/michel.png'
 import gelberg from '@/public/images/about/gelberg.png'
 // import amin from '@/public/images/about/amin.png'
-import sophia from '@/public/images/about/sophia.png'
+import mary from '@/public/images/about/mary.jpg'
 // import mridul from '@/public/images/about/mridul.png'
 import arrow from '@/public/images/about/arrow.png'
 import userImg from '@/public/images/about/user.jpg'
@@ -41,7 +41,7 @@ const HeroAbout = () => {
           <Text className="text-[24px] font-medium leading-[31.2px] my-5 mob:font-normal mob:text-[20px]">
             Culture
           </Text>
-          <Text className="text-[16px] mob:text-[14px] font-normal">
+          <Text className="text-[15px] mob:text-[14px] font-light">
             At Innate, We believe every client and every project have unique
             needs that require unique solutions. Whether it is a small
             residential remodel or a large commercial project, effective
@@ -67,7 +67,7 @@ const HeroAbout = () => {
           <Text className="text-[24px] font-medium leading-[31.2px] my-5 mob:text-[20px] mob:font-normal">
             Founder
           </Text>
-          <Text className="font-normal text-[16px] mob:text-[14px]">
+          <Text className="font-light text-[15px] mob:text-[14px]">
             My love of architecture began at a very young age. As a child
             growing up in Australia I would create structures with blocks and
             sketch my dream house. Many years later I found myself studying
@@ -90,7 +90,8 @@ const HeroAbout = () => {
         <Image
           src={michel}
           alt=""
-          className="w-[558px] h-[598px] mob:w-[350px] mob:h-[431px] rounded-[10px]"
+          className="w-2/3 mob:w-full mob:order-1"
+          height={357}
         />
       </div>
       <Text
@@ -143,8 +144,8 @@ const HeroAbout = () => {
             data-aos-delay="400"
           >
             <Image
-              className="object-cover w-[266px] h-[261px] mob:w-[350px]"
-              src={sophia}
+              className="object-cover w-[266px] h-[261px] mob:w-[350px] rounded-[10px]"
+              src={mary}
               alt=""
               fill
             />
@@ -223,7 +224,7 @@ const HeroAbout = () => {
             data-aos-delay="700"
           >
             <Text className="text-[18px] font-normal leading-[24px] mob:text-[16px]">
-              Superintendent
+              Exteriors
             </Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
