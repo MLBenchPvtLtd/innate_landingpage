@@ -5,13 +5,14 @@ import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import savetime from "@/public/images/home/savetimee.png";
- 
+
 interface Step1Props {
   onNext: () => void;
   onPrevious: () => void;
 }
 
 const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
+  
   return (
     <div className="gradient py-20 flex items-start justify-center px-5 min-h-[858px]">
       <div className="max-w-[90%] w-full ">
@@ -29,13 +30,19 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             </Text>
           </div>
           <div className="">
-            <Image src={savetime} alt="" width={473} height={404} />
+            <Image data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="0"
+              src={savetime}
+              alt=""
+              width={473}
+              height={404} />
           </div>
         </div>
 
         <div className="flex mob:flex-wrap justify-between mt-10">
           <div className="flex gap-5 mt-6">
-          <button
+            <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >

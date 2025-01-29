@@ -4,7 +4,11 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import step7 from "@/public/images/onboarding/step7.png";
+// import step7 from "@/public/images/onboarding/step7.png";
+
+import avoidleft from '@/public/images/home/dsignbuild/avoidleft.png'
+import avoidright from '@/public/images/home/dsignbuild/avoidright.png'
+import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'
 
 interface Step7Props {
   onNext: () => void;
@@ -24,17 +28,42 @@ const Step7: React.FC<Step7Props> = ({ onNext, onPrevious }) => {
               Transparent Bids
             </Text>
             <Text className="text-[#D9D9D9] text-[16px] font-normal mob:text-[14px]">
-            You’ll get a transparent bid that breaks down the price per trade.
+              You’ll get a transparent bid that breaks down the price per trade.
             </Text>
           </div>
           <div className="">
-            <Image src={step7} alt="" width={527} height={365} />
+            <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
+              <Image
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="0"
+                className="relative z-20 w-[251.2px] h-[279.13px] sm:w-[340.31px] sm:h-[360.99px]"
+                src={avoidcenter}
+                alt=""
+              />
+              <Image
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className="absolute left-0 z-0 w-[137.99px] h-[180.68px] sm:w-[186.54px] sm:h-[244.25px]"
+                src={avoidleft}
+                alt=""
+              />
+              <Image
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className="absolute right-0 z-0 w-[137.99px] h-[180.68px] sm:w-[186.54px] sm:h-[244.25px]"
+                src={avoidright}
+                alt=""
+              />
+            </div>
           </div>
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-10">
           <div className="flex gap-5 mt-6">
-          <button
+            <button
               onClick={onPrevious}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
             >

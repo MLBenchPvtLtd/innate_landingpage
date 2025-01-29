@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import SliderFilter from "./SLiderFilter";
 interface Step4Props {
   onChange: (data: { selectedOptions: string[] }) => void; // Adjusted data structure
@@ -6,8 +6,8 @@ interface Step4Props {
 
 const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
   const [rangeStart, setRangeStart] = React.useState<number>(20);
-  const [rangeEnd, setRangeEnd] = React.useState<number>(37);
-  
+  const [rangeEnd, setRangeEnd] = React.useState<number>(50);
+
   // Update local state and notify parent
   const handleSliderChange = (
     start: React.SetStateAction<number>,
@@ -16,23 +16,57 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
     setRangeEnd(end);
 
     const selectedOptions = [`Range: ${start}K - ${end}K`];
-    
+
     // Save to localStorage
     sessionStorage.setItem("step4", JSON.stringify(selectedOptions));
-    
+
     // Notify parent
     onChange({ selectedOptions });
   };
 
+  // const [step1, setStep1] = useState<string[]>()
+  function setrange(selectedOptions: string[]) {
+    console.log("hello");
+    let totalStart = 0;
+    let totalEnd = 0;
 
+    selectedOptions.forEach((option: string) => {
+      const [start, end] = budgetRanges[option] || [0, 0];
+      totalStart += parseInt(start, 10);
+      totalEnd += parseInt(end, 10);
+    });
+
+    if (rangeStart !== totalStart || rangeEnd !== totalEnd) {
+      setRangeStart(totalStart);
+      setRangeEnd(totalEnd);
+      // console.log("range", totalStart);
+    }
+
+    const step4Options = [`Range: ${totalStart}K - ${totalEnd}K`];
+    sessionStorage.setItem("step4", JSON.stringify(step4Options));
+    onChange({ selectedOptions: step4Options });
+
+  }
 
   useEffect(() => {
     const savedData = sessionStorage.getItem("step4");
-    console.log("step4",savedData);
     if (savedData) {
+      console.log("saved", savedData);
       const selectedOptions = JSON.parse(savedData);
-      
-      // Assuming savedData is an array like ["Range: 20K - 37K"]
+      // const formData = sessionStorage.getItem("formData");
+      // console.log(formData)
+      // if (formData) {
+      //   const parsedData = JSON.parse(formData);
+      //   const selectedOptions = parsedData.step1.selectedOptions;
+      //   const chk = selectedOptions.every((option: string) => step1?.includes(option));
+      //   // console.log(selectedOptions," ",step1);
+      //   if (!chk) {
+      //     setrange(selectedOptions);
+      //     return;
+      //   }
+      // }
+      // // console.log("step4", savedData);
+      // // Assuming savedData is an array like ["Range: 20K - 37K"]
       if (selectedOptions && selectedOptions.length > 0) {
         const rangeMatch = selectedOptions[0].match(/(\d+)K - (\d+)K/);
         if (rangeMatch) {
@@ -43,14 +77,27 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
         }
       }
     }
-    else{
-      const selectedOptions=[`Range: ${rangeStart}K - ${rangeEnd}K`]
-      sessionStorage.setItem("step4", JSON.stringify(selectedOptions));
-      onChange({ selectedOptions });
+    else {
+      const formData = sessionStorage.getItem("formData");
+      if (formData) {
+        const parsedData = JSON.parse(formData);
+        const selectedOptions = parsedData.step1.selectedOptions;
+        // setStep1(selectedOptions);
+        setrange(selectedOptions);
+      }
     }
+  }, [onChange]);
+  const budgetRanges: Record<string, [string, string]> = {
+    "Accessory Dwelling Unit (ADU)": ["200", "500"],
+    "Kitchen Remodel": ["30", "80"],
+    "Bathroom Remodel": ["20", "50"],
+    "Addition": ["120", "250"],
+    "New Construction": ["650", "3000"],
+    "General Remodel": ["20", "250"],
+    "Other": ["20", "3000"],
+  };
 
 
-  }, [rangeStart, rangeEnd, onChange]);
   return (
     <div>
       <SliderFilter

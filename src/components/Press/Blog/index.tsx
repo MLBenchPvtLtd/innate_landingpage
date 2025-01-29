@@ -19,7 +19,7 @@ const Blog = () => {
   return (
     <div className=" pt-16">
       <div className="w-full max-w-full  flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] px-16 md:px-20 mob:px-0">
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px]  flex flex-col">
           <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
@@ -44,7 +44,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px] flex flex-col">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px] flex flex-col">
           <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
@@ -68,7 +68,7 @@ const Blog = () => {
         </div>
 
 
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px]  flex flex-col">
           <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
@@ -90,7 +90,7 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px]  flex flex-col">
           <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
@@ -115,7 +115,7 @@ const Blog = () => {
       </div>
       {/* row2 */}
       <div className="w-full max-w-full  flex flex-wrap justify-start mob:justify-center  gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
-        <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+        <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px]  flex flex-col">
           <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>
@@ -138,7 +138,7 @@ const Blog = () => {
 
           </div>
         </div>
-        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-[#FFFFFF99] rounded-[10px]  flex flex-col">
           <Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="flex flex-col justify-between flex-grow p-4">
             <div>

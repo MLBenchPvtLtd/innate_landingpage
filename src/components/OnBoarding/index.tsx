@@ -53,11 +53,11 @@ const OnBoarding: React.FC = () => {
       if (prev === 3) {
         const step1Data = formData["step1"] as { selectedOptions: string[] };
         if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
-          return 4.5; // Arbitrary number for Step4Alternative
+          return 3.5; // Arbitrary number for Step4Alternative
         }
       }
-      if (prev === 4.5) {
-        return 5
+      if (prev === 3.5) {
+        return 4
       }
 
       // Default navigation
@@ -67,14 +67,14 @@ const OnBoarding: React.FC = () => {
   const handlePrevious = () => {
     setCurrentStep((prev) => {
       // If currently on Step 3, check the selection from Step1 to decide the next step
-      if (prev === 5) {
+      if (prev === 4) {
         const step1Data = formData["step1"] as { selectedOptions: string[] };
         if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
-          return 4.5; // Arbitrary number for Step4Alternative
+          return 3.5; // Arbitrary number for Step4Alternative
         }
       }
-      if (prev === 4.5) {
-        return 3
+      if (prev === 3.5) {
+        return 2
       }
       // Default navigation
       return prev > 0 ? prev - 1 : prev;
@@ -84,7 +84,7 @@ const OnBoarding: React.FC = () => {
   const handleInputChange = (step: number, data: string | number | object | unknown[]) => {
     // Only update the state if the data has changed
     if (JSON.stringify(formData[`step${step}`]) !== JSON.stringify(data)) {
-      console.log(`Step ${step} data:`, data); // Log the data
+      // console.log(`Step ${step} data:`, data); // Log the data
 
       setFormData((prev: FormData) => ({
         ...prev,
@@ -252,7 +252,7 @@ const OnBoarding: React.FC = () => {
           onChange={(data) => handleInputChange(4, data)}
         />
       )}
-      {currentStep === 4.5 && (
+      {currentStep === 3.5 && (
         <Step4Alternative
           onNext={handleNext}
           onPrevious={handlePrevious}
