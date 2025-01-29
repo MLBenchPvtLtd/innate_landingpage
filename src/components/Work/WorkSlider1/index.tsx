@@ -19,8 +19,8 @@ import Fifth from '../Content/DesertOasis/Fifth'
 import Sixth from '../Content/DesertOasis/Sixth'
 import Seventh from '../Content/DesertOasis/Seventh'
 import Eight from '../Content/DesertOasis/Eight'
-import leftarrow from '@/public/images/work/Arrowleftblue.png'
-import rightarrow from '@/public/images/work/Arrowrightblue.png'
+// import leftarrow from '@/public/images/work/Arrowleftblue.png'
+import arrow from '@/public/images/work/Arrow.png'
 
 function WorkSlider1() {
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -38,8 +38,8 @@ function WorkSlider1() {
 
   return (
     <div className="w-full h-screen overflow-hidden flex justify-center items-center relative">
-      <div className="absolute inset-0 flex justify-center items-center">
-        <div className="text-center p-5 mob:p-14 w-full z-10 bg-opacity-50">
+      <div className="absolute inset-0 flex justify-center items-center z-20">
+        <div className="text-center p-5 mob:p-14 w-full bg-opacity-50">
           {imageLoaded && (
             <div>
               <Text
@@ -53,7 +53,7 @@ function WorkSlider1() {
               </Text>
               <Link
                 href="/services"
-                className="mt-10 mob:mt-6 font-normal max-w-[200px] h-[62.69px] mx-auto flex items-center justify-center text-center gap-1 text-[18px] mob:text-[12px] text-white border border-[#FFFFFF] px-[3px] py-[17.34px] mob:max-w-[140px] mob:px-[7px] mob:py-[7.33px] mob:h-[40px]"
+                className="mt-10 mob:mt-6 font-normal max-w-[200px] h-[62.69px] mx-auto flex items-center justify-center text-center gap-1 text-[18px] mob:text-[12px] text-white border border-[#FFFFFF] px-[3px] py-[17.34px] mob:max-w-[140px] mob:px-[7px] mob:py-[7.33px] mob:h-[40px] z-20 relative"
               >
                 LEARN MORE
                 <Image src={arrowwhite} alt="" width={18} height={18} />
@@ -64,15 +64,15 @@ function WorkSlider1() {
       </div>
       <div className="w-full overflow-hidden flex justify-center items-center relative">
         <Image
-          className="cards-custom-prev10 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="cards-custom-prev10 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-20 rotate-180"
           onClick={handleprevbtn}
-          src={leftarrow}
+          src={arrow}
           alt="moveprevbtn"
         />
         <Image
-          className="cards-custom-next10 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="cards-custom-next10 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-20"
           onClick={handleNextvbtn}
-          src={rightarrow}
+          src={arrow}
           alt="movenextbtn"
         />
 
@@ -120,6 +120,9 @@ function WorkSlider1() {
             <Eight />
           </SwiperSlide>
         </Swiper>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
       </div>
     </div>
   )

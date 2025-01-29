@@ -1,5 +1,8 @@
 import React from 'react'
-const Second = () => {
+interface FirstProps {
+  setVideoLoaded: (loaded: boolean) => void // Function that takes a boolean and returns void
+}
+const Second: React.FC<FirstProps> = ({ setVideoLoaded }) => {
   return (
     <div className="relative w-full z-10  mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">
       <video
@@ -7,6 +10,9 @@ const Second = () => {
         autoPlay
         loop
         muted
+        onLoadedData={() => {
+          setVideoLoaded(true)
+        }}
       >
         <source
           src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004017/PR_tpkn5z.mp4"

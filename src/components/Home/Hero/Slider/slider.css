@@ -57,3 +57,7 @@
 
   /* Ensure z-index works */
 }
+
+.project-name {
+  font-weight: 100;
+}

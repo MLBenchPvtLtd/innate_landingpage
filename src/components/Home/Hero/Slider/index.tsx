@@ -19,9 +19,11 @@ import Slide2 from '../Content/slide2'
 import Slide3 from '../Content/slide3'
 import Slide4 from '../Content/slide4'
 import Text from '@/components/ui/Text'
+import { useRouter } from 'next/navigation'
 
 function HomeSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const router = useRouter()
 
   const slides = [
     { component: <Slide1 />, delay: 36000, projectName: 'Innate NW' },
@@ -34,22 +36,19 @@ function HomeSlider() {
     { component: <Slide4 />, delay: 14000, projectName: 'Bosma ADU' },
   ]
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  // const scrollToSection = (id: string) => {
+  //   const element = document.getElementById(id)
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' })
+  //   }
+  // }
 
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full overflow-hidden home-slider-parent">
         <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-20 bg-opacity-50 mob:left-0">
-          <div className="mb-[70px]">
-            <Text
-              as="h2"
-              className="my-3 text-white leading-[44px] mob:leading-[36.4px]"
-            >
+          <div className="mb-[40px]">
+            <div className="my-3 text-white leading-[44px] mob:leading-[36.4px]">
               <span className="text-[40px] font-light mob:text-[28px]">
                 Design+ Build
               </span>
@@ -57,21 +56,24 @@ function HomeSlider() {
               <span className="text-[40px] font-light mob:text-[28px]">
                 It’s
               </span>{' '}
-              <span className="italic text-[40px] mob:text-[28px]">Innate</span>
-            </Text>
+              <span className="italic text-[40px] mob:text-[28px] font-light">
+                Innate
+              </span>
+            </div>
 
             <button
-              className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-normal max-w-[200px] h-[50px] text-[16px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent px-[24px] py-[14px] mob:text-[14px] mob:max-w-[181px] h-[48px]"
-              onClick={() => scrollToSection('contactHome')}
+              className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-normal max-w-[200px] h-[50px] text-[16px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent px-[24px] py-[14px] mob:text-[14px] mob:max-w-[181px] mob:h-[48px]"
+              // onClick={() => scrollToSection('contactHome')}
+              onClick={() => router.push('/onboarding')}
             >
               Book Consultation
             </button>
           </div>
 
-          <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5 mob:text-[18px] font-normal">
+          <Text className="text-[20px] leading-[28px] mob:leading-[25px] text-[#FFFFFF] mt-5 mob:text-[18px] font-normal font-bentonMedium">
             Project
           </Text>
-          <Text className="text-[28px] mob:text-[24px] leading-[36.4px] text-[#FFFFFF] font-medium">
+          <Text className="text-[28px] mob:text-[24px] leading-[36.4px] mob:leading-[31.2px] text-[#FFFFFF] project-name">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>

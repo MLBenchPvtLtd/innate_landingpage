@@ -18,8 +18,9 @@ import Fifth from '../Content/ModernADU/Fifth'
 import Sixth from '../Content/ModernADU/Sixth'
 import Seventh from '../Content/ModernADU/Seventh'
 import Eight from '../Content/ModernADU/Eight'
-import leftarrow from '@/public/images/work/Arrowleftblue.png'
-import rightarrow from '@/public/images/work/Arrowrightblue.png'
+// import leftarrow from '@/public/images/work/Arrowleftblue.png'
+// import rightarrow from '@/public/images/work/Arrowrightblue.png'
+import arrow from '@/public/images/work/Arrow.png'
 import { useState } from 'react'
 
 function WorkSlider3() {
@@ -38,7 +39,7 @@ function WorkSlider3() {
 
   return (
     <div className="w-full h-screen overflow-hidden flex justify-center items-center relative">
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="absolute inset-0 flex justify-center items-center z-20">
         <div className="text-center p-5 mob:p-14 w-full z-10 bg-opacity-50">
           {imageLoaded && (
             <div>
@@ -49,7 +50,7 @@ function WorkSlider3() {
                 Modern ADU
               </Text>
               <Text className="text-[28px] font-normal mob:text-[11.84px] text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
-                Kent, Washington
+                Bellevue, Washington
               </Text>
               <Link
                 href="/services"
@@ -65,15 +66,15 @@ function WorkSlider3() {
 
       <div className="w-full overflow-hidden flex justify-center items-center relative">
         <Image
-          className="cards-custom-prev7 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="cards-custom-prev7 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer rotate-180"
           onClick={handleprevbtn}
-          src={leftarrow}
+          src={arrow}
           alt="moveprevbtn"
         />
         <Image
-          className="cards-custom-next7 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="cards-custom-next7 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer "
           onClick={handleNextvbtn}
-          src={rightarrow}
+          src={arrow}
           alt="movenextbtn"
         />
 
@@ -120,6 +121,7 @@ function WorkSlider3() {
             <Eight />
           </SwiperSlide>
         </Swiper>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
       </div>
     </div>
   )

@@ -15,7 +15,6 @@ const First: React.FC<FirstProps> = ({ setImageLoaded }) => {
         alt=""
         width={1440}
         height={757}
-        loading="lazy"
         onLoad={() => setImageLoaded(true)}
       />
     </div>

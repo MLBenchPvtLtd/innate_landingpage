@@ -5,40 +5,41 @@ import Text from '../ui/Text'
 
 import logo from '@/public/logo-innate.png'
 
-import insta from '@/public/insta.svg'
-import fb from '@/public/fb.svg'
-import linkedin from '@/public/ln.svg'
+import insta from '@/public/in.png'
+import fb from '@/public/fbb.png'
+import linkedin from '@/public/LinkedIn.png'
 
 const Footer = () => {
+
   return (
-    <div className=" pt-16 pb-6 mob:pt-12 px-5 mob:bg-[#141414]">
+    <div className=" pt-16 pb-6 mob:pt-12 px-5 ">
       <div className="mx-auto w-full max-w-[90%] sm:flex mob:flex-1 tab:flex-wrap tab:gap-[20px] mob:flew-row justify-between mob:justify-center ">
         <div className="mob:flex mob:justify-center">
           <Image src={logo} alt="" width={222.17} height={48} />
         </div>
         <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10">
-          <Text className="font-normal">Northwest</Text>
-          <Text className="text-[#D9D9D9] mt-3 font-normal mob:text-[14px]">
+          <Text className="font-normal text-white">Northwest</Text>
+          <Text className="text-[#D9D9D9] mt-3 font-light mob:text-[14px]">
             12819 SE 38th St #340 <br /> Bellevue, WA 98006 <br /> (425)
             866-5206
           </Text>
         </div>
 
-        <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10 font-medium">
-          <Text>Los Angeles</Text>
-          <Text className="text-[#D9D9D9] mt-3 font-normal mob:text-[14px]">
-            Appointment Only
+        <div className="max-w-[20%] mob:max-w-full mob:text-center mob:mt-10">
+          <Text className="font-normal text-white">Los Angeles</Text>
+          <Text className="text-[#D9D9D9] mt-3 font-light mob:text-[14px]">
+          22647 Ventura Blvd, <br /> Woodland Hills, CA <br /> 91364
           </Text>
         </div>
         <div className="mob:flex mob:flex-col mob:justify-center text-center mob:mt-10">
           <div className="flex gap-4 ml-3 mob:justify-center">
-            <a href="https://www.instagram.com/innate_aec/" target="_blank">
+            <a href="https://www.instagram.com/innate_nw/" target="_blank">
               <Image
                 src={insta}
                 alt="Instagram"
                 width={32}
                 height={32}
-                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
+                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer opacity-60"
               />
             </a>
             <a href="https://www.facebook.com/innateaec" target="_blank">
@@ -47,7 +48,7 @@ const Footer = () => {
                 alt="Facebook"
                 width={32}
                 height={32}
-                className="transition-transform duration-300  hover:scale-[1.1] cursor-pointer"
+                className="transition-transform duration-300  hover:scale-[1.1] cursor-pointer opacity-60"
               />
             </a>
             <a
@@ -59,7 +60,8 @@ const Footer = () => {
                 alt="LinkedIn"
                 width={32}
                 height={32}
-                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
+                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer  opacity-60"
+
               />
             </a>
           </div>

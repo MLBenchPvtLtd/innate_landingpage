@@ -200,6 +200,7 @@ export async function POST(req: NextRequest) {
           Phone:
         </p>
         <p style="font-size: 22px; font-weight: 500;">${data.step8.phone}</p>
+        <p style="font-size: 22px; font-weight: 500;">${data.step8.email}</p>
       </div>
   
       <div

@@ -64,7 +64,7 @@ function ReviewsSlider() {
           slidesPerView={1}
           speed={4000}
           autoplay={{
-            delay: 8000,
+            delay: 12000,
             disableOnInteraction: false,
           }}
           loop={true}

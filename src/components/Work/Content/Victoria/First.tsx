@@ -21,6 +21,9 @@ const First = () => {
       >
         <source src="/images/home/VB.mp4" type="video/mp4" />
       </video>
+      {videoLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
+      )}
 
       <div className="w-full  relative z-10 min-h-[350px] flex items-center justify-center">
         {videoLoaded && (
@@ -32,7 +35,7 @@ const First = () => {
               Victoria Bathroom
             </Text>
             <Text className="text-[28px] font-normal mob:text-[11.84px] text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
-              Littleton, Colorado
+              Bothell, Washington
             </Text>
             <Link
               href="/services"

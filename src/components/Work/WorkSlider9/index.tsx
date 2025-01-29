@@ -15,12 +15,13 @@ import arrowwhite from '@/public/images/work/Arrowwhite.png'
 import '../slider.css'
 import First from '../Content/Pellegrino/First'
 import Second from '../Content/Pellegrino/Second'
-import leftarrow from '@/public/images/work/Arrowleftblue.png'
-import rightarrow from '@/public/images/work/Arrowrightblue.png'
+// import leftarrow from '@/public/images/work/Arrowleftblue.png'
+import arrow from '@/public/images/work/Arrow.png'
 import { useState } from 'react'
 
 function WorkSlider3() {
-  const [imageLoaded, setImageLoaded] = useState(false)
+  // const [imageLoaded, setImageLoaded] = useState(false)
+  const [videoLoaded, setVideoLoaded] = useState(false)
   const swiper = useSwiper()
 
   const handleprevbtn = () => {
@@ -35,9 +36,9 @@ function WorkSlider3() {
 
   return (
     <div className="w-full h-screen overflow-hidden flex justify-center items-center relative">
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="absolute inset-0 flex justify-center items-center z-20">
         <div className="text-center p-5 mob:p-14 w-full z-10 bg-opacity-50">
-          {imageLoaded && (
+          {videoLoaded && (
             <div>
               <Text
                 as="h1"
@@ -46,7 +47,7 @@ function WorkSlider3() {
                 Pellegrino Remodel
               </Text>
               <Text className="text-[28px] font-normal mob:text-[11.84px] text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
-                Littleton, Colorado
+                Denver, Colorado
               </Text>
               <Link
                 href="/services"
@@ -63,15 +64,15 @@ function WorkSlider3() {
       {/* Swiper Slider Section */}
       <div className="w-full overflow-hidden flex justify-center items-center relative">
         <Image
-          className="cards-custom-prev9 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="cards-custom-prev9 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer rotate-180"
           onClick={handleprevbtn}
-          src={leftarrow}
+          src={arrow}
           alt="moveprevbtn"
         />
         <Image
           className="cards-custom-next9 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
           onClick={handleNextvbtn}
-          src={rightarrow}
+          src={arrow}
           alt="movenextbtn"
         />
         <Swiper
@@ -86,12 +87,14 @@ function WorkSlider3() {
           className="mySwiper swiper-backface-hidden"
         >
           <SwiperSlide>
-            <First setImageLoaded={setImageLoaded} />
+            <Second setVideoLoaded={setVideoLoaded} />
           </SwiperSlide>
           <SwiperSlide>
-            <Second />
+            {/* <First setImageLoaded={setImageLoaded} /> */}
+            <First />
           </SwiperSlide>
         </Swiper>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
       </div>
     </div>
   )

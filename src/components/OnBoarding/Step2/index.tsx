@@ -15,7 +15,7 @@ interface Step2Props {
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   const options = [
-    "Designer",
+    "Architect",
     "Engineer",
     "General Contractor",
     "Surveyor",
