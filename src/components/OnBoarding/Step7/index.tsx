@@ -6,9 +6,9 @@ import Text from "@/components/ui/Text";
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 // import step7 from "@/public/images/onboarding/step7.png";
 
-import avoidleft from '@/public/images/home/dsignbuild/avoidleft.png'
-import avoidright from '@/public/images/home/dsignbuild/avoidright.png'
-import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'
+import avoidleft from '@/public/images/home/dsignbuild/left.svg'
+import avoidright from '@/public/images/home/dsignbuild/right.svg'
+import avoidcenter from '@/public/images/home/dsignbuild/center.svg'
 
 interface Step7Props {
   onNext: () => void;

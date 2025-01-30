@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import rightarrow from '@/public/images/press/RightArrowblue.png'
 import Swal from 'sweetalert2'
@@ -9,7 +9,58 @@ import linkedin from '@/public/LinkedIn.png'
 import instagaram from '@/public/Instagram.png'
 import { ClipLoader } from 'react-spinners'
 
-const Form = () => {
+// interface LatLng {
+//   lat: number;
+//   lng: number;
+// }
+
+// interface SearchLocationInputProps {
+//   setSelectedLocation: (location: LatLng) => void;
+// }
+
+const Form: React.FC = () => {
+
+  const autoCompleteRef = useRef<HTMLInputElement>(null);
+  // let autoComplete: google.maps.places.Autocomplete;
+  const autoCompleteInstance = useRef<google.maps.places.Autocomplete | null>(null); 
+  useEffect(() => {
+    const loadScript = (url: string, callback: () => void) => {
+      if (document.querySelector(`script[src="${url}"]`)) {
+        callback();
+        return;
+      }
+  
+      const script = document.createElement("script");
+      script.src = url;
+      script.async = true;
+      script.defer = true;
+      script.onload = callback;
+      document.head.appendChild(script);
+    };
+  
+    const handleScriptLoad = () => {
+      if (!autoCompleteRef.current || !window.google?.maps) return;
+  
+      autoCompleteInstance.current = new google.maps.places.Autocomplete(autoCompleteRef.current);
+  
+      autoCompleteInstance.current.addListener("place_changed", () => {
+        const place = autoCompleteInstance.current?.getPlace();
+        if (place?.formatted_address) {
+          setFormData((prev) => ({ ...prev, projectAddress: place.formatted_address ?? prev.projectAddress }));
+        }
+      });
+    };
+  
+    if (!window.google) {
+      loadScript(
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0A5Ma5HEzqdRzsRoh6TzvpwWPZ0UqP6s&libraries=places",
+        handleScriptLoad
+      );
+    } else {
+      handleScriptLoad();
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -173,11 +224,10 @@ const Form = () => {
             />
             <label
               htmlFor="name"
-              className={`absolute left-0 text-[16px] text-white transition-all mob:text-[14px] font-normal ${
-                formData.name
-                  ? '-top-4 text-[16px] mob:text-[14px]'
-                  : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
-              }`}
+              className={`absolute left-0 text-[16px] text-white transition-all mob:text-[14px] font-normal ${formData.name
+                ? '-top-4 text-[16px] mob:text-[14px]'
+                : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
+                }`}
             >
               Name
             </label>
@@ -197,11 +247,10 @@ const Form = () => {
             />
             <label
               htmlFor="email"
-              className={`absolute left-0 font-normal text-white transition-all text-[16px] mob:text-[14px] ${
-                formData.email
-                  ? '-top-4 text-[16px] mob:text-[14px]'
-                  : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
-              }`}
+              className={`absolute left-0 font-normal text-white transition-all text-[16px] mob:text-[14px] ${formData.email
+                ? '-top-4 text-[16px] mob:text-[14px]'
+                : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
+                }`}
             >
               Email
             </label>
@@ -243,11 +292,10 @@ const Form = () => {
             />
             <label
               htmlFor="phone"
-              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${
-                formData.phone && formData.phone.toString().length > 0
-                  ? '-top-4 text-[16px] mob:text-[14px]'
-                  : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
-              }`}
+              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${formData.phone && formData.phone.toString().length > 0
+                ? '-top-4 text-[16px] mob:text-[14px]'
+                : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
+                }`}
             >
               Phone
             </label>
@@ -256,6 +304,7 @@ const Form = () => {
           <div className="relative w-full">
             <input
               type="text"
+              ref={autoCompleteRef}
               name="projectAddress"
               id="projectAddress"
               value={formData.projectAddress}
@@ -266,11 +315,10 @@ const Form = () => {
             />
             <label
               htmlFor="projectAddress"
-              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${
-                formData.projectAddress
-                  ? '-top-4 text-[16px] mob:text-[14px]'
-                  : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
-              }`}
+              className={`absolute left-0 text-[16px] mob:text-[14px] font-normal text-white transition-all ${formData.projectAddress
+                ? '-top-4 text-[16px] mob:text-[14px]'
+                : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
+                }`}
             >
               Project Address
             </label>
@@ -351,11 +399,10 @@ const Form = () => {
             />
             <label
               htmlFor="message"
-              className={`absolute left-0 text-[16px] font-normal mob:text-[14px] text-white transition-all ${
-                formData.message
-                  ? '-top-4 text-[16px] mob:text-[14px]'
-                  : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
-              }`}
+              className={`absolute left-0 text-[16px] font-normal mob:text-[14px] text-white transition-all ${formData.message
+                ? '-top-4 text-[16px] mob:text-[14px]'
+                : 'top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm'
+                }`}
             >
               Message
             </label>

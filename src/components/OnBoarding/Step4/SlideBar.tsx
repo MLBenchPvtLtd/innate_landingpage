@@ -24,9 +24,9 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
     onChange({ selectedOptions });
   };
 
-  // const [step1, setStep1] = useState<string[]>()
+  // const [step1, setStep1] = React.useState<string[]>()
+
   function setrange(selectedOptions: string[]) {
-    console.log("hello");
     let totalStart = 0;
     let totalEnd = 0;
 
@@ -35,7 +35,7 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
       totalStart += parseInt(start, 10);
       totalEnd += parseInt(end, 10);
     });
-
+    console.log("totalStart",totalStart)
     if (rangeStart !== totalStart || rangeEnd !== totalEnd) {
       setRangeStart(totalStart);
       setRangeEnd(totalEnd);
@@ -51,24 +51,34 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
   useEffect(() => {
     const savedData = sessionStorage.getItem("step4");
     if (savedData) {
-      console.log("saved", savedData);
-      const selectedOptions = JSON.parse(savedData);
-      // const formData = sessionStorage.getItem("formData");
-      // console.log(formData)
-      // if (formData) {
-      //   const parsedData = JSON.parse(formData);
-      //   const selectedOptions = parsedData.step1.selectedOptions;
-      //   const chk = selectedOptions.every((option: string) => step1?.includes(option));
-      //   // console.log(selectedOptions," ",step1);
-      //   if (!chk) {
-      //     setrange(selectedOptions);
-      //     return;
-      //   }
-      // }
-      // // console.log("step4", savedData);
-      // // Assuming savedData is an array like ["Range: 20K - 37K"]
-      if (selectedOptions && selectedOptions.length > 0) {
-        const rangeMatch = selectedOptions[0].match(/(\d+)K - (\d+)K/);
+      const changedStep1 = sessionStorage.getItem("step1");
+      if (changedStep1) {
+        const { selectedOptions } = JSON.parse(changedStep1);
+        const step1 = sessionStorage.getItem("savedStep1")
+        const step1Array = typeof step1 === "string" ? step1.split(",") : step1;
+        const chk = selectedOptions.every((option: string) => step1Array?.includes(option)) && step1Array?.every(option => selectedOptions.includes(option));
+        console.log(selectedOptions, chk, step1Array);
+        
+        
+
+        if (!chk && (step1 != undefined && step1 != null)) {
+          sessionStorage.setItem("savedStep1", selectedOptions)
+          setrange(selectedOptions);
+
+          return;
+        }
+        else {
+          sessionStorage.setItem("savedStep1", selectedOptions)
+          
+        }
+      }
+
+
+      const step4 = JSON.parse(savedData);
+
+      if (step4 && step4.length > 0) {
+        console.log("step4",step4)
+        const rangeMatch = step4[0].match(/(\d+)K - (\d+)K/);
         if (rangeMatch) {
           const start = parseInt(rangeMatch[1], 10);
           const end = parseInt(rangeMatch[2], 10);
@@ -82,7 +92,7 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
       if (formData) {
         const parsedData = JSON.parse(formData);
         const selectedOptions = parsedData.step1.selectedOptions;
-        // setStep1(selectedOptions);
+        sessionStorage.setItem("savedStep1", selectedOptions)
         setrange(selectedOptions);
       }
     }
