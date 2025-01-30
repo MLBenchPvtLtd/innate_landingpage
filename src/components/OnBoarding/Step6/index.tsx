@@ -13,9 +13,9 @@ interface Step6Props {
 }
 
 const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
+  const autoCompleteRef = useRef<HTMLInputElement | null>(null);
+  const autoComplete = useRef<google.maps.places.Autocomplete | null>(null);
   const [address, setAddress] = useState<string>("");
-  const autoCompleteRef = useRef<HTMLInputElement>(null);
-  let autoComplete: google.maps.places.Autocomplete;
 
   useEffect(() => {
     const savedData = sessionStorage.getItem("step6");
@@ -40,10 +40,10 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
     const handleScriptLoad = () => {
       if (!autoCompleteRef.current || !window.google?.maps) return;
 
-      autoComplete = new google.maps.places.Autocomplete(autoCompleteRef.current);
-      autoComplete.addListener("place_changed", () => {
-        const place = autoComplete.getPlace();
-        if (place.formatted_address) {
+      autoComplete.current = new window.google.maps.places.Autocomplete(autoCompleteRef.current);
+      autoComplete.current.addListener("place_changed", () => {
+        const place = autoComplete.current?.getPlace();
+        if (place?.formatted_address) {
           setAddress(place.formatted_address);
           onChange({ address: place.formatted_address });
         }
@@ -52,12 +52,15 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
 
     if (!window.google) {
       loadScript(
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0A5Ma5HEzqdRzsRoh6TzvpwWPZ0UqP6s&libraries=places",
+        "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places",
         handleScriptLoad
       );
     } else {
       handleScriptLoad();
     }
+
+    // Clean up function
+   
   }, []);
 
   const handleNextClick = () => {

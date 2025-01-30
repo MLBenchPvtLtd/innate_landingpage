@@ -21,15 +21,15 @@ import { ClipLoader } from 'react-spinners'
 const Form: React.FC = () => {
 
   const autoCompleteRef = useRef<HTMLInputElement>(null);
-  let autoComplete: google.maps.places.Autocomplete;
-
+  // let autoComplete: google.maps.places.Autocomplete;
+  const autoCompleteInstance = useRef<google.maps.places.Autocomplete | null>(null); 
   useEffect(() => {
     const loadScript = (url: string, callback: () => void) => {
       if (document.querySelector(`script[src="${url}"]`)) {
         callback();
         return;
       }
-
+  
       const script = document.createElement("script");
       script.src = url;
       script.async = true;
@@ -37,20 +37,20 @@ const Form: React.FC = () => {
       script.onload = callback;
       document.head.appendChild(script);
     };
-
+  
     const handleScriptLoad = () => {
       if (!autoCompleteRef.current || !window.google?.maps) return;
-
-      autoComplete = new google.maps.places.Autocomplete(autoCompleteRef.current);
-
-      autoComplete.addListener("place_changed", () => {
-        const place = autoComplete.getPlace();
-        if (place.formatted_address) {
+  
+      autoCompleteInstance.current = new google.maps.places.Autocomplete(autoCompleteRef.current);
+  
+      autoCompleteInstance.current.addListener("place_changed", () => {
+        const place = autoCompleteInstance.current?.getPlace();
+        if (place?.formatted_address) {
           setFormData((prev) => ({ ...prev, projectAddress: place.formatted_address ?? prev.projectAddress }));
         }
       });
     };
-
+  
     if (!window.google) {
       loadScript(
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0A5Ma5HEzqdRzsRoh6TzvpwWPZ0UqP6s&libraries=places",
