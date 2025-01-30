@@ -60,7 +60,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
     }
 
     // Clean up function
-   
+
   }, []);
 
   const handleNextClick = () => {
@@ -96,12 +96,18 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
             onChange={(e) => setAddress(e.target.value)}
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
+
           <div className="flex gap-[12px] mt-5">
-            <Image src={user} alt="" width={24} height={24} />
-            <Text className="text-[16px] font-normal mob:text-[14px]">
-              4 of your neighbors are currently working on projects with Innate.
-            </Text>
+            {address && (
+              <>
+                <Image src={user} alt="" width={24} height={24} />
+                <Text className="text-[16px] font-normal mob:text-[14px]">
+                  4 of your neighbors are currently working on projects with Innate.
+                </Text>
+              </>
+            )}
           </div>
+
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-5">

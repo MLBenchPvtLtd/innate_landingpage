@@ -52,7 +52,8 @@ function WorkSlider1() {
                 Palm Springs, California
               </Text>
               <Link
-                href="/services"
+                href="#"
+                onClick={(e) => e.preventDefault()}
                 className="mt-10 mob:mt-6 font-normal max-w-[200px] h-[62.69px] mx-auto flex items-center justify-center text-center gap-1 text-[18px] mob:text-[12px] text-white border border-[#FFFFFF] px-[3px] py-[17.34px] mob:max-w-[140px] mob:px-[7px] mob:py-[7.33px] mob:h-[40px] z-20 relative"
               >
                 LEARN MORE

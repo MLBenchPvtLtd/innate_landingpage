@@ -34,7 +34,7 @@ const Collective = () => {
           </div>
           <div className="flex justify-items-center mob:mt-8 mob:px-0">
             <iframe
-              src="https://www.loom.com/embed/edfe795cdce04589b279fefaa15b4e96"
+              src="https://www.loom.com/embed/edfe795cdce04589b279fefaa15b4e96?autoplay=0"
               frameBorder="0"
               allowFullScreen
               className="mob:mr-0 w-[631px] h-[339px] mob:w-[354px] mob:h-[225px]"
