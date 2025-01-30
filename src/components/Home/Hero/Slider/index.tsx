@@ -48,18 +48,19 @@ function HomeSlider() {
       <div className="w-full overflow-hidden home-slider-parent">
         <div className="absolute bottom-[128px] mob:bottom-[70px] left-16 p-5 z-20 bg-opacity-50 mob:left-0">
           <div className="mb-[40px]">
-            <div className="my-3 text-white leading-[44px] mob:leading-[36.4px]">
-              <span className="text-[40px] font-light mob:text-[28px]">
+            <Text
+              as="h2"
+              className="my-3 text-white leading-[44px] mob:leading-[36.4px]"
+            >
+              <span className="text-[40px] mob:text-[28px] font-light">
                 Design+ Build
               </span>
               <br />
-              <span className="text-[40px] font-light mob:text-[28px]">
-                It’s
-              </span>{' '}
-              <span className="italic text-[40px] mob:text-[28px] font-light">
-                Innate
+              <span className="text-[40px] mob:text-[28px] font-light">
+                It’s{' '}
               </span>
-            </div>
+              <span className="italic text-[40px] mob:text-[28px]">Innate</span>
+            </Text>
 
             <button
               className="mt-[20px] mb-[60px] border border-[#FFFFFF] font-normal max-w-[200px] h-[50px] text-[16px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent px-[24px] py-[14px] mob:text-[14px] mob:max-w-[181px] mob:h-[48px]"
@@ -73,7 +74,7 @@ function HomeSlider() {
           <Text className="text-[20px] leading-[28px] mob:leading-[25px] text-[#FFFFFF] mt-5 mob:text-[18px] font-normal font-bentonMedium">
             Project
           </Text>
-          <Text className="text-[28px] mob:text-[24px] leading-[36.4px] mob:leading-[31.2px] text-[#FFFFFF] project-name">
+          <Text className="text-[28px] mob:text-[24px] leading-[36.4px] mob:leading-[31.2px] text-[#FFFFFF] font-light">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>
@@ -112,7 +113,7 @@ function HomeSlider() {
             <SwiperSlide key={index}>{slide.component}</SwiperSlide>
           ))}
         </Swiper>
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.2)] to-black pagination-gradient z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)]  pagination-gradient z-10 pointer-events-none"></div>
       </div>
     </div>
   )

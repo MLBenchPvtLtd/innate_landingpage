@@ -19,20 +19,20 @@ import roof5 from '@/public/images/home/roof5.png'
 import roof6 from '@/public/images/home/roof6.png'
 import roof7 from '@/public/images/home/roof7.png'
 import roof8 from '@/public/images/home/natural Disaster Logo.png'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 
 const Services = () => {
-  const router = useRouter()
+  // const router = useRouter()
   return (
     <div className="pt-24 pb-4 mob:pt-0">
       <div className="flex flex-wrap justify-center w-full mx-auto">
         <div
-          className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5] mob:min-h-[390px] mob:aspect-[5/5]"
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderBottom: 'none',
-            borderLeft: 'none',
-          }}
+          className="border border-[#FFFFFF99] border-b-0 border-l-0 w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5] mob:min-h-[390px] mob:aspect-[5/5] mob:border-r-0"
+          // style={{
+          //   border: '1px solid rgba(255, 255, 255, 0.6)',
+          //   borderBottom: 'none',
+          //   borderLeft: 'none',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -59,7 +59,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -70,7 +70,7 @@ const Services = () => {
 
         {/* Repeat the same for other items */}
         <div
-          className="border-r border-t border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-b"
+          className="border-r border-t border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-b mob:border-r-0 "
           // style={{ borderTop: '1px solid rgba(255, 255, 255, 0.6)' }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative mob:aspect-[5/5]">
@@ -97,7 +97,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  // //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -138,7 +138,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -151,7 +151,7 @@ const Services = () => {
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px] overflow-hidden mx-auto mob:min-h-[390px]">
         <div
-          className="border-[#FFFFFF99] border-r border-t border-b w-[50%] tab:w-full relative group min-h-[484px] overflow-hidden mob:min-h-[390px] mob:border-b-0 mob:aspect-[5/5]"
+          className="border-[#FFFFFF99] border-r border-t border-b w-[50%] tab:w-full relative group min-h-[484px] overflow-hidden mob:min-h-[390px] mob:border-b-0 mob:border-r-0 mob:aspect-[5/5]"
           // style={{
           //   border: '1px solid rgba(255, 255, 255, 0.6)',
           //   borderLeft: 'none',
@@ -180,7 +180,7 @@ const Services = () => {
               <div className="flex justify-center">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -220,7 +220,7 @@ const Services = () => {
               <div className="flex justify-center">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -260,7 +260,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -269,7 +269,7 @@ const Services = () => {
           </div>
         </div>
         <div
-          className="border-x border-b border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-l-0"
+          className="border-x border-b border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-l-0 mob:border-r-0"
           // style={{
           //   border: '1px solid rgba(255, 255, 255, 0.6)',
           //   borderTop: 'none',
@@ -298,7 +298,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>
@@ -330,7 +330,7 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button
                   className="w-[136px] h-[50px] mob:text-[14px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300 mob:w-[126px] mob:h-[48px]"
-                  onClick={() => router.push('/services')}
+                  //onClick={() => router.push('/services')}
                 >
                   Learn More
                 </Button>

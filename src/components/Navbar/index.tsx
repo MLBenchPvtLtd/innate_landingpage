@@ -486,8 +486,9 @@ const Navbar = () => {
                       {/* </div> */}
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/about')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
+                          // onClick={() => handleTabChange('/services')}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/about'
                               ? 'text-[#2CFF06]'
@@ -501,8 +502,10 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/work')}
+                          // href="/services"
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
+                          // onClick={() => handleTabChange('/work')}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/work'
                               ? 'text-[#2CFF06]'
@@ -516,8 +519,10 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/work')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/work')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/work'
                               ? 'text-[#2CFF06]'
@@ -532,8 +537,10 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/press')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/press')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/press'
                               ? 'text-[#2CFF06]'
@@ -547,8 +554,10 @@ const Navbar = () => {
                         {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/contact')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/contact')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/contact'
                               ? 'text-[#2CFF06]'
@@ -561,8 +570,10 @@ const Navbar = () => {
                         </Link>
 
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/contact')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/contact')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/contact'
                               ? 'text-[#2CFF06]'
@@ -574,8 +585,10 @@ const Navbar = () => {
                           </li>
                         </Link>
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/contact')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/contact')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/contact'
                               ? 'text-[#2CFF06]'
@@ -587,8 +600,10 @@ const Navbar = () => {
                           </li>
                         </Link>
                         <Link
-                          href="/services"
-                          onClick={() => handleTabChange('/contact')}
+                          // href="/services"
+                          // onClick={() => handleTabChange('/contact')}
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
                             activeTab === '/contact'
                               ? 'text-[#2CFF06]'

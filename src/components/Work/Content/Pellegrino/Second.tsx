@@ -15,7 +15,7 @@ const Second: React.FC<FirstProps> = ({ setVideoLoaded }) => {
         }}
       >
         <source
-          src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004017/PR_tpkn5z.mp4"
+          src="https://res.cloudinary.com/dpibcz7ui/video/upload/v1738229427/PR_kctlhg.mp4"
           type="video/mp4"
         />
       </video>

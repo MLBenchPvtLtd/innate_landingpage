@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Text from '@/components/ui/Text'
 
 import firm from '@/public/images/about/firm.png'
-import michel from '@/public/images/about/michel.png'
+import michel from '@/public/images/about/michael.png'
 import gelberg from '@/public/images/about/gelberg.png'
 // import amin from '@/public/images/about/amin.png'
 import mary from '@/public/images/about/mary.jpg'
@@ -41,7 +41,7 @@ const HeroAbout = () => {
           <Text className="text-[24px] font-medium leading-[31.2px] my-5 mob:font-normal mob:text-[20px]">
             Culture
           </Text>
-          <Text className="text-[15px] mob:text-[14px] font-light">
+          <Text className="text-[16px] mob:text-[14px] font-light">
             At Innate, We believe every client and every project have unique
             needs that require unique solutions. Whether it is a small
             residential remodel or a large commercial project, effective
@@ -52,7 +52,7 @@ const HeroAbout = () => {
         </div>
       </div>
       <div
-        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between mob:justify-center gap-12 mob:gap-10 items-center py-16 "
+        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between mob:justify-center gap-32 mob:gap-10 items-center py-16 "
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
@@ -67,7 +67,7 @@ const HeroAbout = () => {
           <Text className="text-[24px] font-medium leading-[31.2px] my-5 mob:text-[20px] mob:font-normal">
             Founder
           </Text>
-          <Text className="font-light text-[15px] mob:text-[14px]">
+          <Text className="font-light text-[16px] mob:text-[14px]">
             My love of architecture began at a very young age. As a child
             growing up in Australia I would create structures with blocks and
             sketch my dream house. Many years later I found myself studying
@@ -77,7 +77,7 @@ const HeroAbout = () => {
             profound occurs when you put pencil to paper. It’s a tactile
             connection that brings a unique authenticity to every project we do.
           </Text>
-          <Text className="my-4 font-normal text-[16px] mob:text-[14px]">
+          <Text className="my-4 font-light text-[16px] mob:text-[14px]">
             Since our inception, our philosophy has always been to enhance the
             quality of life of our clients. By collaborating with architects,
             engineers and craftsmen that share our values, I have formed a
@@ -90,8 +90,8 @@ const HeroAbout = () => {
         <Image
           src={michel}
           alt=""
-          className="w-2/3 mob:w-full mob:order-1"
-          height={357}
+          className="w-1/3 mob:w-full mob:order-1 rounded-[10px]"
+          // height={357}
         />
       </div>
       <Text
@@ -152,7 +152,7 @@ const HeroAbout = () => {
           </div>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <Text className="text-[30px] font-semibold leading-[39px] mt-5 mob:font-medium mob:text-[28px]">
-              Sophia Assis
+              Mary Padasas
             </Text>
           </div>
           <div

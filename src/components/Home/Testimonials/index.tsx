@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import Text from '@/components/ui/Text'
 
 // import profile1 from '@/public/images/home/profile.png'
-import profile2 from '@/public/images/home/profile (1).png'
-import profile3 from '@/public/images/home/profile (2).png'
+// import profile2 from '@/public/images/home/profile (1).png'
+// import profile3 from '@/public/images/home/profile (2).png'
 import './Testimonials.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -193,7 +193,7 @@ function Testimonials() {
                       aria-label="Open video in a new tab"
                     ></a>
                   </div>
-                  <div className="p-4">
+                  <div className="pl-2 py-4 pr-4">
                     <div className="flex gap-[11px] items-center">
                       {/* <Image src={profile1} alt="" width={48} height={48} /> */}
                       <div>
@@ -233,9 +233,9 @@ function Testimonials() {
                     ></a>
                   </div>
 
-                  <div className="p-4">
+                  <div className="pl-2 py-4 pr-4">
                     <div className="flex gap-[11px] items-center">
-                      <Image src={profile2} alt="" width={48} height={48} />
+                      {/* <Image src={profile2} alt="" width={48} height={48} /> */}
                       <div>
                         <Text className="text-[18px] leading-[25.2px] text-white font-normal">
                           Wedgewood ADU 950 SF
@@ -260,7 +260,7 @@ function Testimonials() {
                     <iframe
                       src="https://www.youtube.com/embed/BTdFMnOx__Q?si=Blwi7ryULoMUMXVZ"
                       title="YouTube Video Player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture rounded-10"
                       allowFullScreen
                       className="absolute top-0 left-0 w-full h-full"
                     ></iframe>
@@ -272,9 +272,9 @@ function Testimonials() {
                       aria-label="Open video in a new tab"
                     ></a>
                   </div>
-                  <div className="p-4">
+                  <div className="pl-2 py-4 pr-4">
                     <div className="flex gap-[11px] items-center">
-                      <Image src={profile3} alt="" width={48} height={48} />
+                      {/* <Image src={profile3} alt="" width={48} height={48} /> */}
                       <div>
                         <Text className="text-[18px] leading-[25.2px] text-white font-normal">
                           Norman Residence
