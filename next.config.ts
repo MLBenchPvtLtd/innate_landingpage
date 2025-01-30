@@ -1,21 +1,27 @@
 import { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
+// /** @type {import('next').NextConfig} */
+const nextConfig:NextConfig = {
     async redirects() {
-        if (process.env.NEXT_PUBLIC_ENV === 'development') {
-            return [];
-        }
-        else {
-            console.log('Redirect applied for all paths to https://www.innate-nw.com/:path*')
-            return [
-                {
-                    source: '/:path*',
-                    destination: 'https://www.innate-nw.com/:path*',
-                    permanent: true,
-                },
-            ];
-        }
+      if (process.env.NEXT_PUBLIC_ENV === 'development') {
+        return [];
+      } else {
+        return [
+          {
+            source: '/:path*',
+            has: [
+              {
+                type: 'host',
+                value: 'innate-nw.com', // Redirect ONLY if the host is non-www
+              },
+            ],
+            destination: 'https://www.innate-nw.com/:path*',
+            permanent: true,
+          },
+        ];
+      }
     },
-};
-
-export default nextConfig;
+  };
+  
+  export default nextConfig;
+  
