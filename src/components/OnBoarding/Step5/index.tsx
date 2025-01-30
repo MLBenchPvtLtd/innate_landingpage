@@ -4,12 +4,12 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import s1 from "@/public/images/onboarding/s1.png";
-import s2 from "@/public/images/onboarding/s2.png";
-import s3 from "@/public/images/onboarding/s3.png";
-import s4 from "@/public/images/onboarding/s4.png";
-import s5 from "@/public/images/onboarding/s5.png";
-import s6 from "@/public/images/onboarding/s6.png";
+import s1 from "@/public/images/onboarding/s1.svg";
+import s2 from "@/public/images/onboarding/s2.svg";
+import s3 from "@/public/images/onboarding/s3.svg";
+import s4 from "@/public/images/onboarding/s4.svg";
+import s5 from "@/public/images/onboarding/s5.svg";
+import s6 from "@/public/images/onboarding/s6.svg";
 import Swal from "sweetalert2";
 
 interface Step5Props {

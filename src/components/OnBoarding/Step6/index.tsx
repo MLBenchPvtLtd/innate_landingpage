@@ -1,37 +1,74 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-
 import Text from "@/components/ui/Text";
+import Swal from "sweetalert2";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import user from "@/public/images/onboarding/users-01.png";
-import Swal from "sweetalert2";
 
 interface Step6Props {
   onNext: () => void;
   onPrevious: () => void;
-  onChange: (data: { address: string }) => void; // Add onChange prop to handle address
+  onChange: (data: { address: string }) => void;
 }
 
 const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
+  const autoCompleteRef = useRef<HTMLInputElement | null>(null);
+  const autoComplete = useRef<google.maps.places.Autocomplete | null>(null);
   const [address, setAddress] = useState<string>("");
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAddress(e.target.value);
-    onChange({ address: e.target.value }); // Send the address to the parent component
-  };
-
   useEffect(() => {
-    const savedData = sessionStorage.getItem("step6"); 
+    const savedData = sessionStorage.getItem("step6");
     setAddress(savedData || "");
+
+    const loadScript = (url: string, callback: () => void) => {
+      if (document.querySelector(`script[src="${url}"]`)) {
+        if (window.google) callback();
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = url;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if (window.google) callback();
+      };
+      document.head.appendChild(script);
+    };
+
+    const handleScriptLoad = () => {
+      if (!autoCompleteRef.current || !window.google?.maps) return;
+
+      autoComplete.current = new window.google.maps.places.Autocomplete(autoCompleteRef.current);
+      autoComplete.current.addListener("place_changed", () => {
+        const place = autoComplete.current?.getPlace();
+        if (place?.formatted_address) {
+          setAddress(place.formatted_address);
+          onChange({ address: place.formatted_address });
+        }
+      });
+    };
+
+    if (!window.google) {
+      loadScript(
+        "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places",
+        handleScriptLoad
+      );
+    } else {
+      handleScriptLoad();
+    }
+
+    // Clean up function
+   
   }, []);
 
   const handleNextClick = () => {
     if (!address.trim()) {
       Swal.fire({
-        title: 'Error!',
-        text: 'Please enter your address before proceeding.',
-        icon: 'error',
+        title: "Error!",
+        text: "Please enter your address before proceeding.",
+        icon: "error",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -49,14 +86,14 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
             Enter your address to get a starting cost
           </Text>
           <Text className="text-[16px] font-normal mob:text-[14px]">
-            Construction costs are highly dependent on your location. Share your
-            address so we can give you a tailored estimate.
+            Construction costs are highly dependent on your location. Share your address so we can give you a tailored estimate.
           </Text>
           <input
+            ref={autoCompleteRef}
             placeholder="Address"
             type="text"
             value={address}
-            onChange={handleAddressChange} // Handle address change
+            onChange={(e) => setAddress(e.target.value)}
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
           <div className="flex gap-[12px] mt-5">
@@ -77,7 +114,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={handleNextClick} // Validate input on Next button click
+              onClick={handleNextClick}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import savetime from "@/public/images/home/savetimee.png";
+import savetime from "@/public/images/home/saveTime.svg";
 
 interface Step1Props {
   onNext: () => void;
@@ -40,7 +40,7 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
           </div>
         </div>
 
-        <div className="flex mob:flex-wrap justify-between mt-10">
+        <div className="flex mob:flex-wrap justify-end mt-10">
           <div className="flex gap-5 mt-6">
             <button
               onClick={onPrevious}
