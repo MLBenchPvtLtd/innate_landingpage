@@ -112,7 +112,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex mob:flex-wrap justify-between">
+        <div className="flex mob:flex-wrap justify-end">
           <div className="flex gap-5 mt-6">
             <button
               onClick={onPrevious}

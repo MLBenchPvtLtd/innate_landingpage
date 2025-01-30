@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 
@@ -5,9 +6,9 @@ import Text from '../ui/Text'
 
 import logo from '@/public/logo-innate.png'
 
-import insta from '@/public/in.png'
-import fb from '@/public/fbb.png'
-import linkedin from '@/public/LinkedIn.png'
+import insta from '@/public/insta.svg'
+import fb from '@/public/fb.svg'
+import linkedin from '@/public/linkedin.svg'
 
 const Footer = () => {
 
@@ -42,7 +43,7 @@ const Footer = () => {
                 className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer opacity-60"
               />
             </a>
-            <a href="https://www.facebook.com/innateaec" target="_blank">
+            <a href="#"  onClick={(e)=>{e.preventDefault()}}>
               <Image
                 src={fb}
                 alt="Facebook"

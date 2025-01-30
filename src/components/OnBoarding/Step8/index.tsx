@@ -93,6 +93,14 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
           <br />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleEmailChange}
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            className="pl-4 mt-3 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white" />
           <input
             placeholder="Phone"
             type="number"
@@ -114,13 +122,6 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
             }} // Handle phone change
             className="pl-4 mt-3 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={handleEmailChange}
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white" />
         </div>
 
         <div className="flex mob:flex-wrap justify-end mt-5">
