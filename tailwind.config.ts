@@ -12,6 +12,7 @@ export default {
         inter: ["var(--font-inter)"],
         monts: ["var(--font-monts)"],
         firaSans: ["var(--font-firasans)"],
+        bentonMedium: ["BentonSans-Medium", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

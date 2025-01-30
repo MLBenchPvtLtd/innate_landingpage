@@ -24,7 +24,7 @@ import { useRouter } from 'next/navigation'
 const Services = () => {
   const router = useRouter()
   return (
-    <div className="pt-24 pb-5 mob:pt-0">
+    <div className="pt-24 pb-4 mob:pt-0">
       <div className="flex flex-wrap justify-center w-full mx-auto">
         <div
           className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5] mob:min-h-[390px] mob:aspect-[5/5]"

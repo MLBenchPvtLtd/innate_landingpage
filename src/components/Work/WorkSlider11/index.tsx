@@ -15,8 +15,8 @@ import Second from '../Content/Shoreline/Second'
 import Third from '../Content/Shoreline/Third'
 import Fourth from '../Content/Shoreline/Fourth'
 import Fifth from '../Content/Shoreline/Fifth'
-import leftarrow from '@/public/images/work/Arrowleftblue.png'
-import rightarrow from '@/public/images/work/Arrowrightblue.png'
+// import leftarrow from '@/public/images/work/Arrowleftblue.png'
+import arrow from '@/public/images/work/Arrow.png'
 import { useState } from 'react'
 
 function WorkSlider3() {
@@ -35,16 +35,23 @@ function WorkSlider3() {
 
   return (
     <div className="w-full h-screen flex justify-center items-center relative overflow-hidden">
-      <div className="absolute inset-0 flex justify-center items-center w-full h-full">
+      <div className="absolute inset-0 flex justify-center items-center w-full h-full z-20">
         {/* Text content */}
-        <div className="absolute xl:bottom-96 mob:bottom-80 left-0 p-5 mob:p-10 w-full z-10 bg-opacity-50 text-center">
+        <div className="absolute xl:bottom-96 mob:bottom-80 left-0 p-5 mob:p-10 w-full z-20 bg-opacity-50 text-center">
           {imageLoaded && (
             <div>
               <Text
                 as="h1"
-                className="text-[74px] font-semibold text-[#FFFFFF] mob:text-[29.29px]"
+                className="text-[74px] font-semibold text-[#FFFFFF] mob:text-[29.29px] text-center mob:hidden"
               >
                 Shoreline Residence
+              </Text>
+              <Text
+                as="h1"
+                className="text-[74px] font-semibold text-[#FFFFFF] mob:text-[29.29px] text-center sm:hidden"
+              >
+                Shoreline
+                <br /> Residence
               </Text>
               <Text className="text-[28px] font-normal mob:text-[11.84px] text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
                 Shoreline, Washington
@@ -64,15 +71,15 @@ function WorkSlider3() {
         <div className="w-full work1-slider-parent flex justify-center items-center relative">
           {/* Navigation Arrows */}
           <Image
-            className="cards-custom-prev11 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+            className="cards-custom-prev11 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer rotate-180"
             onClick={handleprevbtn}
-            src={leftarrow}
+            src={arrow}
             alt="moveprevbtn"
           />
           <Image
             className="cards-custom-next11 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
             onClick={handleNextvbtn}
-            src={rightarrow}
+            src={arrow}
             alt="movenextbtn"
           />
 
@@ -104,6 +111,7 @@ function WorkSlider3() {
               <Fifth />
             </SwiperSlide>
           </Swiper>
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
         </div>
       </div>
     </div>

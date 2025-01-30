@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Text from '@/components/ui/Text'
 
-import profile1 from '@/public/images/home/profile.png'
+// import profile1 from '@/public/images/home/profile.png'
 import profile2 from '@/public/images/home/profile (1).png'
 import profile3 from '@/public/images/home/profile (2).png'
 import './Testimonials.css'
@@ -37,15 +37,15 @@ function Testimonials() {
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           </div>
-          <div className="p-4">
+          <div className="pl-0 py-4 pr-4">
             <div className="flex gap-[11px] items-center">
-              <Image
+              {/* <Image
                 src={profile1}
                 alt=""
                 width={48}
                 height={48}
                 className="self-start"
-              />
+              /> */}
               <div>
                 <Text className="text-[20px] leading-[28px] text-white font-normal">
                   Pellegrino Residence
@@ -72,15 +72,15 @@ function Testimonials() {
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           </div>
-          <div className="p-4">
+          <div className="pl-0 py-4 pr-4">
             <div className="flex gap-[11px] items-center">
-              <Image
+              {/* <Image
                 src={profile2}
                 alt=""
                 width={48}
                 height={48}
                 className="self-start"
-              />
+              /> */}
               <div>
                 <Text className="text-[20px] mob:text-[18px]leading-[28px] text-white ">
                   Wedgewood ADU 950 SF
@@ -105,15 +105,15 @@ function Testimonials() {
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>
           </div>
-          <div className="p-4">
+          <div className="pl-0 py-4 pr-4">
             <div className="flex gap-[11px] items-center">
-              <Image
+              {/* <Image
                 src={profile3}
                 alt=""
                 width={48}
                 height={48}
                 className="self-start"
-              />
+              /> */}
               <div>
                 <Text className="text-[20px] leading-[28px] text-white">
                   Norman Residence
@@ -195,7 +195,7 @@ function Testimonials() {
                   </div>
                   <div className="p-4">
                     <div className="flex gap-[11px] items-center">
-                      <Image src={profile1} alt="" width={48} height={48} />
+                      {/* <Image src={profile1} alt="" width={48} height={48} /> */}
                       <div>
                         <Text className="text-[18px] leading-[25.2px] text-white font-normal">
                           Pellegrino Residence
