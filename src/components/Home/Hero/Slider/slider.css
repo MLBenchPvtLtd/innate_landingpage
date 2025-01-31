@@ -53,9 +53,7 @@
 
 .mySwiper .swiper-pagination {
   z-index: 100;
-  /* Adjust this value as needed */
 
-  /* Ensure z-index works */
 }
 
 .project-name {
