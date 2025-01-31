@@ -14,7 +14,7 @@ interface StartProps {
       <div className="">
         <Text
           as="h1"
-          className="text-[40px] mob:text-[30px] font-firaSans font-normal mob:font-semibold mb-10 mob:text-center pl-10"
+          className="text-[40px] mob:text-[30px] font-firaSans font-normal mob:font-semibold mb-10 mob:text-center pl-10 mob:pl-0"
         >
           How do you want to get started?
         </Text>
