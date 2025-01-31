@@ -16,10 +16,14 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
   const autoCompleteRef = useRef<HTMLInputElement | null>(null);
   const autoComplete = useRef<google.maps.places.Autocomplete | null>(null);
   const [address, setAddress] = useState<string>("");
+  const [addressSelected, setAddressSelected] = useState<boolean>(false);
 
   useEffect(() => {
     const savedData = sessionStorage.getItem("step6");
-    setAddress(savedData || "");
+    if (savedData) {
+      setAddress(savedData);
+      setAddressSelected(true); // Keep message visible if data exists
+    }
 
     const loadScript = (url: string, callback: () => void) => {
       if (document.querySelector(`script[src="${url}"]`)) {
@@ -41,27 +45,32 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
       if (!autoCompleteRef.current || !window.google?.maps) return;
 
       autoComplete.current = new window.google.maps.places.Autocomplete(autoCompleteRef.current);
+
       autoComplete.current.addListener("place_changed", () => {
         const place = autoComplete.current?.getPlace();
         if (place?.formatted_address) {
           setAddress(place.formatted_address);
+          setAddressSelected(true); // Mark as selected from dropdown
           onChange({ address: place.formatted_address });
+          sessionStorage.setItem("step6", place.formatted_address);
         }
       });
     };
 
     if (!window.google) {
       loadScript(
-        "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places",
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0A5Ma5HEzqdRzsRoh6TzvpwWPZ0UqP6s&libraries=places",
         handleScriptLoad
       );
     } else {
       handleScriptLoad();
     }
+  }, [onChange]);
 
-    // Clean up function
-
-  }, []);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAddress(e.target.value);
+    setAddressSelected(false); // Reset selection status when user types
+  };
 
   const handleNextClick = () => {
     if (!address.trim()) {
@@ -79,8 +88,8 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
   };
 
   return (
-    <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
-      <div className="max-w-[90%] mob:max-w-full w-full py-20">
+    <div className="gradient flex items-center justify-center px-5 min-h-[690px] mob:min-h-0">
+      <div className="max-w-[90%] mob:max-w-full w-full py-20 mob:pt-10">
         <div>
           <Text as="h1" className="text-[40px] mob:text-[30px] font-firaSans font-medium mob:font-semibold mb-3">
             Enter your address to get a starting cost
@@ -93,14 +102,14 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
             placeholder="Address"
             type="text"
             value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            onChange={handleInputChange}
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
-
           <div className="flex gap-[12px] mt-5">
-            {address && (
+            <Image src={user} alt="" className="w-[24px] h-[24px]" />
+
+            {addressSelected && (
               <>
-                <Image src={user} alt="" width={24} height={24} />
                 <Text className="text-[16px] font-normal mob:text-[14px]">
                   4 of your neighbors are currently working on projects with Innate.
                 </Text>
