@@ -53,8 +53,7 @@ function WorkSlider2() {
                 Seattle, Washington
               </Text>
               <Link
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                href="/project"
                 className="mt-8 mob:mt-6 font-normal max-w-[260px] h-[62.69px] mx-auto flex items-center justify-center text-center gap-1 text-[18px] mob:text-[12px] text-white border border-[#FFFFFF] px-[28px] py-[17.34px] mob:max-w-[140px] mob:px-[14px] mob:py-[7.33px] mob:h-[40px]"
               >
                 LEARN MORE
