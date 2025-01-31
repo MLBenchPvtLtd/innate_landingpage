@@ -129,7 +129,7 @@ const Blog: FC<ArticleProps> = ({ id }) => {
       {
         id: 6,
         title: "Why aren’t general contractors getting back to me?",
-        publishedDate: "3 Ferruary, 2024", // Add the publication date here
+        publishedDate: "3 February, 2024", // Add the publication date here
         content: [
 
           {

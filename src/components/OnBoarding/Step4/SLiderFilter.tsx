@@ -1,10 +1,11 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import Text from "@/components/ui/Text";
 import { useEffect, useState } from "react";
-
+import hand from "@/public/images/onboarding/hand.svg" 
 function valuetext(value: number) {
   return `${value}°C`;
 }
@@ -124,6 +125,17 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
               className="text-[16px] text-white  font-arial font-normal  my-2 "
             >
               ${Starts}K
+            </Text>
+            <Text
+              as="p"
+              className="text-[16px] text-white  font-arial font-normal  my-2 flex "
+            >
+              <Image
+                src={hand}
+                alt="hand"
+                className="me-1"
+              />
+              Drag the slider
             </Text>
             <Text
               as="p"
