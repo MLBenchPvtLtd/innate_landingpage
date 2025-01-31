@@ -5,7 +5,7 @@ import Text from '@/components/ui/Text'
 
 import firm from '@/public/images/about/firm.png'
 import michel from '@/public/images/about/michael.png'
-import gelberg from '@/public/images/about/gelberg.png'
+import gelberg from '@/public/images/about/rangul.svg'
 // import amin from '@/public/images/about/amin.png'
 import mary from '@/public/images/about/mary.jpg'
 // import mridul from '@/public/images/about/mridul.png'
@@ -21,7 +21,7 @@ const HeroAbout = () => {
         “Architecture and craftsmanship is in our DNA”
       </Text>
       <div
-        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around mob:justify-center gap-20 items-center mob:gap-10"
+        className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around tab:justify-start gap-20 items-start mob:gap-10"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
@@ -29,9 +29,9 @@ const HeroAbout = () => {
         <Image
           src={firm}
           alt=""
-          className="w-[558px] h-[397px] mob:w-[350px] mob:h-[311px] rounded-[10px]"
+          className="w-[558px] h-[397px] tab:w-full mob:h-[311px] rounded-[10px]"
         />
-        <div className="w-full max-w-1/2 ms-10 mob:ms-0">
+        <div className="w-full max-w-1/2 tab:ms-0 ms-10">
           <Text
             as="h1"
             className="font-inter font-light font-medium text-[40px] mob:text-[30px] mob:font-semibold"
@@ -90,7 +90,7 @@ const HeroAbout = () => {
         <Image
           src={michel}
           alt=""
-          className="w-1/3 mob:w-full mob:order-1 rounded-[10px]"
+          className="w-1/3 tab:w-full mob:order-1 rounded-[10px]"
           // height={357}
         />
       </div>
@@ -113,7 +113,7 @@ const HeroAbout = () => {
             data-aos-delay="200"
           >
             <Image
-              className="object-cover w-[266px] h-[261px] mob:w-[350px]"
+              className="object-cover w-[266px] h-[261px] mob:w-[350px] rounded-[10px]"
               src={gelberg}
               alt=""
               fill
