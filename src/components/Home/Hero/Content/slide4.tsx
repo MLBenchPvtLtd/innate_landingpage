@@ -18,7 +18,7 @@ const Slide4 = () => {
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004013/bosma-adu_phzfg7.mp4"
+          src="https://firebasestorage.googleapis.com/v0/b/innate-bb90b.firebasestorage.app/o/bosma-adu.mp4?alt=media&token=0c906c3e-ed25-4082-8230-f5941f54e9ce"
           type="video/mp4"
         />
       </video>

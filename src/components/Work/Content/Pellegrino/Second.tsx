@@ -15,7 +15,7 @@ const Second: React.FC<FirstProps> = ({ setVideoLoaded }) => {
         }}
       >
         <source
-          src="https://res.cloudinary.com/dpibcz7ui/video/upload/v1738229427/PR_kctlhg.mp4"
+          src="https://firebasestorage.googleapis.com/v0/b/innate-bb90b.firebasestorage.app/o/pellegrino-remodel.mp4?alt=media&token=d42fe844-9e50-4b63-8e43-3fcf398e1240"
           type="video/mp4"
         />
       </video>

@@ -13,7 +13,7 @@ const Slide1 = () => {
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004016/website-homepage_lja4bt.mp4"
+          src="https://firebasestorage.googleapis.com/v0/b/innate-bb90b.firebasestorage.app/o/website-homepage.mp4?alt=media&token=3a0019cb-9ce1-4740-abe6-41c3f53bbe3e"
           type="video/mp4"
         />
       </video>
