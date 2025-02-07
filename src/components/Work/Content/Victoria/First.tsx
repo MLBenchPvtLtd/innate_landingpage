@@ -19,7 +19,10 @@ const First = () => {
           console.log('Video loaded')
         }}
       >
-        <source src="/images/home/VB.mp4" type="video/mp4" />
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/innate-bb90b.firebasestorage.app/o/victoria%20bathroom.mp4?alt=media&token=7c9e1c15-fffa-4c74-b6fc-50b0cee6a94b"
+          type="video/mp4"
+        />
       </video>
       {videoLoaded && (
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
