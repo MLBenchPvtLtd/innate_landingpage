@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  other:{
+    'google-site-verification': 'iFU_DRxdjRwhVprnLgrHxWOEX0bHCYBQYTnUSaHrr5Y',
+  }
 }
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
