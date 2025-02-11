@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  other:{
+  other: {
     'google-site-verification': 'iFU_DRxdjRwhVprnLgrHxWOEX0bHCYBQYTnUSaHrr5Y',
   }
 }
@@ -61,6 +61,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/logo-innate.png" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PP676WHP3"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4PP676WHP3');
+            `,
+          }}
+        />
       </head>
       <body
         className={`gradient ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
