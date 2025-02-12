@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-
 import {
   Inter,
   Montserrat,
@@ -13,6 +12,8 @@ import Footer from '@/components/Footer'
 import { TabProvider } from '@/context/TabContsxt'
 import MyProvider from '@/components/MyProvider'
 
+import Script from 'next/script' // Import Script from next/script
+
 export const metadata: Metadata = {
   title: 'Design + Build It’s Innate',
   description:
@@ -22,30 +23,20 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  other: {
-    'google-site-verification': 'iFU_DRxdjRwhVprnLgrHxWOEX0bHCYBQYTnUSaHrr5Y',
-  }
 }
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-
-const monts = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-monts',
-})
-
+const monts = Montserrat({ subsets: ['latin'], variable: '--font-monts' })
 const rajdhani = Rajdhani({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-rajdhani',
 })
-
 const inknut = Inknut_Antiqua({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-inknut',
 })
-
 const Bodoni = Bodoni_Moda({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
@@ -61,21 +52,34 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/logo-innate.png" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PP676WHP3"></script>
-        <script
+      </head>
+      <body
+        className={`gradient ${inter.variable} ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
+      >
+        {/* Google Tag Manager Script */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-4PP676WHP3');
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-TFW4QBRG');
             `,
           }}
         />
-      </head>
-      <body
-        className={`gradient ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
-      >
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TFW4QBRG"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
         <MyProvider>
           <TabProvider>
             {children}
