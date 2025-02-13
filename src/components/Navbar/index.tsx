@@ -57,7 +57,7 @@ const Navbar = () => {
   }, [isOpen])
   const saveTabTitle = (tab: string) => {
     const tabTitles: Record<string, string> = {
-      '/': 'Home',
+      '/': 'Innate NW | Custom Design & Construction Solutions',
       '/about': 'About',
       '/contact': 'Contact',
       '/services': 'Services',
