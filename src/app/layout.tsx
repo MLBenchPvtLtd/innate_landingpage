@@ -15,9 +15,9 @@ import MyProvider from '@/components/MyProvider'
 import Script from 'next/script' // Import Script from next/script
 
 export const metadata: Metadata = {
-  title: 'Design + Build It’s Innate',
+  title: 'Innate NW | Custom Design & Construction Solutions',
   description:
-    'We are a collective of architects, engineers and craftsmen collaborating to create beautiful spaces and structures that meet the unique needs of our clients.',
+    'Innate NW offers expert design, project management, and construction services, delivering high-quality custom spaces tailored to your unique needs.',
   keywords:
     'construction, architecture, engineering, roofing, construction consulting, landscaping, Innate design',
   icons: {
