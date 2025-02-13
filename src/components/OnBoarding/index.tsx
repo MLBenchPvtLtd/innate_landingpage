@@ -12,11 +12,11 @@ import Step7 from "./Step7";
 import Step8 from "./Step8";
 import LastStep from "./LastStep";
 import { ClipLoader } from "react-spinners"
-import logo from "@/public/logo-innate.png";
-import facebook from "@/public/fbb.png";
-import linkedin from "@/public/LinkedIn.png";
+// import logo from "@/public/logo-innate.png";
+// import facebook from "@/public/fbb.png";
+// import linkedin from "@/public/LinkedIn.png";
 import Swal from 'sweetalert2';
-import instagaram from "@/public/Instagram.png";
+// import instagaram from "@/public/Instagram.png";
 
 const OnBoarding: React.FC = () => {
   // Initialize state with a function that retrieves the saved step from localStorage
@@ -53,10 +53,10 @@ const OnBoarding: React.FC = () => {
       if (prev === 3) {
         const step1Data = formData["step1"] as { selectedOptions: string[] };
         if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
-          return 3.5; // Arbitrary number for Step4Alternative
+          return 9; // Arbitrary number for Step4Alternative
         }
       }
-      if (prev === 3.5) {
+      if (prev === 9) {
         return 4
       }
 
@@ -70,10 +70,10 @@ const OnBoarding: React.FC = () => {
       if (prev === 4) {
         const step1Data = formData["step1"] as { selectedOptions: string[] };
         if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
-          return 3.5; // Arbitrary number for Step4Alternative
+          return 9; // Arbitrary number for Step4Alternative
         }
       }
-      if (prev === 3.5) {
+      if (prev === 9) {
         return 2
       }
       // Default navigation
@@ -115,24 +115,14 @@ const OnBoarding: React.FC = () => {
         setLoading(false);
         return;
       }
-      // Add images to the formData
-      const formDataWithImages = {
-        ...formData,
-        images: {
-          logo: logo.src,
-          facebook: facebook.src,
-          linkedin: linkedin.src,
-          instagram: instagaram.src,
-        },
-      };
-      // console.log("API response:", formDataWithImages);
+
       // Call the API with the collected data
       const response: Response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formDataWithImages),
+        body: JSON.stringify(formData),
       });
       // console.log("API response:", response);
 
@@ -175,7 +165,10 @@ const OnBoarding: React.FC = () => {
 
 
   // Calculate progress as a percentage
-  const progress = ((currentStep / totalSteps) * 100).toFixed(2);
+  let progress = ((currentStep / totalSteps) * 100).toFixed(2);
+  if (currentStep === 9) {
+    progress = ((4 / totalSteps) * 100).toFixed(2);
+  }
 
   return (
     <div className="onboarding-container gradient px-5">
@@ -252,7 +245,8 @@ const OnBoarding: React.FC = () => {
           onChange={(data) => handleInputChange(4, data)}
         />
       )}
-      {currentStep === 3.5 && (
+      {/* step 4 alternative */}
+      {currentStep === 9 && (
         <Step4Alternative
           onNext={handleNext}
           onPrevious={handlePrevious}

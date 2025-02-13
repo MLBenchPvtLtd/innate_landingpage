@@ -22,186 +22,121 @@ export async function POST(req: NextRequest) {
     const emailTemplate = `
     <div
       style="
-        min-height: 100vh;
+        
        
-        padding-left: 70px;
+        padding-left: 10px;
         max-width: 900px;
-        color: white;
-        background: linear-gradient(to left, #0e1637 0%, #080a1c 25%, #000000 100%);
+        color: black;
+        
       "
     >
-      <!-- Logo at the top -->
      
-       <p
-        style="
-          font-size: 62px;
-          font-weight: 600;
-          color: #ffffffe5;
-          max-width: 900px;
-          padding-top: 40px;
-          text-align: center;
-        "
-      >
-       Innate
-      </p>
+       
+      <p style="font-size: 38.59px; font-weight: 600; margin-top: 40px;">Contact Details</p>
+      
   
-      <p style="font-size: 32.59px; font-weight: 600; ">Dear Client,</p>
-      <p
-        style="
-          font-size: 22px;
-          font-weight: 400;
-          color: #ffffffe5;
-          max-width: 900px;
-          margin-top: 10px;
-        "
-      >
-        Thank you for starting your project with Innate. We look forward to working with you! Below, you will find the details of your project. A team member will be reaching out to you soon to book a consultation.
-      </p>
-      <p style="font-size: 38.59px; font-weight: 600; margin-top: 40px;">Consultation Details</p>
-      <div
-        style="
-          background-color: #ffffff33;
-          height: 1px;
-          width: 100%;
-          margin-top: 20px;
-          margin-bottom: 20px;
-        "
-      ></div>
-  
-      <div style="display: flex; margin-bottom: 20px;">
+      <div style=" ">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
           Created on:
         </p>
-        <p style="font-size: 22px; font-weight: 500;">${new Date().toLocaleDateString()}</p>
+        <p style="font-size: 22px; font-weight: 100;">${new Date().toLocaleDateString()}</p>
       </div>
   
-      <div style="display: flex; margin-bottom: 20px;">
+      <div style=" ">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
           Name:
         </p>
-        <p style="font-size: 22px; font-weight: 500;">${data.name}</p>
+        <p style="font-size: 22px; font-weight: 100;">${data.name}</p>
       </div>
   
-      <div style="display: flex; margin-bottom: 20px;">
+      <div style=" ">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
           Email Address:
         </p>
-        <p style="font-size: 22px; font-weight: 500;">${data.email}</p>
+        <p style="font-size: 22px; font-weight: 100;">${data.email}</p>
       </div>
   
-      <div style="display: flex; margin-bottom: 20px;">
+      <div style=" ">
   <p
     style="
       font-size: 22px;
       min-width: 300px;
       font-weight: 500;
-      color: #ffffffb2;
+      color: black;
     "
   >
     Phone Number:
   </p>
-  <p style="font-size: 22px; font-weight: 500;">${data.phone}
+  <p style="font-size: 22px; font-weight: 100;">${data.phone}
   </p>
 </div>
 
   
-     <div style="display: flex; margin-bottom: 20px;">
+     <div style=" ">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
           Project Address:
-        </p><br/>
-        <p style="font-size: 22px; font-weight: 500;">${data.projectAddress}</p>
+        </p>
+        <p style="font-size: 22px; font-weight: 100;">${data.projectAddress}</p>
       </div>
   
-      <div style="display: flex; margin-bottom: 20px;">
+      <div style=" ">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
           Project Type:
         </p>
-        <p style="font-size: 22px; font-weight: 500;">${data.projectType}</p>
+        <p style="font-size: 22px; font-weight: 100;">${data.projectType}</p>
       </div>
   
-      <div style="margin-bottom: 20px;">
+      <div style="">
         <p
           style="
             font-size: 22px;
             min-width: 300px;
             font-weight: 500;
-            color: #ffffffb2;
+            color: black;
           "
         >
          Message:
         </p>
-        <p style="font-size: 22px; font-weight: 500;">${data.message}</p>
+        <p style="font-size: 22px; font-weight: 100;">${data.message}</p>
       </div>
       
   
-      <div
-        style="
-          background-color: #ffffff33;
-          height: 1px;
-          width: 100%;
-          margin-top: 20px;
-          margin-bottom: 20px;
-        "
-      ></div>
-  
-      <p style="font-size: 22px; font-weight: 500;">
-        If you have any questions or need assistance, please contact our support
-        team at <a style="color: #4591ca;" href="mailto:info@innate-nw.com">info@innate-nw.com</a>
-      </p>
-  
-      <p style="font-size: 22px; font-weight: 500; padding-bottom:20px;">
-        www.innate-nw.com
-        <span style="margin: 0 20px;"> | </span>
-        info@innate-nw.com
-      </p>
-  
-      <!-- Social Media Links at the Bottom with Inline SVG Logos -->
-    <!-- Social Media Links at the Bottom with Inline SVG Logos -->
-<div style="text-align: left; margin-top: 30px; padding-bottom:50px;">
-  <a href="https://www.facebook.com/innateaec" style="margin: 0 10px;">
-    Facebook
-  </a>
-  <a href="https://www.linkedin.com/company/innate-nw/" style="margin: 0 10px;">
-    Instagaram
-  </a>
-  <a href="https://www.instagram.com/innate_aec/" style="margin: 0 10px;">
-   Linkedin
-  </a>
+      
 </div>
 
 
