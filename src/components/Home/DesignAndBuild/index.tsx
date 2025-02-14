@@ -16,12 +16,9 @@ const DesignAndBuild = () => {
   const router = useRouter()
   return (
     <div className="w-full h-full gradient py-16 px-5 mob:pt-5">
-      <Text
-        as="h1"
-        className="text-center font-normal mob:text-[30px] mb-16  mob:mb-4 mob:leading-[33px] mob:px-5"
-      >
+      <h2 className="text-[48px] leading-[52px] text-center font-normal mob:text-[30px] mb-16  mob:mb-4 mob:leading-[33px] mob:px-5 font-inter">
         Design and build the <span className="italic">Innate </span> way
-      </Text>
+      </h2>
       {/* avoid surprise */}
       <div className="flex lg:flex-wrap gap-[47px] items-center px-[43px] pt-[43px] pb-[43px] mob:px-[16px] w-[80%] mob:w-full min-h-[500px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center mob:gap-[40px] mob:pt-[12px] mob:pb-[28px]">
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">

@@ -12,7 +12,7 @@ const ContactHome = () => {
       <div className="mx-auto w-full max-w-full flex justify-bewteen lg:flex-wrap gap-[160px] lg:gap-[50px]">
         <div className="max-w-[40%] mob:max-w-[90%]">
           <Text
-            as="h1"
+            as="h3"
             className="text-[34px] text-white font-semibold mob:text-[30px]"
           >
             Book a free consultation
