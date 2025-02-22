@@ -24,9 +24,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Define an array of WorkSlider components
 const sliders: React.ElementType[] = [
-  WorkSlider0, WorkSlider1, WorkSlider2, WorkSlider3, WorkSlider4, WorkSlider5,
+  WorkSlider0,
+   WorkSlider1, WorkSlider2, WorkSlider3, WorkSlider4, WorkSlider5,
   WorkSlider6, WorkSlider7, WorkSlider8, WorkSlider9, WorkSlider10, WorkSlider11, WorkSlider12,
-  // WorkSlider13, 
+  WorkSlider13, 
   WorkSlider14,
 ];
 
@@ -59,15 +60,51 @@ const Work: React.FC = () => {
 
         {/* Work Slider Sections */}
         <div className="relative z-0">
-          {sliders.map((SliderComponent, index) => (
+          {sliders.slice(0, 7).map((SliderComponent, index) => (
             <div
               key={index}
               ref={(el) => {
-                cardRefs.current[index] = el; // Assign the ref, but don't return it
+                cardRefs.current[index] = el; 
               }}
               className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
             >
-              <div className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]">
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
+                <SliderComponent />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="relative z-0">
+          {sliders.slice(7, 10).map((SliderComponent, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                cardRefs.current[index] = el; 
+              }}
+              className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
+            >
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
+                <SliderComponent />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="relative z-0">
+          {sliders.slice(10, 14).map((SliderComponent, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                cardRefs.current[index] = el; 
+              }}
+              className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
+            >
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
                 <SliderComponent />
               </div>
             </div>
