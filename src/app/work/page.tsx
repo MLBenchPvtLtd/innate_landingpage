@@ -60,7 +60,7 @@ const Work: React.FC = () => {
 
         {/* Work Slider Sections */}
         <div className="relative z-0">
-          {sliders.slice(0, 7).map((SliderComponent, index) => (
+          {sliders.slice(0, 6).map((SliderComponent, index) => (
             <div
               key={index}
               ref={(el) => {
@@ -77,7 +77,7 @@ const Work: React.FC = () => {
           ))}
         </div>
         <div className="relative z-0">
-          {sliders.slice(7, 10).map((SliderComponent, index) => (
+          {sliders.slice(6, 11).map((SliderComponent, index) => (
             <div
               key={index}
               ref={(el) => {
@@ -94,7 +94,7 @@ const Work: React.FC = () => {
           ))}
         </div>
         <div className="relative z-0">
-          {sliders.slice(10, 14).map((SliderComponent, index) => (
+          {sliders.slice(11, 15).map((SliderComponent, index) => (
             <div
               key={index}
               ref={(el) => {
