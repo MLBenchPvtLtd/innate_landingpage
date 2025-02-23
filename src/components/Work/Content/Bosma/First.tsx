@@ -10,7 +10,7 @@ const First = () => {
   return (
     <>
       <div className="gradient relative w-full z-10 mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">
-        {/* <video
+        <video
           className="fixed top-0 left-0 w-full h-full object-cover z-0"
           autoPlay
           loop
@@ -27,7 +27,7 @@ const First = () => {
         </video>
         {videoLoaded && (
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(0,0,0,0.5)] pagination-gradient z-10 pointer-events-none"></div>
-        )} */}
+        )}
 
         <div className="w-full relative z-10 min-h-[350px] flex items-center justify-center">
           {/* {videoLoaded && ( */}
