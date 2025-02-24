@@ -66,7 +66,7 @@ function WorkSlider3() {
       </div>
 
       {/* Swiper Slider */}
-      <div className="w-full work1-slider-parent flex justify-center items-center relative">
+      <div className="w-full work1-slider-parent h-screen flex justify-center items-center relative bg-blue-950">
         <Image
           className="cards-custom-prev14 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer rotate-180"
           onClick={handleprevbtn}
