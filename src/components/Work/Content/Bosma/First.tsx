@@ -11,10 +11,14 @@ const First = () => {
     <>
       <div className="gradient relative w-full z-10 mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">
         <video
-          className="fixed top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
           autoPlay
           loop
           muted
+          playsInline
+          webkit-playsinline="true"
+          disablePictureInPicture
+          controls={false} 
           onLoadedData={() => {
             setVideoLoaded(true)
             console.log('Video loaded')

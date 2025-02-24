@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
-import NavbarOther from '@/components/Navbar/NavbarOther'
+// import NavbarOther from '@/components/Navbar/NavbarOther'
+import Navbar from '@/components/Navbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -55,7 +56,7 @@ const Work: React.FC = () => {
       <div className="gradient">
         {/* Navbar */}
         <div className="sticky top-0 w-full z-50 bg-white shadow-md">
-          <NavbarOther />
+          <Navbar />
         </div>
 
         {/* Work Slider Sections */}
