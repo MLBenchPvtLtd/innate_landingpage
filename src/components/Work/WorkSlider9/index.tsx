@@ -46,7 +46,7 @@ function WorkSlider3() {
               >
                 Pellegrino Remodel
               </Text>
-              <Text className="text-[28px] font-normal mob:text-[11.84px] text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
+              <Text className="text-[28px] font-normal  text-[#FFFFFF] mb-3 flex items-center gap-1 text-center justify-center mob:text-[11.84px]">
                 Denver, Colorado
               </Text>
               <Link
