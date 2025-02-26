@@ -63,7 +63,7 @@ const Navbar = () => {
       },
       '/about': {
         title: 'About INNATE | Expert Project Management Solutions & Team',
-        description: 'Discover INNATE&apos;s expertise in project management solutions, driving efficiency and innovation for businesses. Learn more about our mission, values, and team.',
+        description: "Discover INNATE's expertise in project management solutions, driving efficiency and innovation for businesses. Learn more about our mission, values, and team.",
       },
       '/contact': {
         title: 'Contact INNATE | Get in Touch for Inquiries & Support',
@@ -83,7 +83,7 @@ const Navbar = () => {
       },
       '/work': {
         title: 'INNATE Work | Cutting-Edge Projects & Proven Excellence',
-        description: 'Explore INNATE&apos;s cutting-edge projects and proven excellence. Discover innovative solutions driving success across industries. Get insights now!',
+        description: "Explore INNATE's cutting-edge projects and proven excellence. Discover innovative solutions driving success across industries. Get insights now!",
       },
       // Add more mappings as needed
     }
