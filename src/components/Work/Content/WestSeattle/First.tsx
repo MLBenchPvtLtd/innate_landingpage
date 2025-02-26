@@ -7,7 +7,8 @@ interface FirstProps {
 const First: React.FC<FirstProps> = ({ setImageLoaded }) => {
   return (
     <>
-      <div className="relative w-full z-10 h-screen m-0 p-0 flex justify-center items-center">
+      <div className="relative w-full z-10  mob:h-[100vh] h-screen min-h-[700px] flex justify-center items-center px-20 mob:px-5">
+    
         <Image
           className="absolute inset-0 w-full h-full object-cover"
           src={slide}
