@@ -56,20 +56,55 @@ const Navbar = () => {
     }
   }, [isOpen])
   const saveTabTitle = (tab: string) => {
-    const tabTitles: Record<string, string> = {
-      '/': 'Innate NW | Custom Design & Construction Solutions',
-      '/about': 'About',
-      '/contact': 'Contact',
-      '/services': 'Services',
-      '/onboarding': 'on Boarding',
-      '/press': 'Press',
-      '/work': 'Work',
+    const tabData: Record<string, { title: string; description: string }> = {
+      '/': {
+        title: 'Innate NW | Custom Design & Construction Solutions',
+        description: 'Innovative design and construction solutions tailored to your needs.',
+      },
+      '/about': {
+        title: 'About INNATE | Expert Project Management Solutions & Team',
+        description: 'Discover INNATE&apos;s expertise in project management solutions, driving efficiency and innovation for businesses. Learn more about our mission, values, and team.',
+      },
+      '/contact': {
+        title: 'Contact INNATE | Get in Touch for Inquiries & Support',
+        description: 'Connect with INNATE’s experts for custom design and construction solutions. Reach out today to discuss your unique project needs and get professional assistance',
+      },
+      '/services': {
+        title: 'Services',
+        description: 'Explore our range of professional services.',
+      },
+      '/onboarding': {
+        title: 'On Boarding',
+        description: 'Start your journey with us through our onboarding process.',
+      },
+      '/press': {
+        title: 'INNATE Press | Company News, Media Releases & Industry Updates',
+        description: 'Get the latest INNATE news, press releases, and industry updates now. Stay informed with media coverage, company announcements, and insightful stories',
+      },
+      '/work': {
+        title: 'INNATE Work | Cutting-Edge Projects & Proven Excellence',
+        description: 'Explore INNATE&apos;s cutting-edge projects and proven excellence. Discover innovative solutions driving success across industries. Get insights now!',
+      },
       // Add more mappings as needed
     }
 
-    // Update the document's title based on the active tab
-    document.title = tabTitles[tab] || 'My App'
+    const { title, description } = tabData[tab] || { title: 'My App', description: 'Default description of the app.' }
+
+    // Update the document's title
+    document.title = title
+
+    // Update the meta description
+    let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement | null
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description)
+    } else {
+      metaDescription = document.createElement('meta')
+      metaDescription.setAttribute('name', 'description')
+      metaDescription.setAttribute('content', description)
+      document.head.appendChild(metaDescription)
+    }
   }
+
 
   // Automatically set the tab title when `activeTab` changes
   useEffect(() => {
@@ -120,9 +155,8 @@ const Navbar = () => {
                 </button>
 
                 <div
-                  className={`${
-                    isOpen ? 'block' : 'hidden'
-                  } w-full md:block md:w-auto`}
+                  className={`${isOpen ? 'block' : 'hidden'
+                    } w-full md:block md:w-auto`}
                   id="navbar-default"
                 >
                   {/* Your menu options */}
@@ -131,11 +165,10 @@ const Navbar = () => {
                       <Link
                         href="/about"
                         onClick={() => handleTabChange('/about')}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
-                          activeTab === '/about'
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === '/about'
                             ? 'text-[#2CFF06]'
                             : 'text-[#FFFFFF]'
-                        }`}
+                          }`}
                       >
                         About
                       </Link>
@@ -144,11 +177,10 @@ const Navbar = () => {
                       <Link
                         href="/work"
                         onClick={() => handleTabChange('/work')}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
-                          activeTab === '/work'
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === '/work'
                             ? 'text-[#2CFF06]'
                             : 'text-[#FFFFFF]'
-                        }`}
+                          }`}
                       >
                         Work
                       </Link>
@@ -159,11 +191,10 @@ const Navbar = () => {
                           handleTabChange('/services')
                           toggleDropdown()
                         }}
-                        className={` cursor-pointer block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
-                          activeTab === '/services'
+                        className={` cursor-pointer block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === '/services'
                             ? 'text-[#2CFF06]'
                             : 'text-[#FFFFFF]'
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-1 ">
                           <Link href="" className="">
@@ -300,11 +331,10 @@ const Navbar = () => {
                       <Link
                         href="/press"
                         onClick={() => handleTabChange('/press')}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
-                          activeTab === '/press'
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === '/press'
                             ? 'text-[#2CFF06]'
                             : 'text-[#FFFFFF]'
-                        }`}
+                          }`}
                       >
                         Press
                       </Link>
@@ -313,11 +343,10 @@ const Navbar = () => {
                       <Link
                         href="/contact"
                         onClick={() => handleTabChange('/contact')}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
-                          activeTab === '/contact'
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${activeTab === '/contact'
                             ? 'text-[#2CFF06]'
                             : 'text-[#FFFFFF]'
-                        }`}
+                          }`}
                       >
                         Contact
                       </Link>
@@ -346,14 +375,12 @@ const Navbar = () => {
                     aria-expanded={isOpen ? 'true' : 'false'}
                   >
                     <span
-                      className={`block mob:w-[39px] mob:h-[2px] bg-white transition-transform duration-300 ease-in-out ${
-                        isOpen ? 'rotate-45 translate-y-[4px]' : ''
-                      }`}
+                      className={`block mob:w-[39px] mob:h-[2px] bg-white transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-[4px]' : ''
+                        }`}
                     ></span>
                     <span
-                      className={`block mob:w-[39px] mob:h-[2px] bg-white mt-1.5 transition-transform duration-300 ease-in-out ${
-                        isOpen ? '-rotate-45 -translate-y-[4px]' : ''
-                      }`}
+                      className={`block mob:w-[39px] mob:h-[2px] bg-white mt-1.5 transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-[4px]' : ''
+                        }`}
                     ></span>
                   </button>
                 </div>
@@ -366,11 +393,10 @@ const Navbar = () => {
                         <Link
                           href="/about"
                           onClick={() => handleTabChange('/about')}
-                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
-                            activeTab === '/about'
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === '/about'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             About
@@ -381,11 +407,10 @@ const Navbar = () => {
                         <Link
                           href="/work"
                           onClick={() => handleTabChange('/work')}
-                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
-                            activeTab === '/work'
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === '/work'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Work
@@ -435,11 +460,10 @@ const Navbar = () => {
                         <Link
                           href="/press"
                           onClick={() => handleTabChange('/press')}
-                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
-                            activeTab === '/press'
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === '/press'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Press
@@ -450,11 +474,10 @@ const Navbar = () => {
                         <Link
                           href="/contact"
                           onClick={() => handleTabChange('/contact')}
-                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${
-                            activeTab === '/contact'
+                          className={`block  text-[19px] font-inter font-normal leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === '/contact'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Contact
@@ -489,11 +512,10 @@ const Navbar = () => {
                           href="#"
                           onClick={(e) => e.preventDefault()}
                           // onClick={() => handleTabChange('/services')}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/about'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/about'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Architecture
@@ -506,11 +528,10 @@ const Navbar = () => {
                           href="#"
                           onClick={(e) => e.preventDefault()}
                           // onClick={() => handleTabChange('/work')}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/work'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/work'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Kitchens & Bathrooms
@@ -523,11 +544,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/work')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/work'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/work'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Construction
@@ -541,11 +561,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/press')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/press'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/press'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Roofing
@@ -558,11 +577,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/contact')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/contact'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/contact'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Decks & Patio Covers
@@ -574,11 +592,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/contact')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/contact'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/contact'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Siding
@@ -589,11 +606,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/contact')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/contact'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/contact'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Windows & Doors
@@ -604,11 +620,10 @@ const Navbar = () => {
                           // onClick={() => handleTabChange('/contact')}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${
-                            activeTab === '/contact'
+                          className={`block  text-[17px] font-inter font-light leading-[25.5px] text-[#FFFFFF99] hover:text-[#2CFF06] ${activeTab === '/contact'
                               ? 'text-[#2CFF06]'
                               : 'text-[#FFFFFF]'
-                          }`}
+                            }`}
                         >
                           <li className="flex ms-5 py-[15px] list-items">
                             Natural Disaster Mitigation
