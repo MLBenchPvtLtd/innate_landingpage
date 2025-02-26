@@ -32,7 +32,7 @@ function WorkSlider3() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
-        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative">
+        <div className=" w-full overflow-hidden  flex justify-center items-center relative">
           <First />
         </div>
       </div>
