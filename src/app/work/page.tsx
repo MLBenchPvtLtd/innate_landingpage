@@ -1,6 +1,11 @@
 'use client'
-import React, { useEffect, useState, useRef } from 'react'
-import Navbar from '@/components/Navbar'
+import React, { useEffect, useRef } from 'react'
+// import NavbarOther from '@/components/Navbar/NavbarOther'
+import Navbar from '@/components/Navbar';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Import WorkSlider components
 import WorkSlider0 from '@/components/Work/WorkSlider0'
 import WorkSlider1 from '@/components/Work/WorkSlider1'
 import WorkSlider2 from '@/components/Work/WorkSlider2'
@@ -16,93 +21,99 @@ import WorkSlider11 from '@/components/Work/WorkSlider11'
 import WorkSlider12 from '@/components/Work/WorkSlider12'
 import WorkSlider13 from '@/components/Work/WorkSLider13'
 import WorkSlider14 from '@/components/Work/WorkSlider14'
+gsap.registerPlugin(ScrollTrigger);
 
-const WorkPage = () => {
-  const [scrollY, setScrollY] = useState(0)
-  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0
-  const isMobile =
-    typeof window !== 'undefined' ? window.innerWidth <= 768 : false // Check if the device is mobile
-  const animationFrameRef = useRef<number | null>(null)
+// Define an array of WorkSlider components
+const sliders: React.ElementType[] = [
+  WorkSlider0,
+   WorkSlider1, WorkSlider2, WorkSlider3, WorkSlider4, WorkSlider5,
+  WorkSlider6, WorkSlider7, WorkSlider8, WorkSlider9, WorkSlider10, WorkSlider11, WorkSlider12,
+  WorkSlider13, 
+  WorkSlider14,
+];
+
+const Work: React.FC = () => {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const smoothScroll = () => {
-      const targetScrollY = window.scrollY
-      setScrollY((prevScrollY) => {
-        const diff = targetScrollY - prevScrollY
-        if (Math.abs(diff) < 1) return targetScrollY
-        return prevScrollY + diff * 0.1 // Adjust the smoothing factor (0.1) as needed
-      })
-      animationFrameRef.current = requestAnimationFrame(smoothScroll)
-    }
-
-    smoothScroll()
-
-    return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current)
+    cardRefs.current.forEach((ref) => {
+      if (ref) {
+        gsap.to(ref, {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ref,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       }
-    }
-  }, [])
-
-  const components = [
-    WorkSlider0,
-    WorkSlider1,
-    WorkSlider2,
-    WorkSlider3,
-    WorkSlider4,
-    WorkSlider5,
-    WorkSlider6,
-    WorkSlider7,
-    WorkSlider8,
-    WorkSlider9,
-    WorkSlider10,
-    WorkSlider11,
-    WorkSlider12,
-    WorkSlider13,
-    WorkSlider14,
-  ]
+    });
+  }, []);
 
   return (
-    <div>
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar />
-      </div>
-      <div className="relative">
-        {components.map((Component, index) => {
-          const start = index * windowHeight
-          const end = (index + 1) * windowHeight * (isMobile ? 32 : 16) // Adjust multiplier based on screen size
+    <>
+      <div className="gradient">
+        {/* Navbar */}
+        <div className="sticky top-0 w-full z-50 bg-white shadow-md">
+          <Navbar />
+        </div>
 
-          // Calculate translateY for each section
-          const translateY =
-            scrollY >= start && scrollY < end
-              ? -(scrollY - start)
-              : scrollY >= end
-              ? -windowHeight
-              : 0
-
-          return (
+        {/* Work Slider Sections */}
+        <div className="relative z-0">
+          {sliders.slice(0, 6).map((SliderComponent, index) => (
             <div
               key={index}
-              style={{
-                transform: `translateY(${translateY}px)`,
-                position: 'fixed',
-                zIndex: components.length - index,
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100vh',
-                transition: 'transform 0.03s ease-out',
+              ref={(el) => {
+                cardRefs.current[index] = el; 
               }}
+              className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
             >
-              <Component />
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
+                <SliderComponent />
+              </div>
             </div>
-          )
-        })}
+          ))}
+        </div>
+        <div className="relative z-0">
+          {sliders.slice(6, 11).map((SliderComponent, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                cardRefs.current[index] = el; 
+              }}
+              className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
+            >
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
+                <SliderComponent />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="relative z-0">
+          {sliders.slice(11, 15).map((SliderComponent, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                cardRefs.current[index] = el; 
+              }}
+              className="work-slider w-full min-h-screen flex items-center sticky top-0 bg-white"
+            >
+              <div 
+              className="h-full tab:h-[80%] mob:h-auto w-full rounded-t-[24px] rounded-b-[18px]"
+              >
+                <SliderComponent />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      {/* Spacer to allow scrolling */}
-      <div style={{ height: `${components.length * 100}vh` }} />
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default WorkPage
+export default Work;
